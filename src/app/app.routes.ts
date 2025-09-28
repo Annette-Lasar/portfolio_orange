@@ -5,6 +5,6 @@ import { Imprint } from './legal/imprint/imprint.js';
 
 export const routes: Routes = [
   { path: '', component: MainContent },
-  { path: 'privacy-policy', component: PrivacyPolicy },
   { path: 'imprint', component: Imprint },
+  { path: 'privacy-policy', component: PrivacyPolicy },
 ];
