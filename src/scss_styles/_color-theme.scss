@@ -1,0 +1,18 @@
+@use '@angular/material' as mat;
+@use 'color-palettes' as palettes;
+
+$orange-theme: mat.m2-define-light-theme(
+  (
+    color: (
+      primary: palettes.$portfolio-primary,
+      accent: palettes.$portfolio-accent,
+      warn: palettes.$portfolio-warn,
+      background: (
+        background: #ffffff,
+        card: #ffffff,
+      ),
+    ),
+  )
+);
+
+@include mat.all-component-themes($orange-theme);

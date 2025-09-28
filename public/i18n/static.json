@@ -1,0 +1,205 @@
+{
+  "staticGeneralInfos": {
+    "closeX": "close_small.svg",
+    "arrowLeft": "arrow_left.svg",
+    "arrowRight": "arrow_right.svg"
+  },
+  "staticAboutInfos": {
+    "tabHeading1": "Frontend",
+    "tabHeading2": "Backend",
+    "staticFrontendIcons": [
+      {
+        "id": "HTML",
+        "caption": "HTML",
+        "iconPath": ""
+      },
+      {
+        "id": "CSS",
+        "caption": "CSS",
+        "iconPath": ""
+      },
+      {
+        "id": "JavaScript",
+        "caption": "JavaScript",
+        "iconPath": ""
+      },
+      {
+        "id": "Angular",
+        "caption": "Angular",
+        "iconPath": ""
+      },
+      {
+        "id": "TypeScript",
+        "caption": "TypeScript",
+        "iconPath": ""
+      },
+      {
+        "id": "API",
+        "caption": "API",
+        "iconPath": ""
+      },
+      {
+        "id": "Angular Material",
+        "caption": "Angular Material",
+        "iconPath": ""
+      },
+      {
+        "id": "Firebase",
+        "caption": "Firebase",
+        "iconPath": ""
+      },
+      {
+        "id": "Git",
+        "caption": "Git",
+        "iconPath": ""
+      },
+      {
+        "id": "WordPress",
+        "caption": "WordPress",
+        "iconPath": ""
+      },
+      {
+        "id": "Scrum",
+        "caption": "Scrum",
+        "iconPath": ""
+      }
+    ],
+    "backendIcons": [
+      {
+        "id": "Python",
+        "caption": "Python",
+        "iconPath": ""
+      },
+      {
+        "id": "DjangoDRF",
+        "caption": "DjangoDRF",
+        "iconPath": ""
+      },
+      {
+        "id": "Linux",
+        "caption": "Linux",
+        "iconPath": ""
+      },
+      {
+        "id": "SQLite3",
+        "caption": "",
+        "iconPath": ""
+      },
+      {
+        "id": "Docker",
+        "caption": "",
+        "iconPath": ""
+      },
+      {
+        "id": "PostgreSQL",
+        "caption": "PostgreSQL",
+        "iconPath": ""
+      },
+      {
+        "id": "Nginx",
+        "caption": "Nginx",
+        "iconPath": ""
+      },
+      {
+        "id": "Gunicorn",
+        "caption": "Gunicorn",
+        "iconPath": ""
+      }
+    ]
+  },
+  "staticProjectInfos": {
+    "githubButton": "Github",
+    "staticProjects": [
+      {
+        "id": "pokedex",
+        "title": "Pokédex",
+        "technologies": ["JS", "API"],
+        "imagePath": "pokedex.jpg",
+        "links": {
+          "github": "https://github.com/Annette-Lasar/Pokedex",
+          "demo": "https://pokedex.annette-lasar.de/"
+        }
+      },
+      {
+        "id": "mermaid",
+        "title": "Mermaid",
+        "technologies": ["JS", "OOP"],
+        "imagePath": "mermaid.jpg",
+        "links": {
+          "github": "https://github.com/Annette-Lasar/Mermaid",
+          "demo": "https://mermaid.annette-lasar.de/"
+        }
+      },
+      {
+        "id": "dabubble",
+        "title": "DABubble",
+        "technologies": ["Angular", "Firestore"],
+        "imagePath": "da_bubble.png",
+        "links": {
+          "github": "",
+          "demo": ""
+        }
+      },
+      {
+        "id": "join",
+        "title": "Join",
+        "technologies": ["Angular", "Django"],
+        "imagePath": "join.png",
+        "links": {
+          "github": "",
+          "demo": ""
+        }
+      },
+      {
+        "id": "coderr",
+        "title": "Coderr",
+        "technologies": ["JS", "Django"],
+        "imagePath": "coderr.png",
+        "links": {
+          "github": "",
+          "demo": ""
+        }
+      },
+      {
+        "id": "videoflix",
+        "title": "Videoflix",
+        "technologies": ["JS", "Django"],
+        "imagePath": "videoflix.png",
+        "links": {
+          "github": "",
+          "demo": ""
+        }
+      }
+    ]
+  },
+  "staticFeedbackInfos": [
+    {
+      "id": "grischa",
+      "cardImage": "avatar_grischa.png"
+    },
+    {
+      "id": "lea",
+      "cardImage": "avatar_lea.png"
+    },
+    {
+      "id": "angela",
+      "cardImage": "avatar_angela.png"
+    },
+    {
+      "id": "miruna",
+      "cardImage": "miruna_agopian_square.jpg"
+    },
+    {
+      "id": "nicole",
+      "cardImage": "avatar_nicole.png"
+    },
+    {
+      "id": "gabriela",
+      "cardImage": "gabriela_square.jpg"
+    },
+    {
+      "id": "merve",
+      "cardImage": "merve_samur_square.jpg"
+    }
+  ]
+}

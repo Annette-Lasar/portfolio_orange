@@ -1,0 +1,77 @@
+<mat-toolbar class="custom-toolbar">
+  <div class="button-wrapper">
+    <button
+      matIconButton
+      class="menu-icon favorite-icon"
+      [aria-label]="pageContentService.variableContent()?.menu?.home"
+    >
+      <mat-icon>home</mat-icon>
+    </button>
+    <span class="button-caption">Start</span>
+  </div>
+  <div class="button-wrapper">
+    <button
+      matIconButton
+      class="menu-icon favorite-icon"
+      [aria-label]="pageContentService.variableContent()?.menu?.about"
+    >
+      <mat-icon>person</mat-icon>
+    </button>
+    <span class="button-caption">About</span>
+  </div>
+
+  <div class="button-wrapper">
+    <button
+      matIconButton
+      class="menu-icon favorite-icon"
+      [aria-label]="pageContentService.variableContent()?.menu?.projects"
+    >
+      <mat-icon>code</mat-icon>
+    </button>
+    <span class="button-caption">Projekte</span>
+  </div>
+
+  <div class="button-wrapper">
+  <button
+    matIconButton
+    class="menu-icon favorite-icon"
+    [aria-label]="pageContentService.variableContent()?.menu?.feedback"
+  >
+    <mat-icon>forum</mat-icon>
+  </button>
+  <span class="button-caption">Feedback</span>
+</div>
+
+<div class="button-wrapper">
+  <button
+    matIconButton
+    class="menu-icon favorite-icon"
+    [aria-label]="pageContentService.variableContent()?.menu?.cv"
+  >
+    <mat-icon>description</mat-icon>
+  </button>
+  <span class="button-caption">Lebenslauf</span>
+  </div>
+
+  <div class="button-wrapper">
+  <button
+    matIconButton
+    class="menu-icon favorite-icon"
+    [aria-label]="pageContentService.variableContent()?.menu?.contact"
+  >
+    <mat-icon>alternate_email</mat-icon>
+  </button>
+  <span class="button-caption">Kontakt</span>
+  </div>
+
+  <div class="button-wrapper">
+  <button
+    matIconButton
+    class="menu-icon favorite-icon"
+    [aria-label]="pageContentService.variableContent()?.menu?.languages"
+  >
+    <mat-icon>language</mat-icon>
+  </button>
+  <span class="button-caption">Sprachen</span>
+  </div>
+</mat-toolbar>

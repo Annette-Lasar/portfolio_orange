@@ -1,0 +1,53 @@
+{
+  "hero": {
+    "title": "Mon Portfolio",
+    "subtitle": "Bienvenue sur ma page"
+  },
+  "feedback": {
+    "heading": "Témoignages",
+    "feedbackInfos": [
+      {
+        "cardTitle": "Grischa Tänzer",
+        "cardSubtitle": "2024",
+        "cardImage": "avatar_grischa.png",
+        "feedbackText": "Merci beaucoup, Annette, pour ta vidéo détaillée – elle m’a vraiment aidé."
+      },
+      {
+        "cardTitle": "Lea Cotar",
+        "cardSubtitle": "Juillet 2025",
+        "cardImage": "avatar_lea.png",
+        "feedbackText": "Annette m'a énormément aidée avec Angular – grâce à ses explications claires de concepts complexes, j’ai enfin pu vraiment progresser. Son soutien a été un véritable atout décisif pour mon projet !"
+      },
+      {
+        "cardTitle": "Angela Gumprecht",
+        "cardSubtitle": "2024",
+        "cardImage": "avatar_angela.png",
+        "feedbackText": "Je viens de terminer le challenge. Ton explication est vraiment excellente ! Merci."
+      },
+      {
+        "cardTitle": "Miruna Agopian",
+        "cardSubtitle": "Juillet 2025",
+        "cardImage": "miruna_agopian_square.jpg",
+        "feedbackText": "Annette convainc aussi bien sur le plan professionnel que personnel. Son souci du détail et sa profonde compréhension des principes de programmation façonnent sa manière structurée de travailler. Lorsqu’on lui demande de l’aide, elle explique les concepts de façon claire et compréhensible. C’est une véritable joueuse d’équipe qui partage volontiers ses connaissances. Avec aisance et charisme, elle guide les autres vers la solution la plus logique."
+      },
+      {
+        "cardTitle": "Nicole Gerlach",
+        "cardSubtitle": "Août 2025",
+        "cardImage": "avatar_nicole.png",
+        "feedbackText": "Annette se distingue par une curiosité et une soif de savoir extraordinaires, qui se manifestent dans sa manière de toujours tout remettre en question lorsqu’elle code, afin de comprendre pleinement les liens et de continuer à apprendre. Elle apporte également des idées innovantes pour améliorer les processus et les projets. Sa volonté d’assumer des responsabilités et d’aider les autres en cas de problèmes ou de questions est impressionnante. C’est une collègue extrêmement serviable qui partage généreusement son savoir et rend compréhensibles des sujets complexes grâce à ses explications claires. Grâce à ses grandes compétences didactiques, elle contribue de manière significative à faire progresser l’équipe et à promouvoir une culture d’apprentissage positive. Son ouverture et son engagement font d’elle un atout précieux pour toute équipe. Je recommande Annette sans réserve et suis convaincue qu’elle brillera dans n’importe quel poste par sa compétence et son engagement."
+      },
+      {
+        "cardTitle": "Gabriela Ströbl",
+        "cardSubtitle": "Septembre 2025",
+        "cardImage": "gabriela_square.jpg",
+        "feedbackText": "Pendant ma formation de programmeuse en parallèle de mon emploi, Annette a été d’un grand soutien. Elle a partagé son expertise ouvertement et, avec beaucoup de patience et de clarté, elle m’a facilité mes débuts pratiques. Sa démarche structurée et son attitude calme et serviable m’ont donné confiance et m’ont inspirée aussi bien sur le plan professionnel que personnel. Je l’ai connue comme une collègue extrêmement compétente et très agréable."
+      },
+      {
+        "cardTitle": "Merve Samur",
+        "cardSubtitle": "Août 2025",
+        "cardImage": "merve_samur_square.jpg",
+        "feedbackText": "Annette est développeuse front-end et back-end, passionnée par le code propre et le partage des connaissances. Elle maîtrise parfaitement le front-end comme le back-end et aime transmettre ses connaissances – que ce soit dans des vidéos pédagogiques ou par une aide directe, sans rien attendre en retour. Le code clair, des structures nettes et un travail efficace sont importants pour elle. Elle aborde les défis avec enthousiasme et apporte beaucoup de cœur et de responsabilité à ses projets. Pour elle, apprendre et se perfectionner font naturellement partie du chemin."
+      }
+    ]
+  }
+}

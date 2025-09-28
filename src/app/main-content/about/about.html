@@ -1,0 +1,15 @@
+<section>
+  @if (pageContentService.variableContent()?.about) {
+  <h2>{{ pageContentService.variableContent()?.about?.heading }}</h2>
+  <div>{{ pageContentService.variableContent()?.about?.subHeading }}</div>
+
+  @for (intro of pageContentService.variableContent()!.about.introduction; track intro) {
+  <p>{{ intro }}</p>
+  }
+
+  <mat-tab-group>
+    <mat-tab label="Frontend"> Content 1 </mat-tab>
+    <mat-tab label="Backend"> Content 2 </mat-tab>
+  </mat-tab-group>
+  }
+</section>

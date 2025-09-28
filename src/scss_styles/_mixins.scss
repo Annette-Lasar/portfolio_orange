@@ -1,0 +1,15 @@
+@use './variables' as v;
+
+@mixin flex-layout(
+  $display: v.$flex-display,
+  $direction: v.$flex-direction,
+  $align: v.$flex-align,
+  $justify: v.$flex-justify,
+  $gap: v.$flex-gap
+) {
+  display: $display;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}

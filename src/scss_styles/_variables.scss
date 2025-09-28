@@ -1,0 +1,49 @@
+// Fonts
+$font-base: 'Lexend', sans-serif;
+$font-heading: 'Audiowide', cursive;
+
+// Brand Colors (raw)
+$color-dark-gray: #3a3a3a;
+$color-light-gray: #dddddd;
+$color-yellow:    #ffb933;
+$color-red:  #c7120f;
+$color-white: #ffffff;
+
+// Semantic Colors
+$primary-color:    $color-dark-gray;
+$accent-color:     $color-yellow;
+$warn-color:       $color-red;
+$background-page: $color-white;
+$background-surface: $color-light-gray;
+$border-color:     $color-light-gray;
+
+// Flex defaults
+$flex-display: flex !default;
+$flex-direction: row !default;
+$flex-align: center !default;
+$flex-justify: space-between !default;
+$flex-gap: 0 !default;
+
+// Spacing
+$spacing-xs: 0.25rem;  // 4px
+$spacing-sm: 0.5rem;   // 8px
+$spacing-md: 1rem;     // 16px
+$spacing-lg: 2rem;     // 32px
+$spacing-xl: 4rem;     // 64px
+
+// Border Radius
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 16px;
+
+// Z-Index Scale
+$z-header: 1000;
+$z-menu: 1100;
+$z-overlay: 2000;
+$z-modal: 3000;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;

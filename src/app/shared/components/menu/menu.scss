@@ -1,0 +1,33 @@
+@use '@angular/material' as mat;
+@use '../../../../scss_styles/color-palettes' as palettes;
+@use '../../../../scss_styles/index' as *;
+
+:host ::ng-deep mat-toolbar.custom-toolbar {
+  width: 95%;
+  position: fixed;
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  height: 44px;
+  @include flex-layout();
+  border-radius: 38px;
+  background-color: mat.m2-get-color-from-palette(palettes.$portfolio-accent, 500);
+  .button-wrapper {
+    @include flex-layout($direction: column, $justify: center);
+    .menu-icon {
+      width: 32px;
+      height: 32px;
+      @include flex-layout($justify: center);
+      mat-icon {
+        font-size: 24px;
+        line-height: 1;
+        display: block;
+      }
+    }
+    .button-caption {
+      display: block;
+      font-size: 0.4rem;
+    }
+  }
+}

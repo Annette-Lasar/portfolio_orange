@@ -1,0 +1,22 @@
+<section>
+  <h2>{{ pageContentService.variableContent()?.feedback?.heading }}</h2>
+
+  <div class="cards-container">
+    @for (fb of pageContentService.mergedFeedbackInfos(); track fb.id) {
+    <mat-card class="feedback-card" appearance="outlined">
+      <mat-card-header>
+        <div
+          mat-card-avatar
+          class="feedback-header-image"
+          [style.background-image]="'url(img/' + fb.cardImage + ')'"
+        ></div>
+        <mat-card-title>{{ fb.cardTitle }}</mat-card-title>
+        <mat-card-subtitle>{{ fb.cardSubtitle }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        {{ fb.feedbackText }}
+      </mat-card-content>
+    </mat-card>
+    }
+  </div>
+</section>

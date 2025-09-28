@@ -1,0 +1,62 @@
+@use '@angular/material' as mat;
+@use './color-palettes' as palettes; 
+
+body {
+  font-family: 'Lexend', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Audiowide', sans-serif;
+  color: mat.m2-get-color-from-palette(palettes.$portfolio-primary, 500);
+}
+
+h2 {
+  width: max-content;
+  margin: 0 auto 1em;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 6px solid mat.m2-get-color-from-palette(palettes.$portfolio-accent, 500);
+}
+
+p,
+mat-card-content {
+  font-family: 'Lexend', sans-serif;
+  color: mat.m2-get-color-from-palette(palettes.$portfolio-primary, 500);
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+@include mat.card-overrides(
+  (
+    title-text-font: 'Lexend, sans-serif',
+    title-text-size: 1rem,
+    title-text-weight: 600,
+    title-text-tracking: 0.05em,
+
+    subtitle-text-font: 'Lexend, sans-serif',
+    subtitle-text-size: 0.9rem,
+    subtitle-text-weight: 400,
+  )
+);
+
+h1 {
+  font-size: clamp(2rem, 11vw + 16px, 4rem);
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: clamp(1.25rem, 8vw + 0.5rem, 3.5rem);
+}
+
+@include mat.button-overrides(
+  (
+    filled-label-text-font: 'Audiowide, sans-serif',
+    filled-label-text-transform: uppercase,
+    filled-label-text-weight: 400,
+    filled-label-text-size: 1rem,
+  )
+);
+
+
