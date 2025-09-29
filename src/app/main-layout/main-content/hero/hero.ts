@@ -1,9 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { PageContentService } from '../../shared/services/page-content.service.js';
-import { Menu } from '../../shared/components/menu/menu.js';
-
+import { PageContentService } from '../../../shared/services/page-content.service.js';
+import { Menu } from '../../../shared/components/menu/menu.js';
 
 @Component({
   selector: 'port-hero',

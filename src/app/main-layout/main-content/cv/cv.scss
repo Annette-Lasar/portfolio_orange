@@ -1,0 +1,51 @@
+@use '@angular/material' as mat;
+@use '../../../../scss_styles/color-palettes' as palettes;
+@use '../../../../scss_styles/index.scss' as *;
+
+section {
+  padding: 2em 0.5em;
+  background-color: mat.m2-get-color-from-palette(palettes.$portfolio-primary, 100);
+}
+
+.list-content {
+    margin: 2em 0 3em;
+  padding: 1.5em 1em;
+  background-color: mat.m2-get-color-from-palette(palettes.$portfolio-primary, 500);
+  .list-heading {
+    margin: 0 0 1em;
+    color: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 500)};
+  }
+  ul {
+    padding: 0 0 0 0.5em;
+    list-style: none;
+    color: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 500)};
+    li {
+      position: relative;
+      padding: 0 0 0 1em;
+      color:#{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 500)};
+      line-height: 2;
+      &::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: mat.m2-get-color-from-palette(palettes.$portfolio-accent, 500);
+        line-height: 2;
+      }
+    }
+  }
+}
+
+button {
+  border-radius: 0;
+}
+
+.cv-download-btn .mdc-button__label {
+  @include flex-layout($justify: center);
+
+  .mat-icon {
+    margin-left: 0.5rem;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+  }
+}

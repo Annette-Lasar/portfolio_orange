@@ -201,5 +201,8 @@
       "id": "merve",
       "cardImage": "merve_samur_square.jpg"
     }
-  ]
+  ],
+  "staticCvContent": {
+    "download": "cv.pdf"
+  }
 }

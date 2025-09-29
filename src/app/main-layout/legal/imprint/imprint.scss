@@ -1,0 +1,13 @@
+@use '@angular/material' as mat;
+@use '../../../../scss_styles/color-palettes' as palettes;
+@use '../../../../scss_styles/index.scss' as *;
+
+section {
+  height: 100%;
+  padding: 1em 0.5em;
+  background-color: mat.m2-get-color-from-palette(palettes.$portfolio-primary, 100);
+}
+
+button {
+  border-radius: 0;
+}

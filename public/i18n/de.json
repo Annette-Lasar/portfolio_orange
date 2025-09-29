@@ -155,7 +155,25 @@
   },
   "cv": {
     "heading": "Lebenslauf",
-    "download": "Lebenslauf herunterladen"
+    "subHeadingTillNow": "2023 bis 2025",
+    "subHeadingCarreer": "Berufliche Laufbahn",
+    "introductionTillNow": "Weiterbildung zur Fullstack-Webentwicklerin bei der Developer Akademie",
+    "introductionCarreer": "Langjährige Brufserfahrung in Didaktik, Kommunikation & Projektorganisation",
+    "mainStackHeading": "Mein Haupt-Stack",
+    "mainStackList": [
+        "JavaScript/ TypeScript",
+        "Angular (Frontend)",
+        "Python",
+        "Django/ DRF (Backend)"
+    ],
+    "mainEmphasisHeading": "Schwerpunkte",
+    "mainEmphasisList": [
+        "Strukturierte Wissensvermittlung",
+        "Teamarbeit",
+        "Verantwortung für Menschen und Projekte"
+    ],
+    "buttonCaption": "Lebenslauf als pdf"
+    
   },
   "contact": {
     "heading": "Kontakt",

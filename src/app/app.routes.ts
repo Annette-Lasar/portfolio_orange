@@ -1,10 +1,17 @@
 import { Routes } from '@angular/router';
-import { MainContent } from './main-content/main-content.js';
-import { PrivacyPolicy } from './legal/privacy-policy/privacy-policy.js';
-import { Imprint } from './legal/imprint/imprint.js';
+import { MainLayout } from './main-layout/main-layout.js';
+import { MainContent } from './main-layout/main-content/main-content.js';
+import { Imprint } from './main-layout/legal/imprint/imprint.js';
+import { PrivacyPolicy } from './main-layout/legal/privacy-policy/privacy-policy.js';
 
 export const routes: Routes = [
-  { path: '', component: MainContent },
-  { path: 'imprint', component: Imprint },
-  { path: 'privacy-policy', component: PrivacyPolicy },
+  {
+    path: '',
+    component: MainLayout,
+    children: [
+      { path: '', component: MainContent },
+      { path: 'imprint', component: Imprint },
+      { path: 'privacy', component: PrivacyPolicy },
+    ],
+  },
 ];

@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
-import { PageContentService } from '../../shared/services/page-content.service';
+import { PageContentService } from '../../../shared/services/page-content.service.js';
 
 @Component({
   selector: 'port-feedback',

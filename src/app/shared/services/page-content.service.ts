@@ -1,32 +1,3 @@
-/* import { Injectable, signal } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { VariableContent } from '../interfaces/variable-content.interface.js';
-import { StaticContent } from '../interfaces/static-content.interface.js';
-
-@Injectable({
-  providedIn: 'root',
-})
-export class PageContentService {
-  variableContent = signal<VariableContent | null>(null);
-  staticContent = signal<StaticContent | null>(null);
-
-  constructor(private http: HttpClient) {}
-
-  loadVariableContent(lang: string = 'de') {
-    const jsonUrl = `i18n/${lang}.json`;
-    this.http.get<VariableContent>(jsonUrl).subscribe((data) => {
-      this.variableContent.set(data);
-    });
-  }
-
-  loadStaticContent() {
-    const jsonUrl = 'i18n/static.json';
-    this.http.get<StaticContent>(jsonUrl).subscribe((data) => {
-      this.staticContent.set(data);
-    });
-  }
-} */
-
 import { Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { VariableContent } from '../interfaces/variable-content.interface';
@@ -40,7 +11,6 @@ export class PageContentService {
   variableContent = signal<VariableContent | null>(null);
   staticContent = signal<StaticContent | null>(null);
 
-  // NEU: gemergte FeedbackInfos direkt als Signal
   mergedFeedbackInfos = signal<FeedbackInfo[]>([]);
 
   constructor(private http: HttpClient) {}

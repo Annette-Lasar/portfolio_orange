@@ -1,6 +1,11 @@
 @use '@angular/material' as mat;
 @use './color-palettes' as palettes; 
 
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Lexend', sans-serif;
 }
@@ -10,6 +15,13 @@ h2,
 h3 {
   font-family: 'Audiowide', sans-serif;
   color: mat.m2-get-color-from-palette(palettes.$portfolio-primary, 500);
+}
+
+h4 {
+  margin: 2em 0 1em;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 700;
+  color: mat.m2-get-color-from-palette(palettes.$portfolio-accent, 500);
 }
 
 h2 {

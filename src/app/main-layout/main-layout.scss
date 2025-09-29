@@ -1,0 +1,18 @@
+section {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 272px;
+  grid-template-areas:
+    'content'
+    'footer';
+}
+
+main {
+  grid-area: 'content';
+}
+
+port-footer {
+  grid-area: 'footer';
+}
