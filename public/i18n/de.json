@@ -14,7 +14,9 @@
     "introduction": [
       "Mein Weg in die Softwareentwicklung war nicht geradlinig - aber genau das macht ihn besonders. Ich bringe analytisches Denken, strukturiertes Arbeiten und die Fähigkeit mit, komplexe Inhalte verständlich aufzubereiten - heute in Form sauberer, funktionaler Webanwendungen.",
       "Ich liebe es, moderne Technologien zu entdecken und in benutzerfreundliche Lösungen zu verwandeln – mit einem klaren Fokus auf durchdachtes Design und mobile Nutzung ab dem ersten Pixel."
-    ]
+    ],
+    "tabHeading1": "Frontend",
+    "tabHeading2": "Backend"
   },
   "projectInfos": {
     "heading": "Projekte",
@@ -161,19 +163,18 @@
     "introductionCarreer": "Langjährige Brufserfahrung in Didaktik, Kommunikation & Projektorganisation",
     "mainStackHeading": "Mein Haupt-Stack",
     "mainStackList": [
-        "JavaScript/ TypeScript",
-        "Angular (Frontend)",
-        "Python",
-        "Django/ DRF (Backend)"
+      "JavaScript/ TypeScript",
+      "Angular (Frontend)",
+      "Python",
+      "Django/ DRF (Backend)"
     ],
     "mainEmphasisHeading": "Schwerpunkte",
     "mainEmphasisList": [
-        "Strukturierte Wissensvermittlung",
-        "Teamarbeit",
-        "Verantwortung für Menschen und Projekte"
+      "Strukturierte Wissensvermittlung",
+      "Teamarbeit",
+      "Verantwortung für Menschen und Projekte"
     ],
     "buttonCaption": "Lebenslauf als pdf"
-    
   },
   "contact": {
     "heading": "Kontakt",

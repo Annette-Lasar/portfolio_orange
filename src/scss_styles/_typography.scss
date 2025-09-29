@@ -10,6 +10,14 @@ body {
   font-family: 'Lexend', sans-serif;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+section {
+  background-color: #{mat.m2-get-color-from-palette(palettes.$portfolio-primary, 100)};
+}
+
 h1,
 h2,
 h3 {

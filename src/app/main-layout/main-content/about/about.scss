@@ -1,7 +1,6 @@
 @use '@angular/material' as mat;
 @use '../../../../scss_styles/color-palettes' as palettes;
 
-
 section {
-    background-color: mat.m2-get-color-from-palette(palettes.$portfolio-primary, 100);
+    padding: 2em 0.5em;
 }

@@ -1,5 +1,6 @@
 <section>
-  @if (pageContentService.variableContent()?.about) {
+  @if (pageContentService.variableContent()?.about &&
+  pageContentService.staticContent()?.staticAboutInfos) {
   <h2>{{ pageContentService.variableContent()?.about?.heading }}</h2>
   <div>{{ pageContentService.variableContent()?.about?.subHeading }}</div>
 
@@ -8,8 +9,30 @@
   }
 
   <mat-tab-group>
-    <mat-tab label="Frontend"> Content 1 </mat-tab>
-    <mat-tab label="Backend"> Content 2 </mat-tab>
+    <mat-tab [label]="pageContentService.variableContent()!.about.tabHeading1">
+      @for (frontendIcon of frontendIcons; track frontendIcon.id) {
+      <figure>
+        <img
+          [src]="'icons/skills/' + frontendIcon.iconPath"
+          [alt]="frontendIcon.caption"
+          height="40"
+        />
+        <figcaption>{{ frontendIcon.caption }}</figcaption>
+      </figure>
+      }
+    </mat-tab>
+    <mat-tab [label]="pageContentService.variableContent()!.about.tabHeading2">
+      @for (backendIcon of backendIcons; track backendIcon.id) {
+      <figure>
+        <img
+          [src]="'icons/skills/' + backendIcon.iconPath"
+          [alt]="backendIcon.caption"
+          height="40"
+        />
+        <figcaption>{{ backendIcon.caption }}</figcaption>
+      </figure>
+      }
+    </mat-tab>
   </mat-tab-group>
   }
 </section>

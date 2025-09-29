@@ -1,6 +1,10 @@
+@use '@angular/material' as mat;
+@use '../../../../scss_styles/color-palettes' as palettes;
+
 section {
   height: 100vh;
   height: 100dvh;
+  background-color: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 400)};
 }
 
 button {

@@ -5,105 +5,121 @@
     "arrowRight": "arrow_right.svg"
   },
   "staticAboutInfos": {
-    "tabHeading1": "Frontend",
-    "tabHeading2": "Backend",
-    "staticFrontendIcons": [
+    "staticSkillIcons": [
       {
         "id": "HTML",
         "caption": "HTML",
-        "iconPath": ""
+        "iconPath": "html.svg",
+        "category": "frontend"
       },
       {
         "id": "CSS",
         "caption": "CSS",
-        "iconPath": ""
+        "iconPath": "css.svg",
+        "category": "frontend"
       },
       {
         "id": "JavaScript",
         "caption": "JavaScript",
-        "iconPath": ""
+        "iconPath": "javascript.svg",
+        "category": "frontend"
       },
       {
         "id": "Angular",
         "caption": "Angular",
-        "iconPath": ""
+        "iconPath": "angular.svg",
+        "category": "frontend"
       },
       {
         "id": "TypeScript",
         "caption": "TypeScript",
-        "iconPath": ""
+        "iconPath": "typescript.svg",
+        "category": "frontend"
       },
       {
         "id": "API",
         "caption": "API",
-        "iconPath": ""
+        "iconPath": "api.svg",
+        "category": "frontend"
       },
       {
         "id": "Angular Material",
         "caption": "Angular Material",
-        "iconPath": ""
+        "iconPath": "material_design.svg",
+        "category": "frontend"
       },
       {
         "id": "Firebase",
         "caption": "Firebase",
-        "iconPath": ""
+        "iconPath": "firebase.svg",
+        "category": "frontend"
       },
       {
         "id": "Git",
         "caption": "Git",
-        "iconPath": ""
+        "iconPath": "git.svg",
+        "category": "frontend"
       },
       {
         "id": "WordPress",
         "caption": "WordPress",
-        "iconPath": ""
+        "iconPath": "wordpress.svg",
+        "category": "frontend"
       },
       {
         "id": "Scrum",
         "caption": "Scrum",
-        "iconPath": ""
-      }
-    ],
-    "backendIcons": [
+        "iconPath": "scrum.svg",
+        "category": "frontend"
+      },
+
       {
         "id": "Python",
         "caption": "Python",
-        "iconPath": ""
+        "iconPath": "python.svg",
+        "category": "backend"
       },
       {
         "id": "DjangoDRF",
-        "caption": "DjangoDRF",
-        "iconPath": ""
+        "caption": "Django/ DRF",
+        "iconPath": "django.svg",
+        "category": "backend"
       },
       {
         "id": "Linux",
         "caption": "Linux",
-        "iconPath": ""
+        "iconPath": "linux.svg",
+        "category": "backend"
       },
       {
         "id": "SQLite3",
-        "caption": "",
-        "iconPath": ""
+        "caption": "SQLite 3",
+        "iconPath": "sqlite.svg",
+        "category": "backend"
       },
       {
         "id": "Docker",
-        "caption": "",
-        "iconPath": ""
+        "caption": "Docker",
+        "iconPath": "docker.svg",
+        "category": "backend"
       },
       {
         "id": "PostgreSQL",
         "caption": "PostgreSQL",
-        "iconPath": ""
+        "iconPath": "postgresql.svg",
+        "category": "backend"
       },
       {
         "id": "Nginx",
         "caption": "Nginx",
-        "iconPath": ""
+        "iconPath": "nginx.svg",
+        "category": "backend"
       },
       {
         "id": "Gunicorn",
         "caption": "Gunicorn",
-        "iconPath": ""
+        "iconPath": "gunicorn.svg",
+        "category": "backend"
       }
     ]
   },

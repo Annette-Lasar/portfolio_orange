@@ -4,11 +4,10 @@
 
 section {
   padding: 2em 0.5em;
-  background-color: mat.m2-get-color-from-palette(palettes.$portfolio-primary, 100);
 }
 
 .list-content {
-    margin: 2em 0 3em;
+  margin: 2em 0 3em;
   padding: 1.5em 1em;
   background-color: mat.m2-get-color-from-palette(palettes.$portfolio-primary, 500);
   .list-heading {
@@ -22,7 +21,7 @@ section {
     li {
       position: relative;
       padding: 0 0 0 1em;
-      color:#{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 500)};
+      color: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 500)};
       line-height: 2;
       &::before {
         content: '•';
@@ -36,6 +35,8 @@ section {
 }
 
 button {
+  display: block;
+  margin: 0 auto;
   border-radius: 0;
 }
 
