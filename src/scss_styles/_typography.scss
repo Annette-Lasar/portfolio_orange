@@ -1,6 +1,5 @@
 @use '@angular/material' as mat;
-@use './color-palettes' as palettes; 
-
+@use './color-palettes' as palettes;
 
 html {
   scroll-behavior: smooth;
@@ -19,16 +18,24 @@ section {
 }
 
 h1,
-h2,
-h3 {
+h2 {
   font-family: 'Audiowide', sans-serif;
+  color: mat.m2-get-color-from-palette(palettes.$portfolio-primary, 500);
+}
+
+h3,
+h4 {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 700;
+}
+
+h3 {
   color: mat.m2-get-color-from-palette(palettes.$portfolio-primary, 500);
 }
 
 h4 {
   margin: 2em 0 1em;
-  font-family: 'Lexend', sans-serif;
-  font-weight: 700;
+
   color: mat.m2-get-color-from-palette(palettes.$portfolio-accent, 500);
 }
 
@@ -79,4 +86,11 @@ h2 {
   )
 );
 
-
+@include mat.tabs-overrides(
+  (
+    active-label-text-color: #fff,
+    inactive-label-text-color: #333,
+    active-indicator-color: transparent,
+    // falls du die Linie ausblenden willst
+  )
+);

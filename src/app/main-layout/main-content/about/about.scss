@@ -1,6 +1,50 @@
 @use '@angular/material' as mat;
 @use '../../../../scss_styles/color-palettes' as palettes;
+@use '../../../../scss_styles/index.scss' as *;
 
 section {
-    padding: 2em 0.5em;
+  padding: 2em 0.5em;
+}
+
+::ng-deep .about-tabs .mat-mdc-tab.mdc-tab--active {
+  background-color: #{mat.m2-get-color-from-palette(palettes.$portfolio-primary, 500)};
+}
+
+::ng-deep .about-tabs .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+  color: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 500)} !important;
+}
+
+::ng-deep .about-tabs .mat-mdc-tab {
+  background-color: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 500)};
+  border: 2px solid #{mat.m2-get-color-from-palette(palettes.$portfolio-primary, 500)};
+}
+
+::ng-deep .about-tabs .mat-mdc-tab .mdc-tab__text-label {
+  color: #{mat.m2-get-color-from-palette(palettes.$portfolio-primary, 500)} !important;
+}
+
+/* inactivates inkbar */
+::ng-deep .mat-mdc-tab-group .mdc-tab-indicator__content--underline {
+  display: none !important;
+}
+
+::ng-deep .about-tabs .mat-mdc-tab-body-content {
+  height: 550px;
+  padding: 1.5rem;
+  @include flex-layout($align: baseline, $justify: flex-start, $gap: 1rem);
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  background-color: #{mat.m2-get-color-from-palette(palettes.$portfolio-primary, 500)};
+  color: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 500)};
+  figure {
+    width: 75px;
+    text-align: center;
+    img {
+        margin: 0 0 12px;
+    }
+    figcaption {
+        margin: 0 0 1em;
+      text-align: center;
+    }
+  }
 }

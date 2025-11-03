@@ -2,6 +2,7 @@ export interface AboutContent {
   heading: string;
   subHeading: string;
   introduction: string[];
+  skillsHeading: string;
   tabHeading1: string;
   tabHeading2: string;
 }

@@ -1,3 +1,14 @@
 <section>
-    <h2>Projekte</h2>
+  @if(pageContentService.variableContent()?.projectInfos){
+  <h2>{{ pageContentService.variableContent()?.projectInfos?.heading }}</h2>
+  }
+  <h3>
+    {{ pageContentService.variableContent()?.projectInfos?.subHeading1 }}
+  </h3>
+  <port-frontend-projects />
+
+  <h3>
+    {{ pageContentService.variableContent()?.projectInfos?.subHeading2 }}
+  </h3>
+  <port-backend-projects />
 </section>

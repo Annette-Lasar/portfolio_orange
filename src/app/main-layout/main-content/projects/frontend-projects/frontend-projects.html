@@ -1,1 +1,21 @@
-<p>frontend-projects works!</p>
+<div>
+  @if(pageContentService.staticContent()?.staticProjectInfos?.staticProjects) { @for (project of
+  frontendProjects; track project.id) {
+  <div class="project-card">
+    <img [src]="'./img/projects/' + project.imagePath" [alt]="project.title" />
+    <div class="title-wrapper">
+      <div>
+        {{ project.title }}
+      </div>
+      <div>
+        @for(technology of project.technologies; let i = $index; track technology) {
+        <span>
+          {{ technology }}
+          @if (i < project.technologies.length - 1) { / }
+        </span>
+        }
+      </div>
+    </div>
+  </div>
+  } }
+</div>

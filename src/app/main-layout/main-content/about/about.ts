@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, computed, effect } from '@angular/core';
+import { Component, OnInit, effect } from '@angular/core';
 import { PageContentService } from '../../../shared/services/page-content.service.js';
 import { MatTabsModule } from '@angular/material/tabs';
 import { StaticSkillIcon } from '../../../shared/interfaces/about.interface.js';
@@ -24,8 +24,6 @@ export class About implements OnInit {
         this.backendIcons = data.staticAboutInfos.staticSkillIcons.filter(
           (icon) => icon.category === 'backend'
         );
-        console.log('Frontend Icons:', this.frontendIcons);
-        console.log('Backend Icons:', this.backendIcons);
       }
     });
   }

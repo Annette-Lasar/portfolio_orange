@@ -10,7 +10,7 @@ import { LegalContent } from './legal.interface.js';
 export interface VariableContent {
   hero: HeroContent;
   about: AboutContent;
-  projects: ProjectInfos;
+  projectInfos: ProjectInfos;
   feedback: FeedbackContent;
   cv: CvContent;
   contact: ContactContent;

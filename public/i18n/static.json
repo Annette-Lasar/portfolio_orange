@@ -134,7 +134,8 @@
         "links": {
           "github": "https://github.com/Annette-Lasar/Pokedex",
           "demo": "https://pokedex.annette-lasar.de/"
-        }
+        },
+        "category": "frontend"
       },
       {
         "id": "mermaid",
@@ -144,7 +145,8 @@
         "links": {
           "github": "https://github.com/Annette-Lasar/Mermaid",
           "demo": "https://mermaid.annette-lasar.de/"
-        }
+        },
+        "category": "frontend"
       },
       {
         "id": "dabubble",
@@ -154,7 +156,8 @@
         "links": {
           "github": "",
           "demo": ""
-        }
+        },
+        "category": "frontend"
       },
       {
         "id": "join",
@@ -164,7 +167,8 @@
         "links": {
           "github": "",
           "demo": ""
-        }
+        },
+        "category": "backend"
       },
       {
         "id": "coderr",
@@ -174,7 +178,8 @@
         "links": {
           "github": "",
           "demo": ""
-        }
+        },
+        "category": "backend"
       },
       {
         "id": "videoflix",
@@ -184,7 +189,8 @@
         "links": {
           "github": "",
           "demo": ""
-        }
+        },
+        "category": "backend"
       }
     ]
   },

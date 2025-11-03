@@ -26,6 +26,7 @@ export interface StaticProject {
   technologies: string[];
   imagePath: string;
   links: StaticProjectLink;
+  category: string;
 }
 
 export interface StaticProjectInfos {

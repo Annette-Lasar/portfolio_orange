@@ -8,14 +8,16 @@
   <p>{{ intro }}</p>
   }
 
-  <mat-tab-group>
+  <h5>{{ pageContentService.variableContent()?.about?.skillsHeading }}</h5>
+
+  <mat-tab-group class="about-tabs">
     <mat-tab [label]="pageContentService.variableContent()!.about.tabHeading1">
       @for (frontendIcon of frontendIcons; track frontendIcon.id) {
       <figure>
         <img
           [src]="'icons/skills/' + frontendIcon.iconPath"
           [alt]="frontendIcon.caption"
-          height="40"
+          height="60"
         />
         <figcaption>{{ frontendIcon.caption }}</figcaption>
       </figure>
@@ -27,7 +29,7 @@
         <img
           [src]="'icons/skills/' + backendIcon.iconPath"
           [alt]="backendIcon.caption"
-          height="40"
+          height="60"
         />
         <figcaption>{{ backendIcon.caption }}</figcaption>
       </figure>
