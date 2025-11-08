@@ -1,14 +1,22 @@
 <section>
-  @if(pageContentService.variableContent()?.projectInfos){
-  <h2>{{ pageContentService.variableContent()?.projectInfos?.heading }}</h2>
+  @if(pageContentService.mergedContent()?.projectInfos){
+  <h2>{{ pageContentService.mergedContent()?.projectInfos?.heading }}</h2>
   }
   <h3>
-    {{ pageContentService.variableContent()?.projectInfos?.subHeading1 }}
+    {{ pageContentService.mergedContent()?.projectInfos?.subHeading1 }}
   </h3>
-  <port-project/>
+
+  @for (project of frontendProjects; track project.id) {
+
+  <port-project [project]="project" />
+  }
 
   <h3>
-    {{ pageContentService.variableContent()?.projectInfos?.subHeading2 }}
+    {{ pageContentService.mergedContent()?.projectInfos?.subHeading2 }}
   </h3>
 
+  @for (project of backendProjects; track project.id) {
+
+  <port-project [project]="project" />
+  }
 </section>

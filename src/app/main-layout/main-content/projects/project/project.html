@@ -1,2 +1,13 @@
-@if (pageContentService.mergedContent()) { @for (project of
-pageContentService.mergedContent()?.feedback?.feedbackInfos; track project.id) { } }
+<button>
+  <div>
+    <img [src]="'./img/projects/' + project.imagePath" [alt]="project.title" />
+  </div>
+  <div class="title-wrapper">
+    <div>{{ project.title }}</div>
+    <div>
+      @for (tech of project.technologies; track tech; let i = $index) {
+      <span>{{ tech }}{{ i < project.technologies.length - 1 ? ' / ' : '' }}</span>
+      }
+    </div>
+  </div>
+</button>

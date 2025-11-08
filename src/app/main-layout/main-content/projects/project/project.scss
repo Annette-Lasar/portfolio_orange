@@ -2,4 +2,10 @@
 @use '../../../../../scss_styles/' as palettes;
 @use '../../../../../scss_styles/' as *;
 
-
+button {
+    display: block;
+    margin: 0 0 2em;
+    .title-wrapper {
+        @include flex-layout();
+    }
+}

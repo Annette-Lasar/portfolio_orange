@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { PageContentService } from '../../../../shared/services/page-content.service.js';
+import { MergedProject } from '../../../../shared/interfaces/project.interface.js';
 
 @Component({
   selector: 'port-project',
@@ -8,10 +9,7 @@ import { PageContentService } from '../../../../shared/services/page-content.ser
   styleUrl: './project.scss',
 })
 export class Project {
-  constructor(public pageContentService: PageContentService) {}
+  @Input() project!: MergedProject;
 
-  ngOnInit(): void {
-    this.pageContentService.loadVariableContent('de');
-    this.pageContentService.loadStaticContent();
-  }
+  constructor(public pageContentService: PageContentService) {}
 }

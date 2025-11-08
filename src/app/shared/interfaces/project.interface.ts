@@ -33,3 +33,5 @@ export interface StaticProjectInfos {
   githubButton: string;
   staticProjects: StaticProject[];
 }
+
+export interface MergedProject extends Project, StaticProject {}
