@@ -1,4 +1,7 @@
 {
+  "generalInfos": {
+    "candidateImgAlt": "Foto der Bewerberin"
+  },
   "hero": {
     "greeting": "Hallo, ich bin",
     "name": "Annette",
@@ -175,7 +178,8 @@
       "Teamarbeit",
       "Verantwortung für Menschen und Projekte"
     ],
-    "buttonCaption": "Lebenslauf als pdf"
+    "buttonCaption": "Lebenslauf als pdf",
+    "cvDownload": "cv-de.pdf"
   },
   "contact": {
     "heading": "Kontakt",

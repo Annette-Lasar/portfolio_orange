@@ -16,14 +16,10 @@ export class About implements OnInit {
 
   constructor(public pageContentService: PageContentService) {
     effect(() => {
-      const data = this.pageContentService.staticContent();
+      const data = this.pageContentService.mergedContent();
       if (data) {
-        this.frontendIcons = data.staticAboutInfos.staticSkillIcons.filter(
-          (icon) => icon.category === 'frontend'
-        );
-        this.backendIcons = data.staticAboutInfos.staticSkillIcons.filter(
-          (icon) => icon.category === 'backend'
-        );
+        this.frontendIcons = data.about.skills.filter((icon) => icon.category === 'frontend');
+        this.backendIcons = data.about.skills.filter((icon) => icon.category === 'backend');
       }
     });
   }

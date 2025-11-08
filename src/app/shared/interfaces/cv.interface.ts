@@ -9,8 +9,5 @@ export interface CvContent {
   mainEmphasisHeading: string;
   mainEmphasisList: string[];
   buttonCaption: string;
-}
-
-export interface StaticCvContent {
-  download: string;
+  cvDownload: string;
 }

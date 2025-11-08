@@ -1,17 +1,16 @@
 <section>
-  @if (pageContentService.variableContent()?.about &&
-  pageContentService.staticContent()?.staticAboutInfos) {
-  <h2>{{ pageContentService.variableContent()?.about?.heading }}</h2>
-  <div>{{ pageContentService.variableContent()?.about?.subHeading }}</div>
+  @if (pageContentService.mergedContent()) {
+  <h2>{{ pageContentService.mergedContent()?.about?.heading }}</h2>
+  <div>{{ pageContentService.mergedContent()?.about?.subHeading }}</div>
 
   @for (intro of pageContentService.variableContent()!.about.introduction; track intro) {
   <p>{{ intro }}</p>
   }
 
-  <h5>{{ pageContentService.variableContent()?.about?.skillsHeading }}</h5>
+  <h5>{{ pageContentService.mergedContent()?.about?.skillsHeading }}</h5>
 
   <mat-tab-group class="about-tabs">
-    <mat-tab [label]="pageContentService.variableContent()!.about.tabHeading1">
+    <mat-tab [label]="pageContentService.mergedContent()!.about.tabHeading1">
       @for (frontendIcon of frontendIcons; track frontendIcon.id) {
       <figure>
         <img

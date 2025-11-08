@@ -1,16 +1,19 @@
 <section>
-  <img src="img/annette_lasar_sw_rgb_square.jpg" alt="" />
-  @if (pageContentService.variableContent()?.hero) {
-  <p>{{ pageContentService.variableContent()?.hero?.greeting }}</p>
+  @if (pageContentService.mergedContent()) {
+  <img
+    [src]="pageContentService.mergedContent()?.generalInfos?.candidateImg01"
+    [alt]="pageContentService.mergedContent()?.generalInfos?.candidateImgAlt"
+  />
+  <p>{{ pageContentService.mergedContent()?.hero?.greeting }}</p>
   <h1>
-    {{ pageContentService.variableContent()?.hero?.name }}
+    {{ pageContentService.mergedContent()?.hero?.name }}
   </h1>
-  @for (intro of pageContentService.variableContent()!.hero.introduction; track intro){
+  @for (intro of pageContentService.mergedContent()!.hero.introduction; track intro){
   <p>{{ intro }}</p>
   }
 
   <button matButton="filled" color="accent">
-    {{ pageContentService.variableContent()?.hero?.buttonCaption }}
+    {{ pageContentService.mergedContent()?.hero?.buttonCaption }}
   </button>
   }
 

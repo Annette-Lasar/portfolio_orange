@@ -1,5 +1,6 @@
 {
   "staticGeneralInfos": {
+    "candidateImg01": "img/annette_lasar_sw_rgb_square.jpg",
     "closeX": "close_small.svg",
     "arrowLeft": "arrow_left.svg",
     "arrowRight": "arrow_right.svg"
@@ -223,8 +224,5 @@
       "id": "merve",
       "cardImage": "merve_samur_square.jpg"
     }
-  ],
-  "staticCvContent": {
-    "download": "cv.pdf"
-  }
+  ]
 }

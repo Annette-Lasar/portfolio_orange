@@ -1,8 +1,8 @@
 <section>
-  <h2>{{ pageContentService.variableContent()?.feedback?.heading }}</h2>
+  <h2>{{ pageContentService.mergedContent()?.feedback?.heading }}</h2>
 
   <div class="cards-container">
-    @for (fb of pageContentService.mergedFeedbackInfos(); track fb.id) {
+    @for (fb of pageContentService.mergedContent()?.feedback?.feedbackInfos; track fb.id) {
     <mat-card class="feedback-card" appearance="outlined">
       <mat-card-header>
         <div

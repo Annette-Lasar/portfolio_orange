@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { FrontendProjects } from './frontend-projects/frontend-projects.js';
-import { BackendProjects } from './backend-projects/backend-projects.js';
 import { PageContentService } from '../../../shared/services/page-content.service.js';
+import { Project } from './project/project.js';
 
 @Component({
   selector: 'port-projects',
-  imports: [FrontendProjects, BackendProjects],
+  imports: [Project],
   templateUrl: './projects.html',
   styleUrl: './projects.scss'
 })
