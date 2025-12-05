@@ -1,1 +1,78 @@
-<p>contact-form works!</p>
+<section>
+  @if (pageContentService.mergedContent()?.contact?.form) {
+  <form class="contact-form">
+    <mat-form-field class="full-width">
+      <!--       <mat-label>
+        {{ pageContentService.mergedContent()?.contact?.form?.name }}
+      </mat-label> -->
+      <input
+        matInput
+        [placeholder]="pageContentService.mergedContent()?.contact?.form?.namePlaceholder || ''"
+        required
+      />
+      @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
+      <mat-error>
+        {{ pageContentService.mergedContent()?.contact?.form?.errors?.errorMissingName }}
+      </mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>
+        {{ pageContentService.mergedContent()?.contact?.form?.email }}
+      </mat-label>
+      <input
+        type="email"
+        matInput
+        [formControl]="emailFormControl"
+        [placeholder]="'My placeholder text'"
+      />
+      @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
+      <mat-error>
+        {{ pageContentService.mergedContent()?.contact?.form?.errors?.errorMissingEmail }}
+      </mat-error>
+      } @if (emailFormControl.hasError('required')) {
+      <mat-error>
+        {{ pageContentService.mergedContent()?.contact?.form?.errors?.errorMissingEmail }}
+      </mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <!-- <mat-label>
+        {{ pageContentService.mergedContent()?.contact?.form?.message }}
+      </mat-label> -->
+      <textarea
+        matInput
+        [placeholder]="pageContentService.mergedContent()?.contact?.form?.messagePlaceholder || ''"
+        rows="5"
+        maxlength="500"
+        #message
+        required
+      ></textarea>
+      <mat-hint class="char-hint full-width" align="end">{{ message.value.length }} / 500</mat-hint>
+      @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
+      <mat-error>
+        {{ pageContentService.mergedContent()?.contact?.form?.errors?.errorMissingMessage }}
+      </mat-error>
+      }
+    </mat-form-field>
+    <div class="checkbox-wrapper">
+      <label for="acceptPrivacy" class="custom-checkbox cursor-pointer">
+        <input
+          id="acceptPrivacy"
+          class="checkbox cursor-pointer"
+          type="checkbox"
+          name="acceptPrivacy"
+          required
+        />
+        <span
+          class="checkbox-text"
+          [innerHTML]="
+            pageContentService.mergedContent()?.contact?.acceptPrivacyPolicy || '' | linkifyPrivacy
+          "
+        ></span>
+      </label>
+    </div>
+  </form>
+  }
+</section>

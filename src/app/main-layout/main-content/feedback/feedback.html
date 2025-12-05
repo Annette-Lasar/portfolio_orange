@@ -1,4 +1,5 @@
 <section>
+  @if(pageContentService.mergedContent()) {
   <h2>{{ pageContentService.mergedContent()?.feedback?.heading }}</h2>
 
   <div class="cards-container">
@@ -19,4 +20,5 @@
     </mat-card>
     }
   </div>
+  }
 </section>

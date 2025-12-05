@@ -1,1 +1,23 @@
-@use 'scss_styles/index';
+@use '@angular/material' as mat;
+@use 'scss_styles/index' as *;
+
+.full-width {
+  width: 100%;
+}
+
+.privacy-link {
+  color: mat.m2-get-color-from-palette($portfolio-accent, 500);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.25s ease;
+
+  &:hover,
+  &:focus {
+    color: mat.m2-get-color-from-palette($portfolio-accent, 100);
+  }
+}
+
+
+.cursor-pointer {
+  cursor: pointer;
+}

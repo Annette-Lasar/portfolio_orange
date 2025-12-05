@@ -2,9 +2,10 @@ import { Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { VariableContent } from '../interfaces/variable-content.interface';
 import { StaticContent } from '../interfaces/static-content.interface';
-import { MergedContent } from '../interfaces/merged-content.interface.js';
+import { MergedAboutContent, MergedContent, MergedProjectContent } from '../interfaces/merged-content.interface.js';
 import { FeedbackContent } from '../interfaces/feedback.interface.js';
 import { GeneralInfos } from '../interfaces/general-infos.interface.js';
+import { MergedProject } from '../interfaces/project.interface.js';
 
 @Injectable({
   providedIn: 'root',
@@ -38,10 +39,7 @@ export class PageContentService {
     if (!variable || !statics) return;
 
     const merged = { ...variable, ...statics } as MergedContent;
-    delete (merged as any).staticAboutInfos;
-    delete (merged as any).staticProjectInfos;
-    delete (merged as any).staticFeedbackInfos;
-    delete (merged as any).staticGeneralInfos;
+    this.deleteRedundantJsonParts(merged);
 
     merged.about = this.addAboutToMerged(variable, statics);
     merged.feedback = this.addFeedbackToMerged(variable, statics);
@@ -53,7 +51,7 @@ export class PageContentService {
     console.log(merged);
   }
 
-  private addAboutToMerged(variable: VariableContent, statics: StaticContent): any {
+  private addAboutToMerged(variable: VariableContent, statics: StaticContent): MergedAboutContent {
     return {
       ...variable.about,
       skills: statics.staticAboutInfos.staticSkillIcons,
@@ -85,5 +83,12 @@ export class PageContentService {
       ...variable.generalInfos,
       ...statics.staticGeneralInfos,
     };
+  }
+
+  deleteRedundantJsonParts(merged: MergedContent) {
+    delete (merged as any).staticAboutInfos;
+    delete (merged as any).staticProjectInfos;
+    delete (merged as any).staticFeedbackInfos;
+    delete (merged as any).staticGeneralInfos;
   }
 }

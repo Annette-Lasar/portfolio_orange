@@ -1,0 +1,16 @@
+@use '@angular/material' as mat;
+@use '../../../../scss_styles//color-palettes' as palettes;
+@use '../../../../scss_styles/index.scss' as *;
+
+section {
+  padding: 2em 0.5em;
+}
+
+.contact-form-wrapper {
+  padding: 2em 1em;
+  background-color: #{mat.m2-get-color-from-palette(palettes.$portfolio-primary, 500)};
+  color: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 500)};
+  p {
+    color: inherit;
+  }
+}

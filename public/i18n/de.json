@@ -183,11 +183,23 @@
   },
   "contact": {
     "heading": "Kontakt",
+    "subHeading": "Lust auf ein neues Projekt?",
+    "introduction": "Schreiben Sie mir. Ich freue mich auf Ihre Ideen.",
+    "acceptPrivacyPolicy": "Ich habe die <a>Datenschutzbestimmungen</a> gelesen und stimme der Vereinbarung meiner Daten zu.",
     "form": {
       "name": "Name",
-      "email": "E-Mail",
+      "namePlaceholder": "Ihr Name",
+      "email": "E-Mail-Adresse",
+      "emailPlaceholder": "Ihre E-Mail-Adresse",
       "message": "Nachricht",
-      "submit": "Absenden"
+      "messagePlaceholder": "Ihre Nachricht",
+      "submit": "Absenden",
+      "errors": {
+        "errorMissingName": "Bitte geben Sie Ihren Namen ein.",
+        "errorMissingEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+        "errorMissingMessage": "Bitte geben Sie eine Nachricht ein.",
+        "errorPrivacyPolicyUnchecked": "Bitte akzeptieren Sie die Datenschutzbestimmungen."
+      }
     }
   },
   "menu": {
