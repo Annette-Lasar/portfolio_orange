@@ -5,8 +5,30 @@ section {
   height: 100vh;
   height: 100dvh;
   background-color: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 400)};
-}
+  img {
+    height: clamp(28vh, 35vh, 40vh);
+    max-height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
 
-button {
-  border-radius: 0;
+  .text-content-wrapper {
+    padding: 0.5em;
+    .headline-wrapper {
+      width: fit-content;
+      .orange-underline {
+        width: 100%;
+        height: 4px;
+        margin: 0 0 8px;
+        background-color: #{mat.m2-get-color-from-palette(palettes.$portfolio-accent, 500)};
+      }
+    }
+  }
+}
+.button-wrapper {
+  padding: 0 0.5em;
+  button {
+    margin: 0 auto;
+    border-radius: 0;
+  }
 }

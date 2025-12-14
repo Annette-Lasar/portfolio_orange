@@ -5,7 +5,7 @@
 :host ::ng-deep mat-toolbar.custom-toolbar {
   width: 95%;
   position: fixed;
-  bottom: 1em;
+  bottom: 0.5em;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -26,8 +26,10 @@
       }
     }
     .button-caption {
+      padding: 0;
       display: block;
       font-size: 0.4rem;
+      border: 1px solid green;
     }
   }
 }

@@ -12,15 +12,7 @@ import { MergedProject } from '../../../shared/interfaces/project.interface.js';
 export class Projects implements OnInit {
   frontendProjects: MergedProject[] = [];
   backendProjects: MergedProject[] = [];
-  constructor(public pageContentService: PageContentService) {
-    effect(() => {
-      const data = this.pageContentService.mergedContent();
-      if (data) {
-        this.frontendProjects = data.projectInfos.projects.filter((p) => p.category === 'frontend');
-        this.backendProjects = data.projectInfos.projects.filter((p) => p.category === 'backend');
-      }
-    });
-  }
+  constructor(public pageContentService: PageContentService) {}
 
   ngOnInit(): void {
     this.pageContentService.loadVariableContent('de');

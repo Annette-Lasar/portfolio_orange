@@ -1,21 +1,24 @@
 <section>
-  @if (pageContentService.mergedContent()) {
-  <img
-    [src]="pageContentService.mergedContent()?.generalInfos?.candidateImg01"
-    [alt]="pageContentService.mergedContent()?.generalInfos?.candidateImgAlt"
-  />
-  <p>{{ pageContentService.mergedContent()?.hero?.greeting }}</p>
-  <h1>
-    {{ pageContentService.mergedContent()?.hero?.name }}
-  </h1>
-  @for (intro of pageContentService.mergedContent()!.hero.introduction; track intro){
-  <p>{{ intro }}</p>
-  }
+  @if (mergedContent$ | async; as content) {
+  <img [src]="content.generalInfos.candidateImg01" [alt]="content.generalInfos.candidateImgAlt" />
+  <div class="text-content-wrapper">
+    <p>{{ content.hero.greeting }}</p>
+    <div class="headline-wrapper">
+      <h1>
+        {{ content.hero.name }}
+      </h1>
+      <div class="orange-underline"></div>
+    </div>
 
-  <button matButton="filled" color="accent">
-    {{ pageContentService.mergedContent()?.hero?.buttonCaption }}
-  </button>
-  }
-
+    @for (intro of content.hero.introduction; track intro){
+    <p>{{ intro }}</p>
+    }
+  </div>
+  <div class="button-wrapper">
+    <button matButton="filled" color="accent">
+      {{ content.hero.buttonCaption }}
+    </button>
+  </div>
   <port-menu />
+  }
 </section>

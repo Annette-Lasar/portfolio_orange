@@ -34,4 +34,12 @@ export interface StaticProjectInfos {
   staticProjects: StaticProject[];
 }
 
-export interface MergedProject extends Project, StaticProject {}
+// export interface MergedProject extends Project, StaticProject {}
+
+export interface MergedProject extends Project {
+  title?: string;
+  technologies?: string[];
+  imagePath?: string;
+  links?: StaticProjectLink;
+  category?: string;
+}
