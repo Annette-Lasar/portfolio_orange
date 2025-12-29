@@ -61,6 +61,10 @@ mat-card-content {
   line-height: 1.2;
 }
 
+p {
+  margin: 0 0 4px;
+}
+
 @include mat.card-overrides(
   (
     title-text-font: 'Lexend, sans-serif',

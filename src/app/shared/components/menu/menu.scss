@@ -2,14 +2,21 @@
 @use '../../../../scss_styles/color-palettes' as palettes;
 @use '../../../../scss_styles/index' as *;
 
-:host ::ng-deep mat-toolbar.custom-toolbar {
+nav {
   width: 95%;
+  max-width: 500px;
   position: fixed;
   bottom: 0.5em;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
   height: 44px;
+  border-radius: 38px;
+  background-color: mat.m2-get-color-from-palette(palettes.$portfolio-accent, 500);
+}
+
+:host ::ng-deep mat-toolbar.custom-toolbar {
+  max-height: 100%;
   @include flex-layout();
   border-radius: 38px;
   background-color: mat.m2-get-color-from-palette(palettes.$portfolio-accent, 500);
@@ -31,5 +38,29 @@
       font-size: 0.4rem;
       border: 1px solid green;
     }
+  }
+}
+
+:host ::ng-deep .mat-mdc-icon-button .mat-icon {
+  color: mat.m2-get-color-from-palette(palettes.$portfolio-primary, 500) !important;
+}
+
+@media (min-width: 37.5em) {
+  nav {
+    width: 44px;
+    height: 80vh;
+    max-height: 600px;
+    top: 50%;
+    right: 1em;
+    left: auto; 
+    bottom: auto; 
+    padding: 1em 0;
+    transform: translate(0, -50%);
+    border: 2px solid royalblue;
+  }
+
+  :host ::ng-deep mat-toolbar.custom-toolbar {
+    height: 100%;
+    @include flex-layout($direction: column);
   }
 }
