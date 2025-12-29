@@ -7,6 +7,10 @@ section {
   grid-template-areas:
     'content'
     'footer';
+  #page {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 }
 
 main {

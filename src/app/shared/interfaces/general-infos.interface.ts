@@ -1,5 +1,6 @@
 export interface StaticGeneralInfos {
   candidateImg01: string;
+  candidateImg02: string;
   closeX: string;
   arrowLeft: string;
   arrowRight: string;

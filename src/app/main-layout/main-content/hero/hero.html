@@ -1,9 +1,9 @@
 <section>
   @if (mergedContent$ | async; as content) {
-  <img [src]="content.generalInfos.candidateImg01" [alt]="content.generalInfos.candidateImgAlt" />
+  <div class="picture"></div>
   <div class="content-wrapper">
     <div class="text-content-wrapper">
-      <p>{{ content.hero.greeting }}</p>
+      <p class="greeting">{{ content.hero.greeting }}</p>
       <div class="headline-wrapper">
         <h1>
           {{ content.hero.name }}
