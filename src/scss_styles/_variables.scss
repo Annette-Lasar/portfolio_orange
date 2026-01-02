@@ -43,7 +43,8 @@ $z-overlay: 2000;
 $z-modal: 3000;
 
 // Breakpoints
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
+$breakpoint-sm: 36em; // 576px
+$breakpoint-md: 48em; // 768px
+$breakpoint-lg: 62em; // 992px
+$breakpoint-xl: 75em; //1200px
+

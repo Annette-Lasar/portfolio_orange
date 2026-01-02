@@ -1,10 +1,9 @@
-<p>feedback works!</p>
-<!-- <section>
-  @if(pageContentService.mergedContent()) {
-  <h2>{{ pageContentService.mergedContent()?.feedback?.heading }}</h2>
+<section>
+  @if(mergedContent$ | async; as content) {
+  <h2>{{ content.feedback.heading }}</h2>
 
   <div class="cards-container">
-    @for (fb of pageContentService.mergedContent()?.feedback?.feedbackInfos; track fb.id) {
+    @for (fb of content.feedback.feedbackInfos; track fb.id) {
     <mat-card class="feedback-card" appearance="outlined">
       <mat-card-header>
         <div
@@ -22,4 +21,4 @@
     }
   </div>
   }
-</section> -->
+</section>

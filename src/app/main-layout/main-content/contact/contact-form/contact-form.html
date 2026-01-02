@@ -1,27 +1,25 @@
-<p>contact-form works!</p>
-
-<!-- <section>
-  @if (pageContentService.mergedContent()?.contact?.form) {
+<section>
+  @if (mergedContent$ | async; as content) {
   <form class="contact-form">
     <mat-form-field class="full-width">
             <mat-label>
-        {{ pageContentService.mergedContent()?.contact?.form?.name }}
+        {{ content.contact.form.name }}
       </mat-label>
       <input
         matInput
-        [placeholder]="pageContentService.mergedContent()?.contact?.form?.namePlaceholder || ''"
+        [placeholder]="content.contact.form.namePlaceholder || ''"
         required
       />
       @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
       <mat-error>
-        {{ pageContentService.mergedContent()?.contact?.form?.errors?.errorMissingName }}
+        {{ content.contact.form.errors.errorMissingName }}
       </mat-error>
       }
     </mat-form-field>
 
     <mat-form-field class="full-width">
       <mat-label>
-        {{ pageContentService.mergedContent()?.contact?.form?.email }}
+        {{ content.contact.form.email }}
       </mat-label>
       <input
         type="email"
@@ -31,21 +29,21 @@
       />
       @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
       <mat-error>
-        {{ pageContentService.mergedContent()?.contact?.form?.errors?.errorMissingEmail }}
+        {{ content.contact.form.errors.errorMissingEmail }}
       </mat-error>
       } @if (emailFormControl.hasError('required')) {
       <mat-error>
-        {{ pageContentService.mergedContent()?.contact?.form?.errors?.errorMissingEmail }}
+        {{ content.contact.form.errors.errorMissingEmail }}
       </mat-error>
       }
     </mat-form-field>
     <mat-form-field class="full-width">
       <mat-label>
-        {{ pageContentService.mergedContent()?.contact?.form?.message }}
+        {{ content.contact.form.message }}
       </mat-label>
       <textarea
         matInput
-        [placeholder]="pageContentService.mergedContent()?.contact?.form?.messagePlaceholder || ''"
+        [placeholder]="content.contact.form.messagePlaceholder || ''"
         rows="5"
         maxlength="500"
         #message
@@ -54,7 +52,7 @@
       <mat-hint class="char-hint full-width" align="end">{{ message.value.length }} / 500</mat-hint>
       @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
       <mat-error>
-        {{ pageContentService.mergedContent()?.contact?.form?.errors?.errorMissingMessage }}
+        {{ content.contact.form.errors.errorMissingMessage }}
       </mat-error>
       }
     </mat-form-field>
@@ -70,11 +68,11 @@
         <span
           class="checkbox-text"
           [innerHTML]="
-            pageContentService.mergedContent()?.contact?.acceptPrivacyPolicy || '' | linkifyPrivacy
+            content.contact.acceptPrivacyPolicy || '' | linkifyPrivacy
           "
         ></span>
       </label>
     </div>
   </form>
   }
-</section> -->
+</section>

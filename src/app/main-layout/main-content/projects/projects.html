@@ -1,27 +1,13 @@
-<p>projects works!</p>
-<!-- <section>
-  @if(pageContentService.mergedContent()?.projectInfos){
-  <h2>{{ pageContentService.mergedContent()?.projectInfos?.heading }}</h2>
+<section>
+  @if(mergedContent$ | async; as content){
+  <h2>{{ content.projectInfos.heading }}</h2>
+
+  <article>
+    @for (project of content.projectInfos.projects; track project.id) {
+
+    <port-project [project]="project" />
+    }
+  </article>
+
   }
-  <article>
-    <h3>
-      {{ pageContentService.mergedContent()?.projectInfos?.subHeading1 }}
-    </h3>
-
-    @for (project of frontendProjects; track project.id) {
-
-    <port-project [project]="project" />
-    }
-  </article>
-
-  <article>
-    <h3>
-      {{ pageContentService.mergedContent()?.projectInfos?.subHeading2 }}
-    </h3>
-
-    @for (project of backendProjects; track project.id) {
-
-    <port-project [project]="project" />
-    }
-  </article>
-</section> -->
+</section>

@@ -1,14 +1,13 @@
-<p>cv works!</p>
-<!-- <section>
-  @if(pageContentService.variableContent()?.cv) {
-  <h2>{{ pageContentService.variableContent()?.cv?.heading }}</h2>
-  <h4>{{ pageContentService.variableContent()?.cv?.subHeadingTillNow }}</h4>
-  <p>{{ pageContentService.variableContent()?.cv?.introductionTillNow }}</p>
+<section>
+  @if(mergedContent$ | async; as content) {
+  <h2>{{ content.cv.heading }}</h2>
+  <h4>{{ content.cv.subHeadingTillNow }}</h4>
+  <p>{{ content.cv.introductionTillNow }}</p>
   <div class="list-content">
-    <div class="list-heading">{{ pageContentService.variableContent()?.cv?.mainStackHeading }}:</div>
+    <div class="list-heading">{{ content.cv.mainStackHeading }}:</div>
 
     <ul>
-      @for(mainStack of pageContentService.variableContent()?.cv?.mainStackList; track mainStack) {
+      @for(mainStack of content.cv.mainStackList; track mainStack) {
       <li>
         {{ mainStack }}
       </li>
@@ -16,26 +15,26 @@
     </ul>
   </div>
 
-  <h4>{{ pageContentService.variableContent()?.cv?.subHeadingCarreer }}</h4>
-  <p>{{ pageContentService.variableContent()?.cv?.introductionCarreer }}</p>
+  <h4>{{ content.cv.subHeadingCarreer }}</h4>
+  <p>{{ content.cv.introductionCarreer }}</p>
 
   <div class="list-content">
-    <div class="list-heading">{{ pageContentService.variableContent()?.cv?.mainEmphasisHeading }}:</div>
+    <div class="list-heading">{{ content.cv.mainEmphasisHeading }}:</div>
 
     <ul>
-      @for(mainEmphasis of pageContentService.variableContent()?.cv?.mainEmphasisList; track
-      mainEmphasis) {
+      @for(mainEmphasis of content.cv.mainEmphasisList; track mainEmphasis) {
       <li>
         {{ mainEmphasis }}
       </li>
       }
     </ul>
   </div>
-  }
-   <button mat-flat-button color="accent" class="cv-download-btn">
+
+  <button mat-flat-button color="accent" class="cv-download-btn">
     <span class="mdc-button__label">
-      <span>{{ pageContentService.variableContent()?.cv?.buttonCaption }}</span>
+      <span>{{ content.cv.buttonCaption }}</span>
       <mat-icon fontIcon="download"></mat-icon>
     </span>
   </button>
-</section> -->
+  }
+</section>

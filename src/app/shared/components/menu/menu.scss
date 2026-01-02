@@ -45,11 +45,12 @@ nav {
   color: mat.m2-get-color-from-palette(palettes.$portfolio-primary, 500) !important;
 }
 
-@media (min-width: 48em) {
+@media (min-width: $breakpoint-md) {
   nav {
     width: 44px;
     height: 80vh;
     max-height: 600px;
+    position: absolute;
     top: 50%;
     right: 1em;
     left: auto; 

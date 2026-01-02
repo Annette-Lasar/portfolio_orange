@@ -1,19 +1,18 @@
-<p>about works!</p>
+<section>
+  @if (mergedContent$ | async; as content) {
+  <h2>{{ content.about.heading }}</h2>
+  <div>{{ content.about.subHeading }}</div>
 
-<!-- <section *ngIf="mergedContent$ | async as content">
-  @if (pageContentService.mergedContent()) {
-  <h2>{{ pageContentService.mergedContent()?.about?.heading }}</h2>
-  <div>{{ pageContentService.mergedContent()?.about?.subHeading }}</div>
-
-  @for (intro of pageContentService.variableContent()!.about.introduction; track intro) {
+  @for (intro of content.about.introduction; track intro) {
   <p>{{ intro }}</p>
   }
 
-  <h5>{{ pageContentService.mergedContent()?.about?.skillsHeading }}</h5>
+  <h5>{{ content.about.skillsHeading }}</h5>
 
   <mat-tab-group class="about-tabs">
-    <mat-tab [label]="pageContentService.mergedContent()!.about.tabHeading1">
-      @for (frontendIcon of frontendIcons; track frontendIcon.id) {
+    <mat-tab [label]="content.about.tabHeading1">
+      @if (frontendIcons$ | async; as frontendIcons) { @for (frontendIcon of frontendIcons; track
+      frontendIcon.id) {
       <figure>
         <img
           [src]="'icons/skills/' + frontendIcon.iconPath"
@@ -22,10 +21,11 @@
         />
         <figcaption>{{ frontendIcon.caption }}</figcaption>
       </figure>
-      }
+      } }
     </mat-tab>
-    <mat-tab [label]="pageContentService.variableContent()!.about.tabHeading2">
-      @for (backendIcon of backendIcons; track backendIcon.id) {
+    <mat-tab [label]="content.about.tabHeading2">
+      @if (backendIcons$ | async; as backendIcons) { @for (backendIcon of backendIcons; track
+      backendIcon.id) {
       <figure>
         <img
           [src]="'icons/skills/' + backendIcon.iconPath"
@@ -34,10 +34,8 @@
         />
         <figcaption>{{ backendIcon.caption }}</figcaption>
       </figure>
-      }
+      } }
     </mat-tab>
   </mat-tab-group>
   }
-</section> -->
-
-
+</section>

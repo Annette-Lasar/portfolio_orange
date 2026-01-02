@@ -25,10 +25,6 @@ section {
   .content-wrapper {
     margin: 0 auto;
     max-width: 400px;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-evenly;
-    // align-items: center;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -73,10 +69,11 @@ section {
   }
 }
 
-@media (min-width: 48em) {
+@media (min-width: $breakpoint-md) {
   section {
     padding: 0;
     @include flex-layout($direction: row-reverse, $justify: center);
+    position: relative;
     .picture {
       // border: 2px solid green;
       width: 50%;
@@ -88,9 +85,12 @@ section {
     .content-wrapper {
       margin: 0;
       max-width: unset;
-      row-gap: 1em;
+      row-gap: 3em;
       .text-content-wrapper {
         row-gap: 1em;
+      }
+      .button-wrapper {
+        margin: unset;
       }
     }
   }

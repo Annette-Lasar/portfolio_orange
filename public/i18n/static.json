@@ -129,43 +129,21 @@
     "githubButton": "Github",
     "staticProjects": [
       {
-        "id": "pokedex",
-        "title": "Pokédex",
-        "technologies": ["JS", "API"],
-        "imagePath": "pokedex.jpg",
-        "links": {
-          "github": "https://github.com/Annette-Lasar/Pokedex",
-          "demo": "https://pokedex.annette-lasar.de/"
-        },
-        "category": "frontend"
-      },
-      {
-        "id": "mermaid",
-        "title": "Mermaid",
-        "technologies": ["JS", "OOP"],
-        "imagePath": "mermaid.jpg",
-        "links": {
-          "github": "https://github.com/Annette-Lasar/Mermaid",
-          "demo": "https://mermaid.annette-lasar.de/"
-        },
-        "category": "frontend"
-      },
-      {
-        "id": "dabubble",
-        "title": "DABubble",
-        "technologies": ["Angular", "Firestore"],
-        "imagePath": "da_bubble.png",
-        "links": {
-          "github": "",
-          "demo": ""
-        },
-        "category": "frontend"
-      },
-      {
         "id": "join",
         "title": "Join",
         "technologies": ["Angular", "Django"],
         "imagePath": "join.png",
+        "links": {
+          "github": "",
+          "demo": ""
+        },
+        "category": "backend"
+      },
+      {
+        "id": "videoflix",
+        "title": "Videoflix",
+        "technologies": ["JS", "Django"],
+        "imagePath": "videoflix.png",
         "links": {
           "github": "",
           "demo": ""
@@ -184,15 +162,26 @@
         "category": "backend"
       },
       {
-        "id": "videoflix",
-        "title": "Videoflix",
-        "technologies": ["JS", "Django"],
-        "imagePath": "videoflix.png",
+        "id": "mermaid",
+        "title": "Mermaid",
+        "technologies": ["JS", "OOP"],
+        "imagePath": "mermaid.jpg",
         "links": {
-          "github": "",
-          "demo": ""
+          "github": "https://github.com/Annette-Lasar/Mermaid",
+          "demo": "https://mermaid.annette-lasar.de/"
         },
-        "category": "backend"
+        "category": "frontend"
+      },
+      {
+        "id": "pokedex",
+        "title": "Pokédex",
+        "technologies": ["JS", "API"],
+        "imagePath": "pokedex.jpg",
+        "links": {
+          "github": "https://github.com/Annette-Lasar/Pokedex",
+          "demo": "https://pokedex.annette-lasar.de/"
+        },
+        "category": "frontend"
       }
     ]
   },

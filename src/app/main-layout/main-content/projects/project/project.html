@@ -1,6 +1,6 @@
-<p>project works!</p>
+<!-- <p>project works!</p> -->
 
-<!-- <button>
+<button>
   <div>
     <img [src]="'./img/projects/' + project.imagePath" [alt]="project.title" />
   </div>
@@ -8,8 +8,8 @@
     <div>{{ project.title }}</div>
     <div>
       @for (tech of project.technologies; track tech; let i = $index) {
-      <span>{{ tech }}{{ i < project.technologies.length - 1 ? ' / ' : '' }}</span>
+      <span>{{ tech }}{{ i < technologies.length - 1 ? ' / ' : '' }}</span>
       }
     </div>
   </div>
-</button> -->
+</button>

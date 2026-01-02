@@ -1,41 +1,40 @@
-<nav aria-label="Hauptnavigation">
-  @if (mergedContent$ | async; as content) {
+@if (mergedContent$ | async; as content) { @if (isMobile$ | async) {
 
+<nav [aria-label]="content.generalInfos.mainNavigationLabel" class="menu-floating">
   <mat-toolbar class="custom-toolbar">
     <div class="button-wrapper">
-      <button matIconButton class="menu-icon favorite-icon" [aria-label]="content.menu.home">
-        <mat-icon>home</mat-icon>
-      </button>
-    </div>
-    <div class="button-wrapper">
-      <button matIconButton class="menu-icon favorite-icon" [aria-label]="content.menu.about">
-        <mat-icon>person</mat-icon>
-      </button>
+      <button matIconButton [aria-label]="content.menu.home"><mat-icon>home</mat-icon></button>
     </div>
 
     <div class="button-wrapper">
-      <button matIconButton class="menu-icon favorite-icon" [aria-label]="content.menu.projects">
-        <mat-icon>code</mat-icon>
-      </button>
+      <button matIconButton [aria-label]="content.menu.about"><mat-icon>person</mat-icon></button>
     </div>
 
     <div class="button-wrapper">
-      <button matIconButton class="menu-icon favorite-icon" [aria-label]="content.menu.feedback">
-        <mat-icon>forum</mat-icon>
-      </button>
+      <button matIconButton [aria-label]="content.menu.projects"><mat-icon>code</mat-icon></button>
     </div>
 
     <div class="button-wrapper">
-      <button matIconButton class="menu-icon favorite-icon" [aria-label]="content.menu.cv">
-        <mat-icon>description</mat-icon>
-      </button>
+      <button matIconButton [aria-label]="content.menu.feedback"><mat-icon>forum</mat-icon></button>
     </div>
 
     <div class="button-wrapper">
-      <button matIconButton class="menu-icon favorite-icon" [aria-label]="content.menu.contact">
+      <button matIconButton [aria-label]="content.menu.cv"><mat-icon>description</mat-icon></button>
+    </div>
+
+    <div class="button-wrapper">
+      <button matIconButton [aria-label]="content.menu.contact">
         <mat-icon>alternate_email</mat-icon>
       </button>
     </div>
   </mat-toolbar>
-  }
 </nav>
+
+} @else {
+<aside>
+  <nav [aria-label]="content.generalInfos.mainNavigationLabel" class="menu-floating">
+    <p>Hier aside!</p>
+  </nav>
+</aside>
+
+} }

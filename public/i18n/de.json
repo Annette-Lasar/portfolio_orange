@@ -1,6 +1,7 @@
 {
   "generalInfos": {
-    "candidateImgAlt": "Foto der Bewerberin"
+    "candidateImgAlt": "Foto der Bewerberin",
+    "mainNavigationLabel": "Hauptnavigation"
   },
   "hero": {
     "greeting": "Hallo, ich bin",
@@ -32,40 +33,6 @@
     "tryButton": "Testen",
     "projects": [
       {
-        "id": "pokedex",
-        "description": [
-          "Der Pokédex ist eine interaktive Webanwendung, die einen Überblick über verschiedene Pokémon bietet. Über eine öffentliche API werden Daten wie Name, Typ und Bild geladen und benutzerfreundlich dargestellt.",
-          "Das Projekt demonstriert den Umgang mit REST-APIs und grundlegende DOM-Manipulation in JavaScript: Abfragen, Rendern von Ergebnissen und die dynamische Erstellung einer Detailansicht für jedes Pokémon."
-        ],
-        "workflow": [
-          "Für den Pokédex gab es kein vorgegebenes Mockup - das Design habe ich mir anhand von Beispielen aus dem Internet erarbeitet.",
-          "Zunächst habe ich den Abruf und die Darstellung von 20 Pokémon umgesetzt und ihre Karten gestaltet. Anschließend erweiterte ich die Anwendung um das Nachladen weiterer Pokémon per Klick.",
-          "Darauf folgte die Gestaltung der Detailansichten sowie die Implementierung einer Suchfunktion, mit der gezielt nach Pokémon gesucht werden kann."
-        ]
-      },
-      {
-        "id": "mermaid",
-        "description": [
-          "Dieses Spiel wurde im Rahmen der Weiterbildung mit Vanilla JavaScript entwickelt. Das Ziel: Hilf dem Meermädchen, Perlen und Sterne zu sammeln, sich gegen feindliche Meeresbewohner zu verteidigen und am Ende den goldenen Schlüssel zu finden, um die Schatztruhe zu öffnen.",
-          "Das gesamte Spiel basiert auf objektorientierter Programmierung mit klar getrennten Klassen für Spielfigur, Gegner, Objekte und Spiellogik."
-        ],
-        "workflow": [
-          "Da keine Vorlage oder genauere Beschreibung vorgegeben war, habe ich das Spiel schrittweise konzipiert und entwickelt.",
-          "Ich habe Funktionen und Klassen iterativ erstellt, getestet und bei Bedarf refaktoriert – ein Prozess, der mein Verständnis für OOP und Spielmechanik vertieft hat. Die visuelle Gestaltung entstand größtenteils parallel zum Coding, da das Projekt auch viel Raum für kreative Entscheidungen ließ."
-        ]
-      },
-      {
-        "id": "dabubble",
-        "description": [
-          "DABubble ist ein moderner Messenger-Dienst im Stil von Slack oder Discord. Nutzerinnen und Nutzer können in Kanälen oder Direktnachrichten kommunizieren und Nachrichten mit Emojis markieren.",
-          "Das Projekt zeigt den Einsatz von Angular in Kombination mit Firestore: Authentifizierung, Speicherung von Sofort-Nachrichten in Echtzeit sowie die Verwaltung von Channel- und User-Daten."
-        ],
-        "workflow": [
-          "Die ersten Schritte für DABubble basierten auf einem Mockup in Figma, das die Gestaltung und Struktur der App vorgibt.",
-          "Für die Darstellung der Emojis habe ich SVG-Dateien nach Kategorien gebündelt, um die Zahl der HTTP-Anfragen zu reduzieren."
-        ]
-      },
-      {
         "id": "join",
         "description": [
           "Join ist eine Kanban-App zur Organisation von Aufgaben und Kontakten. Neue Aufgaben können erstellt, bestehenden Listen zugeordnet und per Drag & Drop verschoben werden.",
@@ -76,6 +43,18 @@
           "Zunächst habe ich das Backend mit Django umgesetzt, um stabile API-Endpoints für Authentifizierung, Aufgabenverwaltung und Kontakte bereitzustellen.",
           "Darauf aufbauend habe ich das Frontend mit Angular und SCSS entwickelt und die Integration zwischen Frontend und Backend sichergestellt.",
           "Während des Entwicklungsprozesses habe ich das Backend gezielt erweitert und optimiert, um zusätzliche Anforderungen des Frontends zu unterstützen."
+        ]
+      },
+      {
+        "id": "videoflix",
+        "description": [
+          "Videoflix ist eine Streaming-Plattform nach dem Vorbild von Netflix. Nutzerinnen und Nutzer können sich registrieren, ihr Konto per E-Mail-Link aktivieren und bei Bedarf das Passwort zurücksetzen.",
+          "Das Projekt wurde mit Django umgesetzt und bietet Videoverwaltung mit Kategorien, automatischer Thumbnail-Erstellung sowie Segmentierung und Speicherung in mehreren Auflösungen."
+        ],
+        "workflow": [
+          "Bei Videoflix lag der Fokus ebenfalls auf dem Backend - das Frontend war vorgegeben. Ein Schwerpunkt war die Authentifizierung über E-Mail-Adresse anstelle eines klassischen Benutzernamens.",
+          "Auf Grundlage einer detaillierten API-Dokumentation habe ich die benötigten Endpoints umgesetzt, mit Postman getestet und zusätzlich Unit-Tests geschrieben.",
+          "Zum Abschluss habe ich die Integration mit dem Frontend geprüft, insbesondere die Authentifizierung, die Kontoaktivierung per E-Mail-Link, das Zurücksetzen des Passworts sowie die Auslieferung der Videos in verschiedenen Auflösungen."
         ]
       },
       {
@@ -92,15 +71,26 @@
         ]
       },
       {
-        "id": "videoflix",
+        "id": "mermaid",
         "description": [
-          "Videoflix ist eine Streaming-Plattform nach dem Vorbild von Netflix. Nutzerinnen und Nutzer können sich registrieren, ihr Konto per E-Mail-Link aktivieren und bei Bedarf das Passwort zurücksetzen.",
-          "Das Projekt wurde mit Django umgesetzt und bietet Videoverwaltung mit Kategorien, automatischer Thumbnail-Erstellung sowie Segmentierung und Speicherung in mehreren Auflösungen."
+          "Dieses Spiel wurde im Rahmen der Weiterbildung mit Vanilla JavaScript entwickelt. Das Ziel: Hilf dem Meermädchen, Perlen und Sterne zu sammeln, sich gegen feindliche Meeresbewohner zu verteidigen und am Ende den goldenen Schlüssel zu finden, um die Schatztruhe zu öffnen.",
+          "Das gesamte Spiel basiert auf objektorientierter Programmierung mit klar getrennten Klassen für Spielfigur, Gegner, Objekte und Spiellogik."
         ],
         "workflow": [
-          "Bei Videoflix lag der Fokus ebenfalls auf dem Backend - das Frontend war vorgegeben. Ein Schwerpunkt war die Authentifizierung über E-Mail-Adresse anstelle eines klassischen Benutzernamens.",
-          "Auf Grundlage einer detaillierten API-Dokumentation habe ich die benötigten Endpoints umgesetzt, mit Postman getestet und zusätzlich Unit-Tests geschrieben.",
-          "Zum Abschluss habe ich die Integration mit dem Frontend geprüft, insbesondere die Authentifizierung, die Kontoaktivierung per E-Mail-Link, das Zurücksetzen des Passworts sowie die Auslieferung der Videos in verschiedenen Auflösungen."
+          "Da keine Vorlage oder genauere Beschreibung vorgegeben war, habe ich das Spiel schrittweise konzipiert und entwickelt.",
+          "Ich habe Funktionen und Klassen iterativ erstellt, getestet und bei Bedarf refaktoriert – ein Prozess, der mein Verständnis für OOP und Spielmechanik vertieft hat. Die visuelle Gestaltung entstand größtenteils parallel zum Coding, da das Projekt auch viel Raum für kreative Entscheidungen ließ."
+        ]
+      },
+      {
+        "id": "pokedex",
+        "description": [
+          "Der Pokédex ist eine interaktive Webanwendung, die einen Überblick über verschiedene Pokémon bietet. Über eine öffentliche API werden Daten wie Name, Typ und Bild geladen und benutzerfreundlich dargestellt.",
+          "Das Projekt demonstriert den Umgang mit REST-APIs und grundlegende DOM-Manipulation in JavaScript: Abfragen, Rendern von Ergebnissen und die dynamische Erstellung einer Detailansicht für jedes Pokémon."
+        ],
+        "workflow": [
+          "Für den Pokédex gab es kein vorgegebenes Mockup - das Design habe ich mir anhand von Beispielen aus dem Internet erarbeitet.",
+          "Zunächst habe ich den Abruf und die Darstellung von 20 Pokémon umgesetzt und ihre Karten gestaltet. Anschließend erweiterte ich die Anwendung um das Nachladen weiterer Pokémon per Klick.",
+          "Darauf folgte die Gestaltung der Detailansichten sowie die Implementierung einer Suchfunktion, mit der gezielt nach Pokémon gesucht werden kann."
         ]
       }
     ]
