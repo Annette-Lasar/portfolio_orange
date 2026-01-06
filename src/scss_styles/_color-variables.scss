@@ -1,0 +1,73 @@
+@use '@angular/material' as mat;
+@use 'color-palettes' as palettes;
+
+:root {
+    // primary colors
+    --color-primary-50: #{mat.m2-get-color-from-palette(palettes.$portfolio-primary, 50)};
+    --color-primary-100: #{mat.m2-get-color-from-palette(palettes.$portfolio-primary, 100)};
+    --color-primary-200: #{mat.m2-get-color-from-palette(palettes.$portfolio-primary, 200)};
+    --color-primary-300: #{mat.m2-get-color-from-palette(palettes.$portfolio-primary, 300)};
+    --color-primary-400: #{mat.m2-get-color-from-palette(palettes.$portfolio-primary, 400)};
+    --color-primary-500: #{mat.m2-get-color-from-palette(palettes.$portfolio-primary, 500)};
+    --color-primary-600: #{mat.m2-get-color-from-palette(palettes.$portfolio-primary, 600)};
+    --color-primary-700: #{mat.m2-get-color-from-palette(palettes.$portfolio-primary, 700)};
+    --color-primary-800: #{mat.m2-get-color-from-palette(palettes.$portfolio-primary, 800)};
+    --color-primary-900: #{mat.m2-get-color-from-palette(palettes.$portfolio-primary, 900)};
+
+    --color-primary-contrast-50: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 50)};
+    --color-primary-contrast-100: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 100)};
+    --color-primary-contrast-200: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 200)};
+    --color-primary-contrast-300: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 300)};
+    --color-primary-contrast-400: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 400)};
+    --color-primary-contrast-500: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 500)};
+    --color-primary-contrast-600: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 600)};
+    --color-primary-contrast-700: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 700)};
+    --color-primary-contrast-800: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 800)};
+    --color-primary-contrast-900: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 900)};
+
+    // accent colors
+    --color-accent-50: #{mat.m2-get-color-from-palette(palettes.$portfolio-accent, 50)};
+    --color-accent-100: #{mat.m2-get-color-from-palette(palettes.$portfolio-accent, 100)};
+    --color-accent-200: #{mat.m2-get-color-from-palette(palettes.$portfolio-accent, 200)};
+    --color-accent-300: #{mat.m2-get-color-from-palette(palettes.$portfolio-accent, 300)};
+    --color-accent-400: #{mat.m2-get-color-from-palette(palettes.$portfolio-accent, 400)};
+    --color-accent-500: #{mat.m2-get-color-from-palette(palettes.$portfolio-accent, 500)};
+    --color-accent-600: #{mat.m2-get-color-from-palette(palettes.$portfolio-accent, 600)};
+    --color-accent-700: #{mat.m2-get-color-from-palette(palettes.$portfolio-accent, 700)};
+    --color-accent-800: #{mat.m2-get-color-from-palette(palettes.$portfolio-accent, 800)};
+    --color-accent-900: #{mat.m2-get-color-from-palette(palettes.$portfolio-accent, 900)};
+
+    --color-accent-contrast-50: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-accent, 50)};
+    --color-accent-contrast-100: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-accent, 100)};
+    --color-accent-contrast-200: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-accent, 200)};
+    --color-accent-contrast-300: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-accent, 300)};
+    --color-accent-contrast-400: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-accent, 400)};
+    --color-accent-contrast-500: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-accent, 500)};
+    --color-accent-contrast-600: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-accent, 600)};
+    --color-accent-contrast-700: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-accent, 700)};
+    --color-accent-contrast-800: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-accent, 800)};
+    --color-accent-contrast-900: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-accent, 900)};
+
+    // warning colors
+    --color-warn-50: #{mat.m2-get-color-from-palette(palettes.$portfolio-warn, 50)};
+    --color-warn-100: #{mat.m2-get-color-from-palette(palettes.$portfolio-warn, 100)};
+    --color-warn-200: #{mat.m2-get-color-from-palette(palettes.$portfolio-warn, 200)};
+    --color-warn-300: #{mat.m2-get-color-from-palette(palettes.$portfolio-warn, 300)};
+    --color-warn-400: #{mat.m2-get-color-from-palette(palettes.$portfolio-warn, 400)};
+    --color-warn-500: #{mat.m2-get-color-from-palette(palettes.$portfolio-warn, 500)};
+    --color-warn-600: #{mat.m2-get-color-from-palette(palettes.$portfolio-warn, 600)};
+    --color-warn-700: #{mat.m2-get-color-from-palette(palettes.$portfolio-warn, 700)};
+    --color-warn-800: #{mat.m2-get-color-from-palette(palettes.$portfolio-warn, 800)};
+    --color-warn-900: #{mat.m2-get-color-from-palette(palettes.$portfolio-warn, 900)};
+
+    --color-warn-contrast-50: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-warn, 50)};
+    --color-warn-contrast-100: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-warn, 100)};
+    --color-warn-contrast-200: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-warn, 200)};
+    --color-warn-contrast-300: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-warn, 300)};
+    --color-warn-contrast-400: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-warn, 400)};
+    --color-warn-contrast-500: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-warn, 500)};
+    --color-warn-contrast-600: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-warn, 600)};
+    --color-warn-contrast-700: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-warn, 700)};
+    --color-warn-contrast-800: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-warn, 800)};
+    --color-warn-contrast-900: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-warn, 900)};
+}

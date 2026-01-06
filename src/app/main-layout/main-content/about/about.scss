@@ -1,26 +1,26 @@
-@use '@angular/material' as mat;
-@use '../../../../scss_styles/color-palettes' as palettes;
-@use '../../../../scss_styles/index.scss' as *;
+// @use '@angular/material' as mat;
+// @use '../../../../scss_styles/color-palettes' as palettes;
+@use '../../../../scss_styles/index' as *;
 
 section {
   padding: 2em 0.5em;
 }
 
 ::ng-deep .about-tabs .mat-mdc-tab.mdc-tab--active {
-  background-color: #{mat.m2-get-color-from-palette(palettes.$portfolio-primary, 500)};
+  background-color: var(--color-primary-500);
 }
 
 ::ng-deep .about-tabs .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
-  color: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 500)} !important;
+  color: var(--color-primary-contrast-500) !important;
 }
 
 ::ng-deep .about-tabs .mat-mdc-tab {
-  background-color: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 500)};
-  border: 2px solid #{mat.m2-get-color-from-palette(palettes.$portfolio-primary, 500)};
+  background-color: var(--color-primary-contrast-500);
+  border: 2px solid var(--color-primary-500);
 }
 
 ::ng-deep .about-tabs .mat-mdc-tab .mdc-tab__text-label {
-  color: #{mat.m2-get-color-from-palette(palettes.$portfolio-primary, 500)} !important;
+  color: var(--color-primary-500) !important;
 }
 
 /* inactivates inkbar */
@@ -34,8 +34,8 @@ section {
   @include flex-layout($align: baseline, $justify: flex-start, $gap: 1rem);
   flex-wrap: wrap;
   font-size: 0.8rem;
-  background-color: #{mat.m2-get-color-from-palette(palettes.$portfolio-primary, 500)};
-  color: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 500)};
+  background-color: var(--color-primary-500);
+  color: var(--color-primary-contrast-500);
   figure {
     width: 75px;
     text-align: center;

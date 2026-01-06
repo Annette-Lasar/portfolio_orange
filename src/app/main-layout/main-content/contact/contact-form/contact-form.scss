@@ -1,261 +1,130 @@
-@use '@angular/material' as mat;
 @use '../../../../../scss_styles/index.scss' as *;
 
-.contact-form {
-  max-width: 600px;
-  margin: 2em auto 0;
-  // position: relative;
-  background-color: mat.m2-get-color-from-palette($portfolio-primary, 500);
-  border: 1px solid red;
-  .field-holder {
-    margin: 0 0 16px;
-    width: 100%;
-    .field {
-      position: relative;
+section {
+  background-color: var(--color-primary-500);
+  .contact-form {
+    max-width: 600px;
+    margin: 2em auto 0;
+    background-color: var(--color-primary-500);
+    .field-holder {
+      margin: 0 0 16px;
+      width: 100%;
+      .field {
+        position: relative;
 
-      input {
-        height: 48px;
-        border: transparent 2px solid;
-      }
-
-      textarea {
-        padding: 16px 0 0 1em;
-        resize: none;
-        border: transparent 2px solid;
-      }
-      label {
-        position: absolute;
-        top: 0.9rem;
-        left: 1rem;
-        color: mat.m2-get-color-from-palette($portfolio-primary, 500);
-        transition: all 0.3s ease-in-out;
-      }
-      input,
-      textarea {
-        width: 100%;
-        padding-inline-start: 1em;
-        background-color: mat.m2-get-contrast-color-from-palette($portfolio-primary, 500);
-        outline: none;
-        border: none;
-        color: mat.m2-get-color-from-palette($portfolio-primary, 500);
-        transition: all 0.3s ease;
-
-        &:focus {
-          border: mat.m2-get-contrast-color-from-palette($portfolio-primary, 500) 2px solid;
-        }
-        &:focus + label,
-        &:valid + label,
-        &:not(:placeholder-shown) + label {
-          top: -0.6rem;
-          left: 0.75rem;
-          font-size: 0.75rem;
-          background: mat.m2-get-contrast-color-from-palette($portfolio-primary, 500);
-          padding: 0 0.25rem;
-          pointer-events: none;
-        }
-        &:-webkit-autofill {
-          -webkit-box-shadow: 0 0 0px 1000px
-            mat.m2-get-contrast-color-from-palette($portfolio-primary, 500) inset;
-          -webkit-text-fill-color: mat.m2-get-color-from-palette($portfolio-primary, 500);
+        input {
+          height: 48px;
+          border: transparent 2px solid;
         }
 
-        &:-moz-autofill {
-          box-shadow: 0 0 0px 1000px mat.m2-get-contrast-color-from-palette($portfolio-primary, 500)
-            inset;
-          color: mat.m2-get-color-from-palette($portfolio-primary, 500);
+        textarea {
+          padding: 16px 0 0 1em;
+          resize: none;
+          border: transparent 2px solid;
+        }
+        label {
+          position: absolute;
+          top: 0.9rem;
+          left: 1rem;
+          color: var(--color-primary-500);
+          transition: all 0.3s ease-in-out;
+        }
+        input,
+        textarea {
+          width: 100%;
+          padding-inline-start: 1em;
+          background-color: var(--color-primary-500);
+          outline: none;
+          border: none;
+          color: var(--color-primary-500);
+          transition: all 0.3s ease;
+
+          &:focus {
+            border: 2px solid var(--color-primary-500);
+          }
+          &:focus + label,
+          &:valid + label,
+          &:not(:placeholder-shown) + label {
+            top: -0.6rem;
+            left: 0.75rem;
+            font-size: 0.75rem;
+            background: var(--color-primary-contrast-500);
+            padding: 0 0.25rem;
+            pointer-events: none;
+          }
+          &:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0px 1000px var(--color-primary-contrast-500) inset;
+            -webkit-text-fill-color: var(--color-primary-500);
+          }
+
+          &:-moz-autofill {
+            box-shadow: 0 0 0px 1000px var(--color-primary-contrast-500) inset;
+            color: var(--color-primary-500);
+          }
         }
       }
     }
-  }
 
-  .checkbox-wrapper {
-    margin: 1em 0 0;
-    font-size: 0.75rem;
-    color: mat.m2-get-contrast-color-from-palette($portfolio-primary, 400);
-    line-height: 1.5;
-    // border: red 4px solid; 
-    .custom-checkbox {
-      @include flex-layout($align: flex-start, $gap: 0.5rem);
-      .checkbox {
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        width: 14px;
-        height: 14px;
-        border: 2px solid white;
-        background-color: mat.m2-get-color-from-palette($portfolio-primary, 500);
-        border-radius: 0;
-        display: block;
-        flex-shrink: 0;
-        position: relative;
-        cursor: pointer;
-        margin-top: 5px;
-        transition: background-color 0.2s ease, border-color 0.2s ease;
-        &::after {
-          content: '';
-          position: absolute;
-          left: 3px;
-          top: 0px;
-          width: 5px;
-          height: 9px;
-          border-right: 2px solid mat.m2-get-color-from-palette($portfolio-primary, 500);
-          border-bottom: 2px solid mat.m2-get-color-from-palette($portfolio-primary, 500);
-          transform: rotate(45deg);
-          opacity: 0;
-          transition: opacity 0.15s ease;
-        }
-
-        &:checked {
-          background-color: white;
-          border-color: white;
-
+    .checkbox-wrapper {
+      margin: 1em 0 0;
+      font-size: 0.75rem;
+      color: var(--color-primary-contrast-400);
+      line-height: 1.5;
+      .custom-checkbox {
+        @include flex-layout($justify: flex-start, $gap: 1em);
+        .checkbox {
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          width: 14px;
+          height: 14px;
+          border: 2px solid white;
+          background-color: var(--color-primary-500);
+          border-radius: 0;
+          display: block;
+          flex-shrink: 0;
+          position: relative;
+          cursor: pointer;
+          margin-top: 2px;
+          transition: background-color 0.2s ease, border-color 0.2s ease;
           &::after {
-            opacity: 1;
+            content: '';
+            position: absolute;
+            left: 3px;
+            top: 0px;
+            width: 5px;
+            height: 9px;
+            border-right: 2px solid var(--color-primary-500);
+            border-bottom: 2px solid var(--color-primary-500);
+            transform: rotate(45deg);
+            opacity: 0;
+            transition: opacity 0.15s ease;
           }
-        }
 
-        &:focus-visible {
-          outline: 2px solid mat.m2-get-color-from-palette($portfolio-accent, 200);
-          outline-offset: 2px;
+          &:checked {
+            background-color: var(--color-primary-contrast-900);
+            border-color: var(--color-primary-contrast-900);
+
+            &::after {
+              opacity: 1;
+            }
+          }
+
+          &:focus-visible {
+            outline: 2px solid var(--color-accent-200);
+            outline-offset: 2px;
+          }
         }
       }
     }
   }
 
   .char-hint {
-    width: 100%;
     font-size: 0.75rem;
+    text-align: right;
   }
 }
 
 .invisible {
   opacity: 0;
 }
-
-/* @use '@angular/material' as mat;
-@use '../../../../../scss_styles/index.scss' as *;
-
-.contact-form {
-  max-width: 600px;
-  margin: 2em auto 0;
-  background-color: mat.m2-get-color-from-palette($portfolio-primary, 500);
-  border: 1px solid red;
-
-  .field-holder {
-    margin: 0 0 16px;
-    width: 100%;
-    position: relative;
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 0.8rem 0.5rem 0;
-      font-size: 1rem;
-      border: none;
-      outline: none;
-      background: #fff;
-      color: #333;
-    }
-
-    label {
-      position: absolute;
-      top: 0.9rem;
-      left: 1rem;
-      color: #333;
-      transition: all 0.25s ease;
-      pointer-events: none;
-      background: #fff;
-    }
-
-    &.active label {
-      top: -0.6rem;
-      left: 0.75rem;
-      font-size: 0.75rem;
-      padding: 0 0.25rem;
-    }
-
-    .validation-message {
-      margin-top: 0.25rem;
-      font-size: 0.8rem;
-      color: red; // oder deine Warnfarbe
-    }
-  }
-}
-
-.invisible {
-  opacity: 0;
-} */
-
-/* .contact-form {
-  max-width: 600px;
-  margin: 2em auto;
-}
-
-.field-holder {
-  position: relative;
-  margin-bottom: 1.5rem;
-
-  input,
-  textarea {
-    width: 100%;
-    padding: 1rem 0.75rem 0.25rem;
-    font-size: 1rem;
-    border: none;
-    border-bottom: 2px solid #666;
-    background-color: white;
-    color: #222;
-    transition: border-color 0.3s ease;
-    outline: none;
-
-    &:focus {
-      border-color: #1976d2;
-    }
-  }
-
-  label {
-    position: absolute;
-    top: 1rem;
-    left: 0.75rem;
-    color: #666;
-    font-size: 1rem;
-    pointer-events: none;
-    transition: all 0.25s ease;
-    background: white;
-  }
-
-  &.active label {
-    top: -0.5rem;
-    left: 0.5rem;
-    font-size: 0.75rem;
-    color: #1976d2;
-    padding: 0 0.25rem;
-  }
-} */
-
-/* .field-holder {
-  position: relative;
-  margin-bottom: 1.5rem;
-
-  label {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    color: #bbb;
-    pointer-events: none;
-    transition: transform 0.3s ease, font-size 0.3s ease;
-  }
-
-  &.focused label {
-    transform: translateY(-1.2rem) scale(0.85);
-    font-size: 0.8rem;
-    color: white;
-  }
-
-  input {
-    width: 100%;
-    padding: 1rem;
-    background: transparent;
-    border: 1px solid #aaa;
-    color: white;
-  }
-} */

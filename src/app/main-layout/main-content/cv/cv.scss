@@ -1,5 +1,5 @@
-@use '@angular/material' as mat;
-@use '../../../../scss_styles/color-palettes' as palettes;
+// @use '@angular/material' as mat;
+// @use '../../../../scss_styles/color-palettes' as palettes;
 @use '../../../../scss_styles/index.scss' as *;
 
 section {
@@ -9,25 +9,25 @@ section {
 .list-content {
   margin: 2em 0 3em;
   padding: 1.5em 1em;
-  background-color: mat.m2-get-color-from-palette(palettes.$portfolio-primary, 500);
+  background-color: var(--color-primary-500);
   .list-heading {
     margin: 0 0 1em;
-    color: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 500)};
+    color: var(--color-primary-contrast-500);
   }
   ul {
     padding: 0 0 0 0.5em;
     list-style: none;
-    color: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 500)};
+    color: var(--color-primary-contrast-500);
     li {
       position: relative;
       padding: 0 0 0 1em;
-      color: #{mat.m2-get-contrast-color-from-palette(palettes.$portfolio-primary, 500)};
+      color: var(--color-primary-contrast-500);
       line-height: 2;
       &::before {
         content: '•';
         position: absolute;
         left: 0;
-        color: mat.m2-get-color-from-palette(palettes.$portfolio-accent, 500);
+        color: var(--color-accent-500);
         line-height: 2;
       }
     }

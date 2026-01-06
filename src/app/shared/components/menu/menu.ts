@@ -80,11 +80,12 @@ import { PageContentService } from '../../services/page-content.service';
 import { ScrollService } from '../../services/scroll.service';
 import { MenuContext } from '../../type-aliases/type-aliases';
 import { MenuViewModel } from '../../interfaces/menu.interface';
+import { LanguageDropdown } from '../language-dropdown/language-dropdown';
 
 @Component({
   selector: 'port-menu',
   standalone: true,
-  imports: [CommonModule, MatIconModule, MatButtonModule, MatToolbarModule],
+  imports: [CommonModule, MatIconModule, MatButtonModule, MatToolbarModule, LanguageDropdown],
   templateUrl: './menu.html',
   styleUrl: './menu.scss',
 })
@@ -112,6 +113,10 @@ export class Menu implements OnInit {
     this.showAsideMenu$ = this.defineIfAsideMenuShallBeRendered();
 
     this.vm$ = this.createViewModel();
+
+    this.heroVisible$.subscribe((v) => console.log('heroVisible$', v));
+    this.isMobile$.subscribe((v) => console.log('isMobile$', v));
+    this.showAsideMenu$.subscribe((v) => console.log('showAside$', v));
   }
 
   defineDesktopSize(): Observable<boolean> {

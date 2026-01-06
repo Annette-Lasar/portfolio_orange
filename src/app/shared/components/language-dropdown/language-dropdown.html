@@ -1,1 +1,6 @@
-<p>language-dropdown works!</p>
+<button matButton [matMenuTriggerFor]="langMenu">DE</button>
+<mat-menu #langMenu="matMenu" panelClass="language-menu-panel">
+  <button mat-menu-item (click)="setLang('de', 'DE')">DE</button>
+  <button mat-menu-item (click)="setLang('en', 'EN')">EN</button>
+  <button mat-menu-item (click)="setLang('fr', 'FR')">FR</button>
+</mat-menu>

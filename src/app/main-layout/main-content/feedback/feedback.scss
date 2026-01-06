@@ -1,18 +1,39 @@
-.cards-container {
-  padding: 1em 0;
-  max-height: 800px;
-  overflow-y: auto;
-}
+@use '../../../../scss_styles/index' as *;
 
-.feedback-card {
-  max-width: 400px;
-  margin: 0 auto 1em;
-  &:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease;
+section {
+  padding: 0 1em;
+  .cards-container {
+    padding: 1em 0;
+    // max-height: 800px;
+    // overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: 300px;
+    gap: 1em;
   }
-}
 
-.feedback-header-image {
-  background-size: cover;
+  .feedback-card {
+    max-width: 400px;
+    height: 300px;
+    margin: 0 auto 1em;
+
+    &:hover {
+      box-shadow: 0 4px 12px var(--color-primary-300);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .feedback-header-image {
+      background-size: cover;
+    }
+
+    .feedback-card-content {
+      height: 240px;
+      padding-block: 1em;
+      .inner-card {
+        height: 100%;
+        padding-block: 1em;
+        overflow-y: auto;
+      }
+    }
+  }
 }

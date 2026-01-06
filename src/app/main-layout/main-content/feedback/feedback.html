@@ -14,8 +14,10 @@
         <mat-card-title>{{ fb.cardTitle }}</mat-card-title>
         <mat-card-subtitle>{{ fb.cardSubtitle }}</mat-card-subtitle>
       </mat-card-header>
-      <mat-card-content>
-        {{ fb.feedbackText }}
+      <mat-card-content class="feedback-card-content">
+        <div class="inner-card">
+          {{ fb.feedbackText }}
+        </div>
       </mat-card-content>
     </mat-card>
     }

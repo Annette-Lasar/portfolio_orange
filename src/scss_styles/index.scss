@@ -3,5 +3,7 @@
 @forward 'reset_stylesheet';
 @forward 'fonts';
 @forward 'typography';
-@forward 'color-palettes';
-@forward 'color-theme';
+
+@forward 'color-palettes';     
+@forward 'color-variables';    
+@forward 'color-theme';        

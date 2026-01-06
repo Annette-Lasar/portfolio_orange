@@ -1,9 +1,7 @@
-@use '@angular/material' as mat;
-@use '../../../../scss_styles/color-palettes' as palettes;
 @use '../../../../scss_styles/index' as *;
 
 .menu {
-  background-color: mat.m2-get-color-from-palette(palettes.$portfolio-accent, 500);
+  background-color: var(--color-accent-500);
 }
 
 .menu-floating {
@@ -13,16 +11,23 @@
   bottom: 0.5em;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 10;
+  z-index: 30;
   height: 44px;
   border-radius: 38px;
+  .language-icon {
+    display: none;
+  }
+}
+
+.menu-aside {
+  display: none;
 }
 
 :host ::ng-deep mat-toolbar.custom-toolbar {
   max-height: 100%;
   @include flex-layout();
   border-radius: 38px;
-  background-color: mat.m2-get-color-from-palette(palettes.$portfolio-accent, 500);
+  background-color: var(--color-accent-500);
   .button-wrapper {
     @include flex-layout($direction: column, $justify: center);
     .menu-icon {
@@ -45,7 +50,7 @@
 }
 
 :host ::ng-deep .mat-mdc-icon-button .mat-icon {
-  color: mat.m2-get-color-from-palette(palettes.$portfolio-primary, 500) !important;
+  color: var(--color-primary-500) !important;
 }
 
 @media (min-width: $breakpoint-md) {
@@ -60,7 +65,16 @@
     bottom: auto;
     padding: 1em 0;
     transform: translate(0, -50%);
-    border: 2px solid royalblue;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 150ms ease-out;
+    &.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .language-icon {
+      display: block;
+    }
   }
 
   :host ::ng-deep mat-toolbar.custom-toolbar {
@@ -69,15 +83,28 @@
   }
 
   .menu-aside {
+    width: 100%;
     height: 100vh;
+    @include flex-layout($direction: column, $justify: flex-start, $gap: 1em);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-24px);
+    pointer-events: none;
+    transition: opacity 200ms ease, transform 200ms ease;
+    &.is-visible {
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: auto;
+    }
     .image-wrapper {
-      height: 40%;
+      height: fit-content;
       overflow: hidden;
       img {
         object-fit: cover;
       }
     }
     .aside-menu-wrapper {
+      width: 100%;
       height: 60%;
       padding: 1em;
       @include flex-layout($direction: column);

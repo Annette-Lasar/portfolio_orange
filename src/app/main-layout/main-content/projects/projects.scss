@@ -1,6 +1,4 @@
-@use '@angular/material' as mat;
-@use '../../../../scss_styles/' as palettes;
-@use '../../../../scss_styles/' as *;
+@use '../../../../scss_styles/index' as *;
 
 section {
   padding: 1em 0.5em;

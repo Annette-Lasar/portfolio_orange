@@ -35,8 +35,12 @@ async) {
 </nav>
 } }} -->
 
-@if (vm$ | async; as vm) { @if (context === 'hero' && vm.showFloating) {
-<nav class="menu menu-floating" [aria-label]="vm.content?.generalInfos?.mainNavigationLabel">
+@if (vm$ | async; as vm) { @if (context === 'hero') {
+<nav
+  class="menu menu-floating"
+  [aria-label]="vm.content?.generalInfos?.mainNavigationLabel"
+  [class.is-visible]="vm.showFloating"
+>
   <mat-toolbar class="custom-toolbar">
     <div class="button-wrapper">
       <button matIconButton [aria-label]="vm.content?.menu?.home"><mat-icon>home</mat-icon></button>
@@ -71,10 +75,20 @@ async) {
         <mat-icon>alternate_email</mat-icon>
       </button>
     </div>
+
+    <div class="button-wrapper language-icon">
+      <button matIconButton [aria-label]="vm.content?.menu?.languages">
+        <mat-icon>language</mat-icon>
+      </button>
+    </div>
   </mat-toolbar>
 </nav>
-} @if (context === 'aside' && vm.showAside) {
-<nav class="menu menu-aside" [aria-label]="vm.content?.generalInfos?.mainNavigationLabel">
+} @if (context === 'aside') {
+<nav
+  class="menu menu-aside"
+  [aria-label]="vm.content?.generalInfos?.mainNavigationLabel"
+  [class.is-visible]="vm.showAside"
+>
   <figure class="image-wrapper">
     <img
       [src]="vm.content?.generalInfos?.candidateImg01"
@@ -89,6 +103,7 @@ async) {
     <a href="#">Feedback</a>
     <a href="#">Lebenslauf</a>
     <a href="#">Kontakt</a>
+    <a href="#"><port-language-dropdown variant="aside" /></a>
   </div>
 </nav>
 } }

@@ -6,10 +6,11 @@ import { ScrollService } from '../../../shared/services/scroll.service.js';
 import { Menu } from '../../../shared/components/menu/menu.js';
 import { MergedContent } from '../../../shared/interfaces/merged-content.interface.js';
 import { Observable, take, filter } from 'rxjs';
+import { LanguageDropdown } from '../../../shared/components/language-dropdown/language-dropdown.js';
 
 @Component({
   selector: 'port-hero',
-  imports: [CommonModule, MatButtonModule, Menu],
+  imports: [CommonModule, MatButtonModule, Menu, LanguageDropdown],
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })
