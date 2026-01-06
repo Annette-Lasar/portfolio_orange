@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, Input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { PageContentService } from '../../../shared/services/page-content.service.js';
+import { ScrollService } from '../../../shared/services/scroll.service.js';
 import { Menu } from '../../../shared/components/menu/menu.js';
 import { MergedContent } from '../../../shared/interfaces/merged-content.interface.js';
-import { Observable } from 'rxjs';
-import { take, filter } from 'rxjs';
+import { Observable, take, filter } from 'rxjs';
 
 @Component({
   selector: 'port-hero',
@@ -13,21 +13,37 @@ import { take, filter } from 'rxjs';
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })
-export class Hero implements OnInit {
+export class Hero implements OnInit, AfterViewInit {
   mergedContent$!: Observable<MergedContent | null>;
-  
-  constructor(public pageContentService: PageContentService) {}
+
+  @ViewChild('heroSection', { static: true })
+  heroElement!: ElementRef<HTMLElement>;
+
+  constructor(
+    public pageContentService: PageContentService,
+    private scrollService: ScrollService
+  ) {}
 
   ngOnInit(): void {
     this.pageContentService.loadVariableContent('de');
     this.initializeMergedContent();
-    this.mergedContent$
-  .pipe(filter(value => value !== null), take(1))
-  .subscribe(console.log);
-
+    this.showMergedContent();
   }
 
-  initializeMergedContent():void {
+  ngAfterViewInit(): void {
+    this.scrollService.registerHeroElement(this.heroElement.nativeElement);
+  }
+
+  initializeMergedContent(): void {
     this.mergedContent$ = this.pageContentService.mergedContent$;
+  }
+
+  showMergedContent() {
+    this.mergedContent$
+      .pipe(
+        filter((value) => value !== null),
+        take(1)
+      )
+      .subscribe(console.log);
   }
 }

@@ -2,7 +2,11 @@
 @use '../../../../scss_styles/color-palettes' as palettes;
 @use '../../../../scss_styles/index' as *;
 
-nav {
+.menu {
+  background-color: mat.m2-get-color-from-palette(palettes.$portfolio-accent, 500);
+}
+
+.menu-floating {
   width: 95%;
   max-width: 500px;
   position: fixed;
@@ -12,7 +16,6 @@ nav {
   z-index: 10;
   height: 44px;
   border-radius: 38px;
-  background-color: mat.m2-get-color-from-palette(palettes.$portfolio-accent, 500);
 }
 
 :host ::ng-deep mat-toolbar.custom-toolbar {
@@ -46,15 +49,15 @@ nav {
 }
 
 @media (min-width: $breakpoint-md) {
-  nav {
+  .menu-floating {
     width: 44px;
     height: 80vh;
     max-height: 600px;
     position: absolute;
     top: 50%;
     right: 1em;
-    left: auto; 
-    bottom: auto; 
+    left: auto;
+    bottom: auto;
     padding: 1em 0;
     transform: translate(0, -50%);
     border: 2px solid royalblue;
@@ -63,5 +66,21 @@ nav {
   :host ::ng-deep mat-toolbar.custom-toolbar {
     height: 100%;
     @include flex-layout($direction: column);
+  }
+
+  .menu-aside {
+    height: 100vh;
+    .image-wrapper {
+      height: 40%;
+      overflow: hidden;
+      img {
+        object-fit: cover;
+      }
+    }
+    .aside-menu-wrapper {
+      height: 60%;
+      padding: 1em;
+      @include flex-layout($direction: column);
+    }
   }
 }

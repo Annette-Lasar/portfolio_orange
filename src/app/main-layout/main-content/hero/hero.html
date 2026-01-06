@@ -1,4 +1,4 @@
-<section>
+<section #heroSection class="hero">
   @if (mergedContent$ | async; as content) {
   <div class="picture"></div>
   <div class="content-wrapper">
@@ -21,6 +21,6 @@
       </button>
     </div>
   </div>
-  <port-menu />
+  <port-menu context="hero" />
   }
 </section>

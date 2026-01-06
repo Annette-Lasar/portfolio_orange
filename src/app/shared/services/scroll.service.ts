@@ -2,17 +2,28 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ScrollService {
-
-  private heroVisibleSubject = new BehaviorSubject<boolean>(true);
+  private heroVisibleSubject = new BehaviorSubject<boolean>(false);
   heroVisible$: Observable<boolean> = this.heroVisibleSubject.asObservable();
+  private observer?: IntersectionObserver;
 
   constructor() {}
 
-  // Diese Methode wird die HeroSection später registrieren
-  registerHeroElement(element: HTMLElement) {
-    // Wird morgen implementiert
+  registerHeroElement(element: HTMLElement): void {
+    this.observer?.disconnect();
+
+    this.observer = new IntersectionObserver(
+      ([entry]) => {
+        this.heroVisibleSubject.next(entry.isIntersecting);
+      },
+      {
+        root: null,
+        threshold: 0.1,
+      }
+    );
+
+    this.observer.observe(element);
   }
 }

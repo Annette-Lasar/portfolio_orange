@@ -5,6 +5,7 @@
 button {
     display: block;
     margin: 0 0 2em;
+    max-width: 400px;
     .title-wrapper {
         @include flex-layout();
     }

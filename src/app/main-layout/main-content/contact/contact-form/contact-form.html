@@ -7,7 +7,6 @@
       </mat-label>
       <input
         matInput
-        [placeholder]="content.contact.form.namePlaceholder || ''"
         required
       />
       @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
@@ -25,7 +24,6 @@
         type="email"
         matInput
         [formControl]="emailFormControl"
-        [placeholder]="'My placeholder text'"
       />
       @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
       <mat-error>
@@ -43,7 +41,6 @@
       </mat-label>
       <textarea
         matInput
-        [placeholder]="content.contact.form.messagePlaceholder || ''"
         rows="5"
         maxlength="500"
         #message

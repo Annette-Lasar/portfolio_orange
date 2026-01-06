@@ -1,6 +1,6 @@
-@if (mergedContent$ | async; as content) { @if (isMobile$ | async) {
-
-<nav [aria-label]="content.generalInfos.mainNavigationLabel" class="menu-floating">
+<!-- @if (mergedContent$ | async; as content) { @if (context === 'hero' ) { @if (showFloatingMenu$ |
+async) {
+<nav [aria-label]="content.generalInfos.mainNavigationLabel" class="menu menu-floating">
   <mat-toolbar class="custom-toolbar">
     <div class="button-wrapper">
       <button matIconButton [aria-label]="content.menu.home"><mat-icon>home</mat-icon></button>
@@ -29,12 +29,66 @@
     </div>
   </mat-toolbar>
 </nav>
+}} @if (context === 'aside') { @if (showAside$ | async) {
+<nav [aria-label]="content.generalInfos.mainNavigationLabel" class="menu menu-aside">
+  <p>Hier aside!</p>
+</nav>
+} }} -->
 
-} @else {
-<aside>
-  <nav [aria-label]="content.generalInfos.mainNavigationLabel" class="menu-floating">
-    <p>Hier aside!</p>
-  </nav>
-</aside>
+@if (vm$ | async; as vm) { @if (context === 'hero' && vm.showFloating) {
+<nav class="menu menu-floating" [aria-label]="vm.content?.generalInfos?.mainNavigationLabel">
+  <mat-toolbar class="custom-toolbar">
+    <div class="button-wrapper">
+      <button matIconButton [aria-label]="vm.content?.menu?.home"><mat-icon>home</mat-icon></button>
+    </div>
 
+    <div class="button-wrapper">
+      <button matIconButton [aria-label]="vm.content?.menu?.about">
+        <mat-icon>person</mat-icon>
+      </button>
+    </div>
+
+    <div class="button-wrapper">
+      <button matIconButton [aria-label]="vm.content?.menu?.projects">
+        <mat-icon>code</mat-icon>
+      </button>
+    </div>
+
+    <div class="button-wrapper">
+      <button matIconButton [aria-label]="vm.content?.menu?.feedback">
+        <mat-icon>forum</mat-icon>
+      </button>
+    </div>
+
+    <div class="button-wrapper">
+      <button matIconButton [aria-label]="vm.content?.menu?.cv">
+        <mat-icon>description</mat-icon>
+      </button>
+    </div>
+
+    <div class="button-wrapper">
+      <button matIconButton [aria-label]="vm.content?.menu?.contact">
+        <mat-icon>alternate_email</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar>
+</nav>
+} @if (context === 'aside' && vm.showAside) {
+<nav class="menu menu-aside" [aria-label]="vm.content?.generalInfos?.mainNavigationLabel">
+  <figure class="image-wrapper">
+    <img
+      [src]="vm.content?.generalInfos?.candidateImg01"
+      [alt]="vm.content?.generalInfos?.candidateImgAlt"
+    />
+  </figure>
+
+  <div class="aside-menu-wrapper">
+    <a href="#">Start</a>
+    <a href="#">About</a>
+    <a href="#">Projekte</a>
+    <a href="#">Feedback</a>
+    <a href="#">Lebenslauf</a>
+    <a href="#">Kontakt</a>
+  </div>
+</nav>
 } }

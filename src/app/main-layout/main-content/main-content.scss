@@ -1,0 +1,45 @@
+@use '@angular/material' as mat;
+@use '../../../scss_styles/color-palettes' as palettes;
+@use '../../../scss_styles/index' as *;
+
+@media (min-width: $breakpoint-md) {
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 235px) 1fr;
+    grid-template-areas:
+      'hero hero'
+      'aside about'
+      'aside projects'
+      'aside feedback'
+      'aside cv'
+      'aside contact';
+
+    aside {
+      grid-area: aside;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      background-color: #{mat.m2-get-color-from-palette(palettes.$portfolio-accent, 500)};
+    }
+
+    port-hero {
+      grid-area: hero;
+    }
+
+    port-projects {
+      grid-area: projects;
+    }
+
+    port-feedback {
+      grid-area: feedback;
+    }
+
+    port-cv {
+      grid-area: cv;
+    }
+
+    port-contact {
+      grid-area: contact;
+    }
+  }
+}
