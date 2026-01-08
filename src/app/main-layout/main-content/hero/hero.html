@@ -22,8 +22,11 @@
     </div>
   </div>
   <port-menu context="hero" />
-  }
+  
   <div class="language-dropdown-wrapper">
-    <port-language-dropdown variant="overlay" />
+    <port-language-dropdown variant="overlay" 
+    [currentLanguage]="content?.generalInfos?.currentLanguage"
+    />
   </div>
+  }
 </section>

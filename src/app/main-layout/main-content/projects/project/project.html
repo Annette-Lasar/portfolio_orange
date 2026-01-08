@@ -1,6 +1,9 @@
-<!-- <p>project works!</p> -->
-
-<button class="cursor-pointer">
+<button
+  type="button"
+  class="cursor-pointer"
+  [attr.aria-label]="content.projectInfos.ariaLabelOpenProject + ': ' + project.title"
+  (click)="openDetail()"
+>
   <div>
     <img [src]="'./img/projects/' + project.imagePath" [alt]="project.title" />
   </div>
@@ -8,8 +11,15 @@
     <div>{{ project.title }}</div>
     <div>
       @for (tech of project.technologies; track tech; let i = $index) {
-      <span>{{ tech }}{{ i < technologies.length - 1 ? ' / ' : '' }}</span>
+      <span>{{ tech.technology }}{{ i < technologies.length - 1 ? ' / ' : '' }}</span>
       }
     </div>
   </div>
 </button>
+@if (showDetail) {
+<port-project-detail 
+[project]="project"
+[content]="content"
+(closeContainer)="closeDetail()"
+/>
+}

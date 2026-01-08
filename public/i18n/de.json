@@ -1,7 +1,8 @@
 {
   "generalInfos": {
     "candidateImgAlt": "Foto der Bewerberin",
-    "mainNavigationLabel": "Hauptnavigation"
+    "mainNavigationLabel": "Hauptnavigation",
+    "currentLanguage": "aktuelle Sprache"
   },
   "hero": {
     "greeting": "Hallo, ich bin",
@@ -27,6 +28,9 @@
     "heading": "Projekte",
     "subHeading1": "Frontend",
     "subHeading2": "Backend",
+    "ariaLabelGitHub": "Auf GitHub anschauen",
+    "ariaLabelOpenProject": "Detailansicht des Projekts öffnen",
+    "ariaLabelCloseProject": "Detailansicht des Projekts schließen",
     "subHeadingDetailView1": "Über das Projekt",
     "subHeadingDetailView2": "Meine Arbeitsweise",
     "appliedTechnologies": "Verwendete Technologien",

@@ -9,4 +9,5 @@ export interface StaticGeneralInfos {
 export interface GeneralInfos extends StaticGeneralInfos {
   candidateImgAlt: string;
   mainNavigationLabel: string;
+  currentLanguage: string;
 }

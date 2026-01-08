@@ -1,26 +1,14 @@
 @use '@angular/material' as mat;
-@use './color-palettes' as palettes;
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Lexend', sans-serif;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
+@use './color-variables' as *;
 
 section {
-  background-color: #{mat.m2-get-color-from-palette(palettes.$portfolio-primary, 100)};
+  background-color: var(--color-primary-100);
 }
 
 h1,
 h2 {
   font-family: 'Audiowide', sans-serif;
-  color: mat.m2-get-color-from-palette(palettes.$portfolio-primary, 500);
+  color: var(--color-primary-500);
 }
 
 h3,
@@ -31,13 +19,13 @@ h4 {
 
 h3 {
   font-size: 1.5rem;
-  color: mat.m2-get-color-from-palette(palettes.$portfolio-primary, 500);
+  color: var(--color-primary-500);
   margin: 0 0 1em;
 }
 
 h4 {
   margin: 2em 0 1em;
-  color: mat.m2-get-color-from-palette(palettes.$portfolio-accent, 500);
+  color: var(--color-accent-500);
 }
 
 h5 {
@@ -49,14 +37,13 @@ h2 {
   margin: 0 auto 1em;
   text-transform: uppercase;
   text-align: center;
-  border-bottom: 6px solid mat.m2-get-color-from-palette(palettes.$portfolio-accent, 500);
+  border-bottom: 6px solid var(--color-accent-500);
 }
 
 p,
 mat-card-content {
   font-family: 'Lexend', sans-serif;
   font-size: 1rem;
-  color: mat.m2-get-color-from-palette(palettes.$portfolio-primary, 500);
   font-weight: 300;
   line-height: 1.2;
 }
@@ -90,7 +77,8 @@ h2 {
   line-height: 1.1;
 }
 
-input, textarea {
+input,
+textarea {
   font-family: 'Lexend, sans-serif';
 }
 

@@ -1,52 +1,19 @@
-<!-- @if (mergedContent$ | async; as content) { @if (context === 'hero' ) { @if (showFloatingMenu$ |
-async) {
-<nav [aria-label]="content.generalInfos.mainNavigationLabel" class="menu menu-floating">
-  <mat-toolbar class="custom-toolbar">
-    <div class="button-wrapper">
-      <button matIconButton [aria-label]="content.menu.home"><mat-icon>home</mat-icon></button>
-    </div>
-
-    <div class="button-wrapper">
-      <button matIconButton [aria-label]="content.menu.about"><mat-icon>person</mat-icon></button>
-    </div>
-
-    <div class="button-wrapper">
-      <button matIconButton [aria-label]="content.menu.projects"><mat-icon>code</mat-icon></button>
-    </div>
-
-    <div class="button-wrapper">
-      <button matIconButton [aria-label]="content.menu.feedback"><mat-icon>forum</mat-icon></button>
-    </div>
-
-    <div class="button-wrapper">
-      <button matIconButton [aria-label]="content.menu.cv"><mat-icon>description</mat-icon></button>
-    </div>
-
-    <div class="button-wrapper">
-      <button matIconButton [aria-label]="content.menu.contact">
-        <mat-icon>alternate_email</mat-icon>
-      </button>
-    </div>
-  </mat-toolbar>
-</nav>
-}} @if (context === 'aside') { @if (showAside$ | async) {
-<nav [aria-label]="content.generalInfos.mainNavigationLabel" class="menu menu-aside">
-  <p>Hier aside!</p>
-</nav>
-} }} -->
-
-@if (vm$ | async; as vm) { @if (context === 'hero') {
+<!-- @if (vm$ | async; as vm) { @if (context === 'hero') {
 <nav
   class="menu menu-floating"
   [aria-label]="vm.content?.generalInfos?.mainNavigationLabel"
   [class.is-visible]="vm.showFloating"
 >
   <mat-toolbar class="custom-toolbar">
+    <a matIconButton routerLink="/about" class="link-wrapper" [aria-label]="vm.content?.menu?.about">
+      <mat-icon>person</mat-icon>
+    </a>
+
     <div class="button-wrapper">
       <button matIconButton [aria-label]="vm.content?.menu?.home"><mat-icon>home</mat-icon></button>
     </div>
 
-    <div class="button-wrapper">
+    <div class="link-wrapper">
       <button matIconButton [aria-label]="vm.content?.menu?.about">
         <mat-icon>person</mat-icon>
       </button>
@@ -77,9 +44,7 @@ async) {
     </div>
 
     <div class="button-wrapper language-icon">
-      <button matIconButton [aria-label]="vm.content?.menu?.languages">
-        <mat-icon>language</mat-icon>
-      </button>
+      <port-language-dropdown variant="icon" />
     </div>
   </mat-toolbar>
 </nav>
@@ -103,7 +68,110 @@ async) {
     <a href="#">Feedback</a>
     <a href="#">Lebenslauf</a>
     <a href="#">Kontakt</a>
-    <a href="#"><port-language-dropdown variant="aside" /></a>
+    <port-language-dropdown variant="aside" />
+  </div>
+</nav>
+} } -->
+
+@if (vm$ | async; as vm) { @if (context === 'hero') {
+<nav
+  class="menu menu-floating"
+  [aria-label]="vm.content?.generalInfos?.mainNavigationLabel"
+  [class.is-visible]="vm.showFloating"
+>
+  <mat-toolbar class="custom-toolbar">
+    <div class="link-wrapper">
+      <a
+        matIconButton
+        routerLink="/home"
+        class="link-wrapper"
+        [aria-label]="vm.content?.menu?.home"
+      >
+        <mat-icon>home</mat-icon>
+      </a>
+    </div>
+
+    <div class="link-wrapper">
+      <a
+        matIconButton
+        routerLink="/about"
+        class="link-wrapper"
+        [aria-label]="vm.content?.menu?.about"
+      >
+        <mat-icon>person</mat-icon>
+      </a>
+    </div>
+
+    <div class="link-wrapper">
+      <a
+        matIconButton
+        routerLink="/projects"
+        class="link-wrapper"
+        [aria-label]="vm.content?.menu?.projects"
+      >
+        <mat-icon>code</mat-icon>
+      </a>
+    </div>
+
+    <div class="link-wrapper">
+      <a
+        matIconButton
+        routerLink="/feedback"
+        class="link-wrapper"
+        [aria-label]="vm.content?.menu?.feedback"
+      >
+        <mat-icon>forum</mat-icon>
+      </a>
+    </div>
+
+    <div class="link-wrapper">
+      <a matIconButton routerLink="/cv" class="link-wrapper" [aria-label]="vm.content?.menu?.cv">
+        <mat-icon>description</mat-icon>
+      </a>
+    </div>
+
+    <div class="link-wrapper">
+      <a
+        matIconButton
+        routerLink="/contact"
+        class="link-wrapper"
+        [aria-label]="vm.content?.menu?.contact"
+      >
+        <mat-icon>alternate_email</mat-icon>
+      </a>
+    </div>
+    <div class="button-wrapper language-icon">
+      <port-language-dropdown
+        variant="icon"
+        [currentLanguage]="vm.content?.generalInfos?.currentLanguage"
+      />
+    </div>
+  </mat-toolbar>
+</nav>
+} @if (context === 'aside') {
+<nav
+  class="menu menu-aside"
+  [aria-label]="vm.content?.generalInfos?.mainNavigationLabel"
+  [class.is-visible]="vm.showAside"
+>
+  <figure class="image-wrapper">
+    <img
+      [src]="vm.content?.generalInfos?.candidateImg01"
+      [alt]="vm.content?.generalInfos?.candidateImgAlt"
+    />
+  </figure>
+
+  <div class="aside-menu-wrapper">
+    <a href="#">Start</a>
+    <a href="#">About</a>
+    <a href="#">Projekte</a>
+    <a href="#">Feedback</a>
+    <a href="#">Lebenslauf</a>
+    <a href="#">Kontakt</a>
+    <port-language-dropdown
+      variant="aside"
+      [currentLanguage]="vm.content?.generalInfos?.currentLanguage"
+    />
   </div>
 </nav>
 } }

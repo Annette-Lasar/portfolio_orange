@@ -131,7 +131,16 @@
       {
         "id": "join",
         "title": "Join",
-        "technologies": ["Angular", "Django"],
+        "technologies": [
+          {
+            "technology": "Angular",
+            "iconPath": "angular.svg"
+          },
+          {
+            "technology": "Django",
+            "iconPath": "django.svg"
+          }
+        ],
         "imagePath": "join.png",
         "links": {
           "github": "",
@@ -142,7 +151,16 @@
       {
         "id": "videoflix",
         "title": "Videoflix",
-        "technologies": ["JS", "Django"],
+        "technologies": [
+          {
+            "technology": "JS",
+            "iconPath": "javascript.svg"
+          },
+          {
+            "technology": "Django",
+            "iconPath": "django.svg"
+          }
+        ],
         "imagePath": "videoflix.png",
         "links": {
           "github": "",
@@ -153,7 +171,16 @@
       {
         "id": "coderr",
         "title": "Coderr",
-        "technologies": ["JS", "Django"],
+        "technologies": [
+          {
+            "technology": "JS",
+            "iconPath": "javascript.svg"
+          },
+          {
+            "technology": "Django",
+            "iconPath": "django.svg"
+          }
+        ],
         "imagePath": "coderr.png",
         "links": {
           "github": "",
@@ -164,7 +191,14 @@
       {
         "id": "mermaid",
         "title": "Mermaid",
-        "technologies": ["JS", "OOP"],
+        "technologies": [{
+            "technology": "JS",
+            "iconPath": "javascript.svg"
+          },
+          {
+            "technology": "OOP",
+            "iconPath": ""
+          }],
         "imagePath": "mermaid.jpg",
         "links": {
           "github": "https://github.com/Annette-Lasar/Mermaid",
@@ -175,7 +209,16 @@
       {
         "id": "pokedex",
         "title": "Pokédex",
-        "technologies": ["JS", "API"],
+        "technologies": [
+          {
+            "technology": "JS",
+            "iconPath": "javascript.svg"
+          },
+          {
+            "technology": "API",
+            "iconPath": "api.svg"
+          }
+        ],
         "imagePath": "pokedex.jpg",
         "links": {
           "github": "https://github.com/Annette-Lasar/Pokedex",

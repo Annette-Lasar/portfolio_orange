@@ -113,6 +113,7 @@ export class Menu implements OnInit {
     this.showAsideMenu$ = this.defineIfAsideMenuShallBeRendered();
 
     this.vm$ = this.createViewModel();
+    console.log('ViewModel: ', this.vm$);
 
     this.heroVisible$.subscribe((v) => console.log('heroVisible$', v));
     this.isMobile$.subscribe((v) => console.log('isMobile$', v));

@@ -8,6 +8,9 @@ export interface ProjectInfos {
   heading: string;
   subHeading1: string;
   subHeading2: string;
+  ariaLabelGitHub: string;
+  ariaLabelOpenProject: string;
+  ariaLabelCloseProject: string;
   subHeadingDetailView1: string;
   subHeadingDetailView2: string;
   appliedTechnologies: string;
@@ -23,10 +26,15 @@ export interface StaticProjectLink {
 export interface StaticProject {
   id: string;
   title: string;
-  technologies: string[];
+  technologies: Technology[];
   imagePath: string;
   links: StaticProjectLink;
   category: string;
+}
+
+export interface Technology {
+  technology: string;
+  iconPath: string;
 }
 
 export interface StaticProjectInfos {
@@ -36,7 +44,7 @@ export interface StaticProjectInfos {
 
 export interface MergedProject extends Project {
   title?: string;
-  technologies?: string[];
+  technologies?: Technology[];
   imagePath?: string;
   links?: StaticProjectLink;
   category?: string;
