@@ -1,13 +1,41 @@
-<section>
+<!-- <section>
   @if(mergedContent$ | async; as content){
   <h2>{{ content.projectInfos.heading }}</h2>
-
+ @if (currentIndex === null) {
   <article>
     @for (project of content.projectInfos.projects; track project.id) {
 
     <port-project [project]="project" [content]="content" />
     }
   </article>
+  } @else {
+    <port-project-detail [project]="content.projectInfos.projects[currentIndex]" />
+  }
 
   }
+</section> -->
+
+<section>
+  @if(mergedContent$ | async; as content){
+  <h2>{{ content.projectInfos.heading }}</h2>
+  @if (currentIndex === null) {
+  <article>
+    @for (project of content.projectInfos.projects; track project.id; let i = $index) {
+    <button
+      type="button"
+      class="project-card-button cursor-pointer"
+      (click)="openDetail(i)"
+      [attr.aria-label]="content.projectInfos.ariaLabelOpenProject + ': ' + project.title"
+    >
+      <port-project [project]="project" [content]="content" />
+    </button>
+    }
+  </article>
+  } @else {
+  <port-project-detail
+    [project]="content.projectInfos.projects[currentIndex]"
+    [content]="content"
+    (closeContainer)="closeDetail()"
+  />
+  } }
 </section>

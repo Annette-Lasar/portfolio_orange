@@ -1,0 +1,58 @@
+@use '../../../../../scss_styles/index' as *;
+
+.project-detail {
+  height: 100vh;
+  height: 100dvh;
+  width: 100vw;
+  overflow: auto;
+  padding: 0.5em 0.75em 1em;
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  color: var(--color-primary-contrast-500);
+  background-color: var(--color-primary-500);
+  .close-button {
+    padding: 0;
+    display: block;
+    margin: 0 0 0 auto;
+    background-color: transparent;
+    border: none;
+    img {
+      filter: invert(1);
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+  .img-wrapper {
+    margin: 0 auto;
+  }
+  .button-wrapper {
+    margin: 1em auto;
+    @include flex-layout();
+    .test-button,
+    .github-button {
+      padding: 0.5em 1em;
+    }
+    .test-button {
+      color: var(--color-primary-500);
+      background-color: var(--color-accent-500);
+    }
+
+    .github-button {
+      color: var(--color-primary-contrast-500);
+      background-color: var(--color-primary-500);
+      border: 2px solid var(--color-primary-contrast-500);
+    }
+  }
+
+  .tech-list {
+    @include flex-layout($justify: flex-start, $gap: 1.5em);
+    li {
+      height: 48px;
+      img {
+        max-height: 100%;
+      }
+    }
+  }
+}

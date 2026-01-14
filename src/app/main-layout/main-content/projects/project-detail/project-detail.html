@@ -1,0 +1,51 @@
+@if (content && project) {
+<article class="project-detail">
+  <button
+    type="button"
+    class="close-button cursor-pointer"
+    [attr.aria-label]="content.projectInfos.ariaLabelCloseProject"
+    (click)="closeDetailView()"
+  >
+    <img [src]="iconPathGeneralPrefix + content.generalInfos.closeX" alt="" />
+  </button>
+  <h3>
+    {{ project.title }}
+  </h3>
+  <div class="img-wrapper">
+    <img [src]="imgPathPrefix + project.imagePath" alt="" />
+  </div>
+  <div class="button-wrapper">
+    <a [href]="project.links?.demo" target="_blank" class="test-button">{{
+      content.projectInfos.tryButton
+    }}</a>
+    <a [href]="project.links?.github" target="_blank" class="github-button">GitHub</a>
+  </div>
+  <h4>
+    {{ content.projectInfos.appliedTechnologies }}
+  </h4>
+  <ul class="tech-list">
+    @for (tech of project.technologies; track tech) {
+    <li>
+      <img [src]="iconPathSkillsPrefix + tech.iconPath" alt="" />
+    </li>
+    }
+  </ul>
+  <h4>
+    {{ content.projectInfos.subHeadingDetailView1 }}
+  </h4>
+
+  @for (descr of project.description; track descr) {
+  <p>
+    {{ descr }}
+  </p>
+  }
+  <h4>
+    {{ content.projectInfos.subHeadingDetailView2 }}
+  </h4>
+  @for (paragraph of project.workflow; track paragraph) {
+  <p>
+    {{ paragraph }}
+  </p>
+  }
+</article>
+}

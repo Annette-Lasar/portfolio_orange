@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { MergedProject } from '../../../../../shared/interfaces/project.interface';
-import { MergedContent } from '../../../../../shared/interfaces/merged-content.interface';
+import { MergedProject } from '../../../../shared/interfaces/project.interface';
+import { MergedContent } from '../../../../shared/interfaces/merged-content.interface';
 
 @Component({
   selector: 'port-project-detail',
