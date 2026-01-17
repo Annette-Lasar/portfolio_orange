@@ -11,47 +11,127 @@
   z-index: 40;
   color: var(--color-primary-contrast-500);
   background-color: var(--color-primary-500);
-  .close-button {
-    padding: 0;
-    display: block;
-    margin: 0 0 0 auto;
-    background-color: transparent;
-    border: none;
-    img {
-      filter: invert(1);
-    }
-  }
-  a {
-    text-decoration: none;
-  }
-  .img-wrapper {
+  .wrapper {
+    max-width: $max-width;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'title'
+      'img'
+      'btn'
+      'tech'
+      'content';
   }
   .button-wrapper {
-    margin: 1em auto;
+    width: 100%;
+    max-width: 400px;
+    margin: 1em auto 0;
+    grid-area: btn;
     @include flex-layout();
-    .test-button,
-    .github-button {
-      padding: 0.5em 1em;
-    }
-    .test-button {
-      color: var(--color-primary-500);
-      background-color: var(--color-accent-500);
-    }
-
-    .github-button {
-      color: var(--color-primary-contrast-500);
+    .arrow {
       background-color: var(--color-primary-500);
-      border: 2px solid var(--color-primary-contrast-500);
+      img {
+        filter: invert(1);
+      }
+    }
+  }
+  .title-wrapper {
+    grid-area: title;
+    .close-button {
+      padding: 0;
+      display: block;
+      margin: 0 0 0 auto;
+      background-color: transparent;
+      border: none;
+      img {
+        filter: invert(1);
+      }
     }
   }
 
-  .tech-list {
-    @include flex-layout($justify: flex-start, $gap: 1.5em);
-    li {
-      height: 48px;
-      img {
-        max-height: 100%;
+  .img-wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+    grid-area: img;
+    a {
+      text-decoration: none;
+    }
+    .img-wrapper {
+      margin: 0 auto;
+      max-width: 400px;
+    }
+    .link-wrapper {
+      margin: 1em auto;
+      @include flex-layout();
+      .test-button,
+      .github-button {
+        padding: 0.5em 1em;
+      }
+      .test-button {
+        color: var(--color-primary-500);
+        background-color: var(--color-accent-500);
+      }
+
+      .github-button {
+        color: var(--color-primary-contrast-500);
+        background-color: var(--color-primary-500);
+        border: 2px solid var(--color-primary-contrast-500);
+      }
+    }
+  }
+  .tech-wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    grid-area: tech;
+    .tech-list {
+      @include flex-layout($justify: flex-start, $gap: 1.5em);
+      li {
+        height: 40px;
+        img {
+          height: 100%;
+        }
+        .tech-text {
+          height: 100%;
+          @include flex-layout($justify: center);
+          font-size: 1.5rem;
+          color: var(--color-accent-500);
+        }
+      }
+    }
+  }
+  .content-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    grid-area: content;
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  .project-detail {
+    @include flex-layout($justify: center);
+    .wrapper {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        'title title'
+        'content img'
+        'content btn'
+        'content tech';
+      column-gap: 1.5em;
+      .content-wrapper {
+        .about-project {
+          margin-top: 0;
+        }
+      }
+    }
+    .button-wrapper {
+      margin: 0.75em auto 0;
+    }
+    .tech-wrapper {
+      justify-items: flex-end;
+      .technology-title {
+        margin-top: 0.5em;
       }
     }
   }

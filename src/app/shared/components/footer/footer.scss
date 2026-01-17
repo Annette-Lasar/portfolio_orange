@@ -2,7 +2,7 @@
 
 footer {
   height: 272px;
-  max-width: 1440px;
+  max-width: $max-width;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;

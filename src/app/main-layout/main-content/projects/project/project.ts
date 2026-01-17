@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input, Output, OnChanges, EventEmitter } from '@angular/core';
 import { PageContentService } from '../../../../shared/services/page-content.service.js';
 import { Technology } from '../../../../shared/interfaces/project.interface.js';
 import { MergedProject } from '../../../../shared/interfaces/project.interface.js';
@@ -17,10 +17,16 @@ export class Project implements OnChanges {
 
   @Input() project!: MergedProject;
   @Input() content!: MergedContent;
+  @Input() index: number = 0;
+  @Output() currentProject = new EventEmitter<void>();
 
   constructor(public pageContentService: PageContentService) {}
 
   ngOnChanges() {
     this.technologies = this.project.technologies ?? [];
+  }
+
+  openDetail() {
+    this.currentProject.emit();
   }
 }

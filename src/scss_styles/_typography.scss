@@ -63,9 +63,9 @@ p {
 
 .project-detail {
   h3 {
-    margin: 0 auto 1em; 
+    margin: 0 auto 0.75em; 
     width: fit-content;
-    font-size: clamp(1.25rem, 8vw + 0.5rem, 3.5rem);
+    font-size: clamp(1.25rem, 7vw + 0.5rem, 3rem);
     font-family: 'Audiowide', sans-serif;
     text-transform: uppercase;
     color: var(--color-primary-contrast-500);

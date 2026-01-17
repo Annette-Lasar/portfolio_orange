@@ -1,41 +1,25 @@
-<!-- <section>
-  @if(mergedContent$ | async; as content){
-  <h2>{{ content.projectInfos.heading }}</h2>
- @if (currentIndex === null) {
-  <article>
-    @for (project of content.projectInfos.projects; track project.id) {
-
-    <port-project [project]="project" [content]="content" />
-    }
-  </article>
-  } @else {
-    <port-project-detail [project]="content.projectInfos.projects[currentIndex]" />
-  }
-
-  }
-</section> -->
-
-<section>
+<section id="projects" data-section="projects">
   @if(mergedContent$ | async; as content){
   <h2>{{ content.projectInfos.heading }}</h2>
   @if (currentIndex === null) {
-  <article>
+  <article class="projets-list">
     @for (project of content.projectInfos.projects; track project.id; let i = $index) {
-    <button
-      type="button"
-      class="project-card-button cursor-pointer"
-      (click)="openDetail(i)"
-      [attr.aria-label]="content.projectInfos.ariaLabelOpenProject + ': ' + project.title"
-    >
-      <port-project [project]="project" [content]="content" />
-    </button>
+    <port-project
+      [project]="project"
+      [content]="content"
+      [index]="i"
+      (currentProject)="openDetail(i)"
+    />
     }
   </article>
   } @else {
   <port-project-detail
     [project]="content.projectInfos.projects[currentIndex]"
     [content]="content"
+    [currentIndex]="currentIndex"
+    [projects]="projects"
     (closeContainer)="closeDetail()"
+    (otherProject)="prevOrNextProject($event)"
   />
   } }
 </section>

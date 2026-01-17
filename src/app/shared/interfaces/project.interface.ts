@@ -1,4 +1,4 @@
-export interface Project {
+export interface ProjectModel {
   id: string;
   description: string[];
   workflow: string[];
@@ -15,7 +15,7 @@ export interface ProjectInfos {
   subHeadingDetailView2: string;
   appliedTechnologies: string;
   tryButton: string;
-  projects: Project[];
+  projects: ProjectModel[];
 }
 
 export interface StaticProjectLink {
@@ -42,7 +42,7 @@ export interface StaticProjectInfos {
   staticProjects: StaticProject[];
 }
 
-export interface MergedProject extends Project {
+export interface MergedProject extends ProjectModel {
   title?: string;
   technologies?: Technology[];
   imagePath?: string;

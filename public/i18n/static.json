@@ -153,12 +153,12 @@
         "title": "Videoflix",
         "technologies": [
           {
-            "technology": "JS",
-            "iconPath": "javascript.svg"
-          },
-          {
             "technology": "Django",
             "iconPath": "django.svg"
+          },
+          {
+            "technology": "Docker",
+            "iconPath": "docker.svg"
           }
         ],
         "imagePath": "videoflix.png",
@@ -172,13 +172,13 @@
         "id": "coderr",
         "title": "Coderr",
         "technologies": [
-          {
-            "technology": "JS",
-            "iconPath": "javascript.svg"
-          },
-          {
+                    {
             "technology": "Django",
             "iconPath": "django.svg"
+          },
+          {
+            "technology": "Docker",
+            "iconPath": "docker.svg"
           }
         ],
         "imagePath": "coderr.png",
@@ -191,14 +191,16 @@
       {
         "id": "mermaid",
         "title": "Mermaid",
-        "technologies": [{
+        "technologies": [
+          {
             "technology": "JS",
             "iconPath": "javascript.svg"
           },
           {
             "technology": "OOP",
             "iconPath": ""
-          }],
+          }
+        ],
         "imagePath": "mermaid.jpg",
         "links": {
           "github": "https://github.com/Annette-Lasar/Mermaid",

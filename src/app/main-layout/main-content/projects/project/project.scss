@@ -1,17 +1,18 @@
 @use '../../../../../scss_styles/' as *;
 
-button {
-    display: block;
-    margin: 0 0 2em;
-    max-width: 400px;
-    border: none;
-    .title-wrapper {
-        padding: 0.5em 0 0;
-        font-size: 0.9rem;
-        font-weight: 500;
-        @include flex-layout();
-        ul {
-            @include flex-layout();
-        }
+.project-card-button {
+  display: block;
+  margin: 0 0 2em;
+  min-width: 300px;
+  max-width: 400px;
+  border: none;
+  .title-wrapper {
+    padding: 0.5em 0 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    @include flex-layout();
+    ul {
+      @include flex-layout();
     }
+  }
 }

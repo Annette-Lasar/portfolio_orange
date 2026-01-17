@@ -53,6 +53,11 @@
   color: var(--color-primary-500) !important;
 }
 
+a {
+  color: var(--color-primary-500);
+  text-decoration: none;
+}
+
 @media (min-width: $breakpoint-md) {
   .menu-floating {
     width: 48px;

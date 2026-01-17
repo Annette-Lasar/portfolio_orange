@@ -24,6 +24,9 @@ $flex-align: center !default;
 $flex-justify: space-between !default;
 $flex-gap: 0 !default;
 
+// width & height
+$max-width: 1440px; 
+
 // Spacing
 $spacing-xs: 0.25rem;  // 4px
 $spacing-sm: 0.5rem;   // 8px

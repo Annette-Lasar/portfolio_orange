@@ -1,6 +1,7 @@
-<!-- <button
+<button
   type="button"
   class="project-card-button cursor-pointer"
+  (click)="openDetail()"
   [attr.aria-label]="content.projectInfos.ariaLabelOpenProject + ': ' + project.title"
 >
   <mat-card class="project-card">
@@ -16,18 +17,4 @@
       </div>
     </mat-card-content>
   </mat-card>
-</button> -->
-
-<mat-card class="project-card">
-  <img mat-card-image [src]="'./img/projects/' + project.imagePath" [alt]="project.title" />
-  <mat-card-content>
-    <div class="title-wrapper">
-      <div>{{ project.title }}</div>
-      <ul>
-        @for (tech of project.technologies; track tech; let i = $index) {
-        <li>{{ tech.technology }}{{ i < technologies.length - 1 ? ' / ' : '' }}</li>
-        }
-      </ul>
-    </div>
-  </mat-card-content>
-</mat-card>
+</button>

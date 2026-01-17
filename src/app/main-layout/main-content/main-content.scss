@@ -20,6 +20,14 @@
       background-color: var(--color-accent-500);
     }
 
+    port-about,
+    port-projects,
+    port-feedback,
+    port-cv,
+    port-contact {
+      padding: 2em 0;
+    }
+
     port-hero {
       grid-area: hero;
     }

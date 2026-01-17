@@ -39,26 +39,26 @@
       {
         "id": "join",
         "description": [
-          "Join ist eine Kanban-App zur Organisation von Aufgaben und Kontakten. Neue Aufgaben können erstellt, bestehenden Listen zugeordnet und per Drag & Drop verschoben werden.",
-          "Das Projekt umfasst eine Benutzer-Authentifizierung sowie die Verwaltung von Aufgaben-Kärtchen und Kontakten. Es demonstriert den Einsatz von Angular für die UI-Logik in Kombination mit einem Django-Backend."
+          "Join ist eine Kanban-App zur Organisation von Aufgaben und Kontakten. Aufgaben können erstellt, Listen zugeordnet und verschoben werden.",
+          "Das Projekt umfasst eine Nutzer-Authentifizierung und einen Gastzugang."
         ],
         "workflow": [
-          "Die Entwicklung von Join begann mit einem Mockup in Figma, das das visuelle Design und die Nutzerführung vorgab.",
-          "Zunächst habe ich das Backend mit Django umgesetzt, um stabile API-Endpoints für Authentifizierung, Aufgabenverwaltung und Kontakte bereitzustellen.",
-          "Darauf aufbauend habe ich das Frontend mit Angular und SCSS entwickelt und die Integration zwischen Frontend und Backend sichergestellt.",
-          "Während des Entwicklungsprozesses habe ich das Backend gezielt erweitert und optimiert, um zusätzliche Anforderungen des Frontends zu unterstützen."
+          "Die Entwicklung von Join basiert auf einem vorgegebenen Mockup in Figma.",
+          "Ich habe zuerst das Backend mit Django umgesetzt, um stabile API-Endpoints für Authentifizierung, Aufgabenverwaltung und Kontakte bereitzustellen.",
+          "Dann habe ich das Frontend mit Angular entwickelt und die Integration zwischen Frontend und Backend sichergestellt.",
+          "Während des Entwicklungsprozesses habe ich das Backend gezielt erweitert, um alle Anforderungen des Frontends zu unterstützen."
         ]
       },
       {
         "id": "videoflix",
         "description": [
           "Videoflix ist eine Streaming-Plattform nach dem Vorbild von Netflix. Nutzerinnen und Nutzer können sich registrieren, ihr Konto per E-Mail-Link aktivieren und bei Bedarf das Passwort zurücksetzen.",
-          "Das Projekt wurde mit Django umgesetzt und bietet Videoverwaltung mit Kategorien, automatischer Thumbnail-Erstellung sowie Segmentierung und Speicherung in mehreren Auflösungen."
+          "Das Projekt bietet Videoverwaltung mit Kategorien, automatischer Thumbnail-Erstellung sowie Speicherung in mehreren Auflösungen."
         ],
         "workflow": [
-          "Bei Videoflix lag der Fokus ebenfalls auf dem Backend - das Frontend war vorgegeben. Ein Schwerpunkt war die Authentifizierung über E-Mail-Adresse anstelle eines klassischen Benutzernamens.",
-          "Auf Grundlage einer detaillierten API-Dokumentation habe ich die benötigten Endpoints umgesetzt, mit Postman getestet und zusätzlich Unit-Tests geschrieben.",
-          "Zum Abschluss habe ich die Integration mit dem Frontend geprüft, insbesondere die Authentifizierung, die Kontoaktivierung per E-Mail-Link, das Zurücksetzen des Passworts sowie die Auslieferung der Videos in verschiedenen Auflösungen."
+          "Der Fokus lag auf dem Backend - das Frontend war vorgegeben. Ein Schwerpunkt war die Authentifizierung per E-Mail-Adresse anstelle eines Benutzernamens.",
+          "Ich habe zunächst die Endpoints umgesetzt, mit Postman getestet und Unit-Tests geschrieben.",
+          "Dann habe ich die Integration mit dem Frontend geprüft, vor allem Authentifizierung, Kontoaktivierung per E-Mail-Link, Zurücksetzen des Passworts und die Auslieferung der Videos in verschiedenen Auflösungen."
         ]
       },
       {
@@ -68,10 +68,10 @@
           "Das Projekt wurde mit Django umgesetzt und umfasst unter anderem Paginierung, Sortierfunktionen und eine REST-API zur Anbindung an das vorgegebene Frontend."
         ],
         "workflow": [
-          "Bei Coderr lag der Schwerpunkt ausschließlich auf dem Backend - das Frontend wurde vorgegeben.",
-          "Auf Grundlage einer detaillierten API-Dokumentation habe ich die benötigten Endpoints systematisch implementiert und mit Postman getestet.",
-          "Im Anschluss erfolgte die Integration mit dem Frontend, wobei die Schnittstellen ausführlich geprüft wurden.",
-          "Für die Projektabnahme wurde das Backend zusätzlich mit automatisierten Tests validiert."
+          "Das Frontend war vorgegeben.",
+          "Auf Grundlage einer detaillierten API-Dokumentation habe ich die Endpoints systematisch aufgebaut und mit Postman getestet.",
+          "Dann habe ich das Frontend integriert und die Schnittstellen ausführlich geprüft.",
+          "Bei der Projektabnahme wurde das Backend mit automatisierten Tests validiert."
         ]
       },
       {
@@ -89,12 +89,12 @@
         "id": "pokedex",
         "description": [
           "Der Pokédex ist eine interaktive Webanwendung, die einen Überblick über verschiedene Pokémon bietet. Über eine öffentliche API werden Daten wie Name, Typ und Bild geladen und benutzerfreundlich dargestellt.",
-          "Das Projekt demonstriert den Umgang mit REST-APIs und grundlegende DOM-Manipulation in JavaScript: Abfragen, Rendern von Ergebnissen und die dynamische Erstellung einer Detailansicht für jedes Pokémon."
+          "Das Projekt demonstriert den Umgang mit REST-APIs und grundlegender DOM-Manipulation: Abfragen, Rendern von Ergebnissen und die dynamische Erstellung einer Detailansicht für jedes Pokémon."
         ],
         "workflow": [
-          "Für den Pokédex gab es kein vorgegebenes Mockup - das Design habe ich mir anhand von Beispielen aus dem Internet erarbeitet.",
-          "Zunächst habe ich den Abruf und die Darstellung von 20 Pokémon umgesetzt und ihre Karten gestaltet. Anschließend erweiterte ich die Anwendung um das Nachladen weiterer Pokémon per Klick.",
-          "Darauf folgte die Gestaltung der Detailansichten sowie die Implementierung einer Suchfunktion, mit der gezielt nach Pokémon gesucht werden kann."
+          "Für Pokédex gab es kein Mockup - das Design habe ich mir anhand von Beispielen aus dem Internet erarbeitet.",
+          "Ich habe den Abruf und die Darstellung von 20 Pokémon umgesetzt und ihre Karten gestaltet. Dann habe ich die Anwendung um das Nachladen weiterer Pokémon erweitert.",
+          "Nach der Gestaltung der Detailansichten habe ich eine Suchfunktion implementiert, mit der gezielt nach Pokémon gesucht werden kann."
         ]
       }
     ]
