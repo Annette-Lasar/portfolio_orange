@@ -8,67 +8,79 @@
       <mat-toolbar class="custom-toolbar">
         <div class="link-wrapper">
           <a
-            matIconButton
+            mat-icon-button
             routerLink="/"
-            class="link-wrapper"
-            [aria-label]="vm.content?.menu?.about"
+            [class.active]="(activeSection$ | async) === 'hero'"
+            [aria-label]="vm.content?.menu?.home"
           >
-            <mat-icon>home</mat-icon>
+            <span class="icon-indicator">
+              <mat-icon fontSet="material-icons-outlined">home</mat-icon>
+            </span>
           </a>
         </div>
 
         <div class="link-wrapper">
           <a
-            matIconButton
-            routerLink="/about"
-            class="link-wrapper"
+            mat-icon-button
+            routerLink="/"
+            [class.active]="(activeSection$ | async) === 'about'"
             [aria-label]="vm.content?.menu?.about"
           >
-            <mat-icon>person</mat-icon>
+            <span class="icon-indicator">
+              <mat-icon fontSet="material-icons-outlined">person</mat-icon>
+            </span>
           </a>
         </div>
 
         <div class="link-wrapper">
           <a
-            matIconButton
-            routerLink="/projects"
-            class="link-wrapper"
+            mat-icon-button
+            routerLink="/"
+            [class.active]="(activeSection$ | async) === 'projects'"
             [aria-label]="vm.content?.menu?.projects"
           >
-            <mat-icon>code</mat-icon>
+            <span class="icon-indicator">
+              <mat-icon fontSet="material-icons-outlined">code</mat-icon>
+            </span>
           </a>
         </div>
 
         <div class="link-wrapper">
           <a
-            matIconButton
-            routerLink="/feedback"
-            class="link-wrapper"
+            mat-icon-button
+            routerLink="/"
+            [class.active]="(activeSection$ | async) === 'feedback'"
             [aria-label]="vm.content?.menu?.feedback"
           >
-            <mat-icon>forum</mat-icon>
+            <span class="icon-indicator">
+              <mat-icon fontSet="material-icons-outlined">forum</mat-icon>
+            </span>
           </a>
         </div>
 
         <div class="link-wrapper">
           <a
-            matIconButton
-            routerLink="/cv"
-            class="link-wrapper"
+            mat-icon-button
+            routerLink="/"
+            [class.active]="(activeSection$ | async) === 'cv'"
             [aria-label]="vm.content?.menu?.cv"
           >
-            <mat-icon>description</mat-icon>
+            <span class="icon-indicator">
+              <mat-icon fontSet="material-icons-outlined">description</mat-icon>
+            </span>
           </a>
         </div>
 
         <div class="link-wrapper">
           <a
-            matIconButton
-            routerLink="/contact"
-            class="link-wrapper"
+            mat-icon-button
+            routerLink="/"
+            [class.active]="(activeSection$ | async) === 'contact'"
             [aria-label]="vm.content?.menu?.contact"
           >
-            <mat-icon>alternate_email</mat-icon>
+            <span class="icon-indicator">
+              <mat-icon fontSet="material-icons-outlined">alternate_email</mat-icon>
+            </span>
           </a>
         </div>
         <div class="button-wrapper language-icon">

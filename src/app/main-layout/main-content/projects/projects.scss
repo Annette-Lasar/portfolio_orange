@@ -1,5 +1,9 @@
 @use '../../../../scss_styles/index' as *;
 
+:host {
+  display: block;
+}
+
 section {
   padding: 1em 0.5em;
   .projets-list {

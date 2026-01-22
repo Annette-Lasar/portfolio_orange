@@ -14,6 +14,8 @@ import { Cv } from './cv/cv.js';
 import { Contact } from './contact/contact.js';
 import { Menu } from '../../shared/components/menu/menu.js';
 import { ActiveSectionService } from '../../shared/services/active-section.service.js';
+import { PageContentService } from '../../shared/services/page-content.service.js';
+import { take } from 'rxjs';
 
 @Component({
   selector: 'port-main-content',
@@ -23,34 +25,65 @@ import { ActiveSectionService } from '../../shared/services/active-section.servi
 })
 export class MainContent implements AfterViewInit {
   private activeSectionService = inject(ActiveSectionService);
+  private pageContentService = inject(PageContentService);
 
   @ViewChildren('contentSection', { read: ElementRef })
   contentSections!: QueryList<ElementRef<HTMLElement>>;
 
   private observer!: IntersectionObserver;
+  private visibilityMap = new Map<string, IntersectionObserverEntry>();
+  private resizeObserver!: ResizeObserver;
 
   ngAfterViewInit(): void {
-    this.setupObserver();
-    console.log('Sections found:', this.contentSections.length);
+    this.pageContentService.mergedContent$.pipe(take(1)).subscribe(() => {
+      this.setupObserver();
+    });
+  }
+
+  ngOnDestroy() {
+    this.observer?.disconnect();
+    this.resizeObserver?.disconnect();
   }
 
   setupObserver() {
     this.observer = new IntersectionObserver((entries) => this.handleIntersections(entries), {
-      root: null,
       threshold: [0.3, 0.6],
     });
+    this.initResizeObserver();
 
     this.contentSections.forEach((section) => this.observer.observe(section.nativeElement));
   }
 
+  private initResizeObserver(): void {
+    this.resizeObserver = new ResizeObserver((entries) => {
+      entries.forEach((entry) => {
+        const el = entry.target as HTMLElement;
+
+        if (el.offsetHeight > 0) {
+          this.observer.observe(el);
+          this.resizeObserver.unobserve(el); // optional, aber sauber
+        }
+      });
+    });
+  }
+
   private handleIntersections(entries: IntersectionObserverEntry[]): void {
-    const visibleEntries = entries.filter((entry) => entry.isIntersecting);
+    entries.forEach((entry) => {
+      const id = entry.target.id;
 
-    if (visibleEntries.length === 0) return;
+      if (entry.isIntersecting) {
+        this.visibilityMap.set(id, entry);
+      } else {
+        this.visibilityMap.delete(id);
+      }
+    });
 
-    const mostVisible = visibleEntries[0];
-    const sectionId = mostVisible.target.id;
+    if (this.visibilityMap.size === 0) return;
 
-    this.activeSectionService.setActiveSection(sectionId);
+    const mostVisible = Array.from(this.visibilityMap.values()).reduce((prev, curr) =>
+      curr.intersectionRatio > prev.intersectionRatio ? curr : prev,
+    );
+
+    this.activeSectionService.setActiveSection(mostVisible.target.id);
   }
 }

@@ -1,6 +1,8 @@
-// @use '@angular/material' as mat;
-// @use '../../../../scss_styles/color-palettes' as palettes;
 @use '../../../../scss_styles/index.scss' as *;
+
+:host {
+  display: block;
+}
 
 section {
   padding: 2em 0.5em;

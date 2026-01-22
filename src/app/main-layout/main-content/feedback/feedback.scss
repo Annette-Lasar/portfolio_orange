@@ -1,5 +1,9 @@
 @use '../../../../scss_styles/index' as *;
 
+:host {
+  display: block;
+}
+
 section {
   padding: 0 1em;
   .cards-container {
