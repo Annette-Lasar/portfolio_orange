@@ -4,16 +4,12 @@ section {
   padding: 0 1em;
   .cards-container {
     padding: 1em 0;
-    // max-height: 800px;
-    // overflow-y: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-template-rows: 300px;
-    gap: 1em;
+    @include flex-layout($justify: center, $gap: 0.5em);
+    flex-wrap: wrap;
   }
 
   .feedback-card {
-    max-width: 400px;
+    max-width: 250px;
     height: 300px;
     margin: 0 auto 1em;
 

@@ -1,11 +1,21 @@
 <div class="content-wrapper">
   <aside>
-    <port-menu context="aside" />
+    <port-menu context="aside"></port-menu>
   </aside>
-  <port-hero />
-  <port-about />
-  <port-projects />
-  <port-feedback />
-  <port-cv />
-  <port-contact />
+  <port-hero></port-hero>
+  <section #contentSection id="about">
+    <port-about></port-about>
+  </section>
+  <section #contentSection id="projects">
+    <port-projects></port-projects>
+  </section>
+  <section #contentSection id="feedback">
+    <port-feedback></port-feedback>
+  </section>
+  <section #contentSection id="cv">
+    <port-cv></port-cv>
+  </section>
+  <section #contentSection id="contact">
+    <port-contact></port-contact>
+  </section>
 </div>

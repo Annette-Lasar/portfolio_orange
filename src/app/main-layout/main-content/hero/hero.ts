@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, Input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { PageContentService } from '../../../shared/services/page-content.service.js';
-import { ScrollService } from '../../../shared/services/scroll.service.js';
+import { SectionVisibilityService } from '../../../shared/services/section-visibility.service.js';
 import { Menu } from '../../../shared/components/menu/menu.js';
 import { MergedContent } from '../../../shared/interfaces/merged-content.interface.js';
 import { Observable, take, filter } from 'rxjs';
@@ -22,7 +22,7 @@ export class Hero implements OnInit, AfterViewInit {
 
   constructor(
     public pageContentService: PageContentService,
-    private scrollService: ScrollService
+    private sectionVisibilityService: SectionVisibilityService
   ) {}
 
   ngOnInit(): void {
@@ -32,7 +32,7 @@ export class Hero implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.scrollService.registerHeroElement(this.heroElement.nativeElement);
+    this.sectionVisibilityService.registerHeroElement(this.heroElement.nativeElement);
   }
 
   initializeMergedContent(): void {
