@@ -1,5 +1,12 @@
 {
   "staticGeneralInfos": {
+    "candidateFirstName": "Annette",
+    "candidateLastName": "Lasar",
+    "candidateAddress": "Buchfeldstraße 19",
+    "candidateTownWithZIP": "74632 Neuenstein",
+    "candidateEmail": "contact@annette-lasar.de",
+    "candidatePhoneNumberNormal": "+49 151 70145561",
+    "candidatePhoneNumberNarrow": "+4915170145561",
     "candidateImg01": "img/annette_lasar_sw_rgb_square.jpg",
     "candidateImg02": "img/annette_lasar_sw_rgb.jpg",
     "closeX": "close_small.svg",
@@ -172,7 +179,7 @@
         "id": "coderr",
         "title": "Coderr",
         "technologies": [
-                    {
+          {
             "technology": "Django",
             "iconPath": "django.svg"
           },

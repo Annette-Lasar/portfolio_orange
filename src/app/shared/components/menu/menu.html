@@ -1,5 +1,5 @@
 @if (vm$ | async; as vm) {
-  @if (context === 'hero') {
+  @if (context === 'hero' || context === 'legal') {
     <nav
       class="menu menu-floating"
       [aria-label]="vm.content?.generalInfos?.mainNavigationLabel"
@@ -92,7 +92,7 @@
       </mat-toolbar>
     </nav>
   }
-  @if (context === 'aside') {
+  @if (context === 'aside' || context === 'legal') {
     <nav
       class="menu menu-aside"
       [aria-label]="vm.content?.generalInfos?.mainNavigationLabel"
@@ -107,11 +107,33 @@
 
       <div class="aside-menu-wrapper">
         <a href="#">Start</a>
-        <a href="#about" [class.active]="(activeSection$ | async) === 'about'">About</a>
-        <a href="#projects" [class.active]="(activeSection$ | async) === 'projects'">Projekte</a>
-        <a href="#feedback" [class.active]="(activeSection$ | async) === 'feedback'">Feedback</a>
-        <a href="#cv" [class.active]="(activeSection$ | async) === 'cv'">Lebenslauf</a>
-        <a href="#contact" [class.active]="(activeSection$ | async) === 'contact'">Kontakt</a>
+        <a
+          href="#about"
+          [class.active]="context === 'aside' && (activeSection$ | async) === 'about'"
+        >
+          {{ vm.content?.about?.heading }}
+        </a>
+        <a
+          href="#projects"
+          [class.active]="context === 'aside' && (activeSection$ | async) === 'projects'"
+        >
+          {{ vm.content?.projectInfos?.heading }}
+        </a>
+        <a
+          href="#feedback"
+          [class.active]="context === 'aside' && (activeSection$ | async) === 'feedback'"
+        >
+          {{ vm.content?.feedback?.heading }}
+        </a>
+        <a href="#cv" [class.active]="context === 'aside' && (activeSection$ | async) === 'cv'">
+          {{ vm.content?.cv?.heading }}
+        </a>
+        <a
+          href="#contact"
+          [class.active]="context === 'aside' && (activeSection$ | async) === 'contact'"
+        >
+          {{ vm.content?.contact?.heading }}
+        </a>
         <port-language-dropdown
           variant="aside"
           [currentLanguage]="vm.content?.generalInfos?.currentLanguage"
@@ -120,3 +142,23 @@
     </nav>
   }
 }
+
+<!-- @if (vm$ | async; as vm) {
+  @if (vm.showFloating) {
+    <nav
+      class="menu menu-floating"
+      [aria-label]="vm.content?.generalInfos?.mainNavigationLabel"
+    >
+      ...
+    </nav>
+  }
+
+  @if (vm.showAside) {
+    <nav
+      class="menu menu-aside"
+      [aria-label]="vm.content?.generalInfos?.mainNavigationLabel"
+    >
+      ...
+    </nav>
+  }
+} -->

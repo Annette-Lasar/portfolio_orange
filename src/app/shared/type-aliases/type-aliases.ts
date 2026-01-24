@@ -1,1 +1,1 @@
-export type MenuContext = 'hero' | 'aside';
+export type MenuContext = 'hero' | 'aside' | 'legal';

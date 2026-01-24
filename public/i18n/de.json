@@ -2,11 +2,14 @@
   "generalInfos": {
     "candidateImgAlt": "Foto der Bewerberin",
     "mainNavigationLabel": "Hauptnavigation",
-    "currentLanguage": "aktuelle Sprache"
+    "currentLanguage": "aktuelle Sprache",
+    "backToHomepage": "Zurück zur Homepage",
+    "candidateCountry": "Deutschland",
+    "emailLabel": "E-Mail-Adresse",
+    "phoneLabel": "Telefon"
   },
   "hero": {
     "greeting": "Hallo, ich bin",
-    "name": "Annette",
     "introduction": [
       "Ich bin Fullstack-Webentwicklerin mit einer Leidenschaft dafür, Ideen in funktionierende digitale Produkte zu verwandeln.",
       "Ich lebe in der Nähe von Heilbronn und arbeite gerne im Team, um saubere, durchdachte Web-Erlebnisse zu schaffen."
@@ -208,7 +211,11 @@
   "legal": {
     "imprint": {
       "heading": "Impressum",
-      "content": "Hier stehen deine Impressumsangaben ..."
+      "subHeading1": "Diensteanbieter",
+      "subHeading2": "Kontaktmöglichkeiten",
+      "content": "Hier stehen deine Impressumsangaben ...",
+      "imprintOriginText": "Erstellt mit kostenlosem Datenschutz-Generator von Dr. Thomas Schwenke.",
+      "imprintOriginLink": "https://datenschutz-generator.de/"
     },
     "privacy": {
       "heading": "Datenschutzerklärung",

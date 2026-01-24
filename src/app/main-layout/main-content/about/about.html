@@ -1,41 +1,44 @@
 <section>
   @if (mergedContent$ | async; as content) {
-  <h2>{{ content.about.heading }}</h2>
-  <div>{{ content.about.subHeading }}</div>
+    <h2>{{ content.about.heading }}</h2>
+    <div>{{ content.about.subHeading }}</div>
 
-  @for (intro of content.about.introduction; track intro) {
-  <p>{{ intro }}</p>
-  }
+    @for (intro of content.about.introduction; track intro) {
+      <p>{{ intro }}</p>
+    }
 
-  <h5>{{ content.about.skillsHeading }}</h5>
-
-  <mat-tab-group class="about-tabs">
-    <mat-tab [label]="content.about.tabHeading1">
-      @if (frontendIcons$ | async; as frontendIcons) { @for (frontendIcon of frontendIcons; track
-      frontendIcon.id) {
-      <figure>
-        <img
-          [src]="'icons/skills/' + frontendIcon.iconPath"
-          [alt]="frontendIcon.caption"
-          height="60"
-        />
-        <figcaption>{{ frontendIcon.caption }}</figcaption>
-      </figure>
-      } }
-    </mat-tab>
-    <mat-tab [label]="content.about.tabHeading2">
-      @if (backendIcons$ | async; as backendIcons) { @for (backendIcon of backendIcons; track
-      backendIcon.id) {
-      <figure>
-        <img
-          [src]="'icons/skills/' + backendIcon.iconPath"
-          [alt]="backendIcon.caption"
-          height="60"
-        />
-        <figcaption>{{ backendIcon.caption }}</figcaption>
-      </figure>
-      } }
-    </mat-tab>
-  </mat-tab-group>
+    <h5>{{ content.about.skillsHeading }}</h5>
+    <div class="tabs-wrapper">
+      <mat-tab-group class="about-tabs">
+        <mat-tab [label]="content.about.tabHeading1">
+          @if (frontendIcons$ | async; as frontendIcons) {
+            @for (frontendIcon of frontendIcons; track frontendIcon.id) {
+              <figure>
+                <img
+                  [src]="'icons/skills/' + frontendIcon.iconPath"
+                  [alt]="frontendIcon.caption"
+                  height="60"
+                />
+                <figcaption>{{ frontendIcon.caption }}</figcaption>
+              </figure>
+            }
+          }
+        </mat-tab>
+        <mat-tab [label]="content.about.tabHeading2">
+          @if (backendIcons$ | async; as backendIcons) {
+            @for (backendIcon of backendIcons; track backendIcon.id) {
+              <figure>
+                <img
+                  [src]="'icons/skills/' + backendIcon.iconPath"
+                  [alt]="backendIcon.caption"
+                  height="60"
+                />
+                <figcaption>{{ backendIcon.caption }}</figcaption>
+              </figure>
+            }
+          }
+        </mat-tab>
+      </mat-tab-group>
+    </div>
   }
 </section>

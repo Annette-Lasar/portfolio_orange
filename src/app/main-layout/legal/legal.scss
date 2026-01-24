@@ -1,0 +1,22 @@
+@use '../../../scss_styles/index' as *;
+
+.content-wrapper {
+  display: block; // mobile default, explizit
+}
+
+@media (min-width: $breakpoint-md) {
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 235px) 1fr;
+    grid-template-areas: 'aside content';
+    border: 3px solid green;
+  }
+
+  port-menu {
+    grid-area: aside;
+  }
+
+  .wrapper {
+    grid-area: content;
+  }
+}

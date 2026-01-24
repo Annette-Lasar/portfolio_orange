@@ -1,10 +1,18 @@
+export interface ImprintContent {
+  heading: string;
+  subHeading1: string;
+  subHeading2: string;
+  content: string;
+  imprintOriginText: string;
+  imprintOriginLink: string;
+}
+
+export interface PrivacyPolicyContent {
+  heading: string;
+  content: string;
+}
+
 export interface LegalContent {
-  imprint: {
-    heading: string;
-    content: string;
-  };
-  privacy: {
-    heading: string;
-    content: string;
-  };
+  imprint: ImprintContent;
+  privacyPolicy: PrivacyPolicyContent;
 }

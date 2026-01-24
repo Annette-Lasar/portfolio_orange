@@ -1,10 +1,45 @@
-<section>
-  <button matButton="filled" color="accent" [routerLink]="['/']" fragment="footer">
-    <mat-icon
-      aria-hidden="false"
-      aria-label="Zurück zur Homepage"
-      fontIcon="arrow_back. "
-    ></mat-icon>
-  </button>
-  <h2>Impressum</h2>
-</section>
+@if (mergedContent$ | async; as content) {
+  <div class="section-wrapper">
+  <section>
+    <h2>
+      {{ content.legal.imprint.heading }}
+    </h2>
+    <h3>
+      {{ content.legal.imprint.subHeading1 }}
+    </h3>
+    <address>
+      {{ content.generalInfos.candidateFirstName }} {{ content.generalInfos.candidateLastName }}
+      <br />
+      {{ content.generalInfos.candidateAddress }} <br />
+      {{ content.generalInfos.candidateTownWithZIP }} <br />
+      {{ content.generalInfos.candidateCountry }}
+    </address>
+    <h3>
+      {{ content.legal.imprint.subHeading2 }}
+    </h3>
+    <p>
+      {{ content.generalInfos.emailLabel }}:
+      <span class="email">{{ content.generalInfos.candidateEmail }}</span>
+    </p>
+    <p>
+      {{ content.generalInfos.phoneLabel }}:
+      <a
+        class="phone"
+        [attr.href]="
+          (isMobile$ | async) ? 'tel:' + content.generalInfos.candidatePhoneNumberNarrow : null
+        "
+      >
+        {{ content.generalInfos.candidatePhoneNumberNormal }}
+      </a>
+    </p>
+    <p class="legal-wrapper">
+      <a 
+      class="legal-link"
+      [href]="content.legal.imprint.imprintOriginLink">
+        {{ content.legal.imprint.imprintOriginText }}</a
+      >
+    </p>
+  </section>
+
+  </div>
+}

@@ -8,6 +8,11 @@ section {
   padding: 2em 0.5em;
 }
 
+.content-wrapper {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
 .list-content {
   margin: 2em 0 3em;
   padding: 1.5em 1em;
@@ -36,8 +41,12 @@ section {
   }
 }
 
-button {
-  display: block;
+.cv-download-btn {
+  width: fit-content;
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
   border-radius: 0;
 }

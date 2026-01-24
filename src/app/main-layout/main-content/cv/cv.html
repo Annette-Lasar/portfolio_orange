@@ -1,40 +1,57 @@
 <section>
   @if (mergedContent$ | async; as content) {
-    <h2>{{ content.cv.heading }}</h2>
-    <h4>{{ content.cv.subHeadingTillNow }}</h4>
-    <p>{{ content.cv.introductionTillNow }}</p>
-    <div class="list-content">
-      <div class="list-heading">{{ content.cv.mainStackHeading }}:</div>
+    <div class="content-wrapper">
+      <h2>{{ content.cv.heading }}</h2>
+      <h4>{{ content.cv.subHeadingTillNow }}</h4>
+      <p>{{ content.cv.introductionTillNow }}</p>
+      <div class="list-content">
+        <div class="list-heading">{{ content.cv.mainStackHeading }}:</div>
 
-      <ul>
-        @for (mainStack of content.cv.mainStackList; track mainStack) {
-          <li>
-            {{ mainStack }}
-          </li>
-        }
-      </ul>
+        <ul>
+          @for (mainStack of content.cv.mainStackList; track mainStack) {
+            <li>
+              {{ mainStack }}
+            </li>
+          }
+        </ul>
+      </div>
+
+      <h4>{{ content.cv.subHeadingCarreer }}</h4>
+      <p>{{ content.cv.introductionCarreer }}</p>
+
+      <div class="list-content">
+        <div class="list-heading">{{ content.cv.mainEmphasisHeading }}:</div>
+
+        <ul>
+          @for (mainEmphasis of content.cv.mainEmphasisList; track mainEmphasis) {
+            <li>
+              {{ mainEmphasis }}
+            </li>
+          }
+        </ul>
+      </div>
+
+      <!-- <button mat-flat-button color="accent" class="cv-download-btn">
+        <span class="mdc-button__label">
+          <span>{{ content.cv.buttonCaption }}</span>
+          <mat-icon fontIcon="download"></mat-icon>
+        </span>
+      </button> -->
+
+      <a
+        mat-flat-button
+        color="accent"
+        class="cv-download-btn"
+        href="/files/Lebenslauf_Annette_Lasar.pdf"
+        download
+        target="_blank"
+        rel="noopener"
+      >
+        <span class="mdc-button__label">
+          <span>{{ content.cv.buttonCaption }}</span>
+          <mat-icon>download</mat-icon>
+        </span>
+      </a>
     </div>
-
-    <h4>{{ content.cv.subHeadingCarreer }}</h4>
-    <p>{{ content.cv.introductionCarreer }}</p>
-
-    <div class="list-content">
-      <div class="list-heading">{{ content.cv.mainEmphasisHeading }}:</div>
-
-      <ul>
-        @for (mainEmphasis of content.cv.mainEmphasisList; track mainEmphasis) {
-          <li>
-            {{ mainEmphasis }}
-          </li>
-        }
-      </ul>
-    </div>
-
-    <button mat-flat-button color="accent" class="cv-download-btn">
-      <span class="mdc-button__label">
-        <span>{{ content.cv.buttonCaption }}</span>
-        <mat-icon fontIcon="download"></mat-icon>
-      </span>
-    </button>
   }
 </section>
