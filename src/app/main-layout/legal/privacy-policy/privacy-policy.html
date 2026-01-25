@@ -1,1 +1,93 @@
-<p>privacy-policy works!</p>
+@if (mergedContent$ | async; as content) {
+  <div class="section-wrapper">
+    <section>
+      <h2>
+        {{ content.legal.privacy.heading }}
+      </h2>
+      <p class="as-of">
+        {{ content.legal.privacy.asOf }}
+      </p>
+
+      <h3>
+        {{ content.legal.privacy.responsible.title }}
+      </h3>
+      <p>
+        {{ content.legal.privacy.responsible.text }}
+      </p>
+
+      <h3>
+        {{ content.legal.privacy.hosting.title }}
+      </h3>
+      <p>
+        {{ content.legal.privacy.hosting.text }}
+      </p>
+      <ul>
+        @for (dataType of content.legal.privacy.hosting.dataTypes; track dataType) {
+          <li>
+            {{ dataType }}
+          </li>
+        }
+      </ul>
+      <p>
+        {{ content.legal.privacy.hosting.legalBasis }}
+      </p>
+      <p>
+        {{ content.legal.privacy.hosting.purpose }}
+      </p>
+
+      <h3>
+        {{ content.legal.privacy.contactForm.title }}
+      </h3>
+      <p>
+        {{ content.legal.privacy.contactForm.text }}
+      </p>
+      <ul>
+        @for (dataType of content.legal.privacy.contactForm.dataTypes; track dataType) {
+          <li>
+            {{ dataType }}
+          </li>
+        }
+      </ul>
+      <p>
+        {{ content.legal.privacy.contactForm.legalBasis }}
+      </p>
+      <p>
+        {{ content.legal.privacy.contactForm.storageDuration }}
+      </p>
+      <h3>
+        {{ content.legal.privacy.downloads.title }}
+      </h3>
+      <p>
+        {{ content.legal.privacy.downloads.text }}
+      </p>
+      <h3>
+        {{ content.legal.privacy.externalLinks.title }}
+      </h3>
+      <p>
+        {{ content.legal.privacy.externalLinks.text }}
+      </p>
+      <h3>
+        {{ content.legal.privacy.rights.title }}
+      </h3>
+      <ul>
+        @for (item of content.legal.privacy.rights.items; track item) {
+          <li>
+            {{ item }}
+          </li>
+        }
+      </ul>
+      <h3>
+        {{ content.legal.privacy.security.title }}
+      </h3>
+      <p>
+        {{ content.legal.privacy.security.text }}
+      </p>
+      <h3>
+        {{ content.legal.privacy.changes.title }}
+      </h3>
+      <p>
+        {{ content.legal.privacy.changes.text }}
+      </p>
+    </section>
+  </div>
+}
