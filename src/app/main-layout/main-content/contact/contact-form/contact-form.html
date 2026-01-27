@@ -1,75 +1,64 @@
 <section>
-  @if (mergedContent$ | async; as content) {
-  <form class="contact-form">
-    <mat-form-field class="full-width">
-            <mat-label>
-        {{ content.contact.form.name }}
-      </mat-label>
-      <input
-        matInput
-        required
-      />
-      @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
-      <mat-error>
-        {{ content.contact.form.errors.errorMissingName }}
-      </mat-error>
-      }
-    </mat-form-field>
+  <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="submit()">
+    <div class="input-wrapper">
+      <mat-form-field class="full-width">
+        <mat-label>
+          {{ allContent.contact.form.name }}
+        </mat-label>
+        <input matInput formControlName="name" />
+        @if (name.invalid && name.touched) {
+          <mat-error>
+            {{ allContent.contact.form.errors.errorMissingName }}
+          </mat-error>
+        }
+      </mat-form-field>
 
-    <mat-form-field class="full-width">
-      <mat-label>
-        {{ content.generalInfos.emailLabel }}
-      </mat-label>
-      <input
-        type="email"
-        matInput
-        [formControl]="emailFormControl"
-      />
-      @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
-      <mat-error>
-        {{ content.contact.form.errors.errorMissingEmail }}
-      </mat-error>
-      } @if (emailFormControl.hasError('required')) {
-      <mat-error>
-        {{ content.contact.form.errors.errorMissingEmail }}
-      </mat-error>
-      }
-    </mat-form-field>
-    <mat-form-field class="full-width">
-      <mat-label>
-        {{ content.contact.form.message }}
-      </mat-label>
-      <textarea
-        matInput
-        rows="5"
-        maxlength="500"
-        #message
-        required
-      ></textarea>
-      <mat-hint class="char-hint full-width" align="end">{{ message.value.length }} / 500</mat-hint>
-      @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
-      <mat-error>
-        {{ content.contact.form.errors.errorMissingMessage }}
-      </mat-error>
-      }
-    </mat-form-field>
-    <div class="checkbox-wrapper">
-      <label for="acceptPrivacy" class="custom-checkbox cursor-pointer">
-        <input
-          id="acceptPrivacy"
-          class="checkbox cursor-pointer"
-          type="checkbox"
-          name="acceptPrivacy"
-          required
-        />
-        <span
-          class="checkbox-text"
-          [innerHTML]="
-            content.contact.acceptPrivacyPolicy || '' | linkifyPrivacy
-          "
-        ></span>
-      </label>
+      <mat-form-field class="full-width">
+        <mat-label>
+          {{ allContent.generalInfos.emailLabel }}
+        </mat-label>
+        <input matInput type="email" formControlName="email" />
+        @if (email.invalid && email.touched) {
+          <mat-error>
+            {{ allContent.contact.form.errors.errorMissingEmail }}
+          </mat-error>
+        }
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>
+          {{ allContent.contact.form.message }}
+        </mat-label>
+        <textarea matInput rows="5" maxlength="500" formControlName="message"></textarea>
+        <mat-hint class="char-hint full-width" align="end"
+          >{{ allContent.contact.form.messageCharacters }}: {{ message.value?.length || 0 }} /
+          500</mat-hint
+        >
+        @if (message.invalid && message.touched) {
+          <mat-error>
+            {{ allContent.contact.form.errors.errorMissingMessage }}
+          </mat-error>
+        }
+      </mat-form-field>
     </div>
+    <div class="checkbox-wrapper cursor-pointer">
+      <input id="acceptPrivacy" type="checkbox" class="checkbox" formControlName="acceptPrivacy" />
+
+      <label for="acceptPrivacy" class="custom-checkbox cursor-pointer"> Ich akzeptiere die </label>
+
+      <a class="privacy-link" routerLink="/legal/privacy" rel="noopener">
+        {{ allContent.legal.privacy.heading }}
+      </a>
+      .
+    </div>
+    <button
+      type="submit"
+      [aria-label]="allContent.contact.form.submitAccessibility"
+      matButton="filled"
+      color="primary-100"
+      class="contact-submit cursor-pointer"
+      [disabled]="contactForm.invalid"
+    >
+      {{ allContent.contact.form.submit }}
+    </button>
   </form>
-  }
 </section>

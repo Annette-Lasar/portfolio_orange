@@ -8,7 +8,6 @@ export class ActiveSectionService {
   activeSection$: Observable<string | null> = this.activeSectionSubject.asObservable();
 
   setActiveSection(id: string) {
-    console.log('Service got:', id);
     this.activeSectionSubject.next(id);
   }
 }

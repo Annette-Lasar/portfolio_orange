@@ -1,32 +1,39 @@
-<section #heroSection class="hero" id="hero" data-section="hero">
+<section #heroSection class="hero" data-section="hero">
   @if (mergedContent$ | async; as content) {
-  <div class="picture"></div>
-  <div class="content-wrapper">
-    <div class="text-content-wrapper">
-      <p class="greeting">{{ content.hero.greeting }}</p>
-      <div class="headline-wrapper">
-        <h1>
-          {{ content.generalInfos.candidateFirstName }}
-        </h1>
-        <div class="orange-underline"></div>
-      </div>
+    <div class="picture"></div>
+    <div class="content-wrapper">
+      <div class="text-content-wrapper">
+        <p class="greeting">{{ content.hero.greeting }}</p>
+        <div class="headline-wrapper">
+          <h1>
+            {{ content.generalInfos.candidateFirstName }}
+          </h1>
+          <div class="orange-underline"></div>
+        </div>
 
-      @for (intro of content.hero.introduction; track intro){
-      <p>{{ intro }}</p>
-      }
+        @for (intro of content.hero.introduction; track intro) {
+          <p>{{ intro }}</p>
+        }
+      </div>
+      <div class="button-wrapper">
+        <a
+          matButton="filled"
+          class="about-link"
+          color="accent"
+          (click)="scroll('about', $event)"
+          aria-label="content.hero.buttonCaption"
+        >
+          {{ content.hero.buttonCaption }}
+        </a>
+      </div>
     </div>
-    <div class="button-wrapper">
-      <button matButton="filled" color="accent">
-        {{ content.hero.buttonCaption }}
-      </button>
+    <port-menu context="hero" />
+
+    <div class="language-dropdown-wrapper">
+      <port-language-dropdown
+        variant="overlay"
+        [currentLanguage]="content?.generalInfos?.currentLanguage"
+      />
     </div>
-  </div>
-  <port-menu context="hero" />
-  
-  <div class="language-dropdown-wrapper">
-    <port-language-dropdown variant="overlay" 
-    [currentLanguage]="content?.generalInfos?.currentLanguage"
-    />
-  </div>
   }
 </section>

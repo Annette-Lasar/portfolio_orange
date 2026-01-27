@@ -13,8 +13,13 @@ section {
   max-width: 600px;
 }
 
+.summary {
+  text-align: center;
+}
+
 .list-content {
-  margin: 2em 0 3em;
+  max-width: 400px;
+  margin: 2em auto 3em;
   padding: 1.5em 1em;
   background-color: var(--color-primary-500);
   .list-heading {

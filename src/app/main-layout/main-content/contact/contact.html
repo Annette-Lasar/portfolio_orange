@@ -10,7 +10,9 @@
     <p>
       {{ content.contact.introduction }}
     </p>
-    <port-contact-form />
+    <port-contact-form 
+    [allContent]="content"
+    />
   </div>
   }
 </section>

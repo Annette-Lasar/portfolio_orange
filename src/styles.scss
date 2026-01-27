@@ -71,6 +71,10 @@ body {
   line-height: 1.5;
 }
 
+.scroll-target {
+  scroll-margin-top: 440px; // Höhe deines Floating / Sticky Menüs
+}
+
 ::-webkit-scrollbar {
   display: none;
 }

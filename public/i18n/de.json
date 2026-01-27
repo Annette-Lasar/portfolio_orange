@@ -17,7 +17,7 @@
     "buttonCaption": "Mehr über mich"
   },
   "about": {
-    "heading": "About me",
+    "heading": "Über mich",
     "subHeading": "Ich bin Annette Lasar, Fullstack-Webentwicklerin",
     "introduction": [
       "Mein Weg in die Softwareentwicklung war nicht geradlinig - aber genau das macht ihn besonders. Ich bringe analytisches Denken, strukturiertes Arbeiten und die Fähigkeit mit, komplexe Inhalte verständlich aufzubereiten - heute in Form sauberer, funktionaler Webanwendungen.",
@@ -190,6 +190,8 @@
       "emailPlaceholder": "Ihre E-Mail-Adresse",
       "message": "Nachricht",
       "messagePlaceholder": "Ihre Nachricht",
+      "messageCharacters": "Zeichen",
+      "submitAccessibility": "Nachricht absenden",
       "submit": "Absenden",
       "errors": {
         "errorMissingName": "Bitte geben Sie Ihren Namen ein.",
@@ -200,7 +202,7 @@
     }
   },
   "menu": {
-    "home": "Startseite",
+    "home": "Start",
     "about": "Über mich",
     "projects": "Projekte",
     "feedback": "Anerkennung",

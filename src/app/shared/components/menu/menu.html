@@ -1,4 +1,4 @@
-@if (vm$ | async; as vm) {
+<!-- @if (vm$ | async; as vm) {
   @if (context === 'hero' || context === 'legal') {
     <nav
       class="menu menu-floating"
@@ -10,7 +10,7 @@
           <a
             mat-icon-button
             routerLink="/"
-            [class.active]="(activeSection$ | async) === 'hero'"
+            [class.active]="context === 'hero' && (activeSection$ | async) === 'hero'"
             [aria-label]="vm.content?.menu?.home"
           >
             <span class="icon-indicator">
@@ -23,7 +23,7 @@
           <a
             mat-icon-button
             routerLink="/"
-            [class.active]="(activeSection$ | async) === 'about'"
+            [class.active]="context === 'hero' && (activeSection$ | async) === 'about'"
             [aria-label]="vm.content?.menu?.about"
           >
             <span class="icon-indicator">
@@ -36,7 +36,7 @@
           <a
             mat-icon-button
             routerLink="/"
-            [class.active]="(activeSection$ | async) === 'projects'"
+            [class.active]="context === 'hero' && (activeSection$ | async) === 'projects'"
             [aria-label]="vm.content?.menu?.projects"
           >
             <span class="icon-indicator">
@@ -49,7 +49,7 @@
           <a
             mat-icon-button
             routerLink="/"
-            [class.active]="(activeSection$ | async) === 'feedback'"
+            [class.active]="context === 'hero' && (activeSection$ | async) === 'feedback'"
             [aria-label]="vm.content?.menu?.feedback"
           >
             <span class="icon-indicator">
@@ -62,7 +62,7 @@
           <a
             mat-icon-button
             routerLink="/"
-            [class.active]="(activeSection$ | async) === 'cv'"
+            [class.active]="context === 'hero' && (activeSection$ | async) === 'cv'"
             [aria-label]="vm.content?.menu?.cv"
           >
             <span class="icon-indicator">
@@ -75,7 +75,7 @@
           <a
             mat-icon-button
             routerLink="/"
-            [class.active]="(activeSection$ | async) === 'contact'"
+            [class.active]="context === 'hero' && (activeSection$ | async) === 'contact'"
             [aria-label]="vm.content?.menu?.contact"
           >
             <span class="icon-indicator">
@@ -131,6 +131,166 @@
         <a
           href="#contact"
           [class.active]="context === 'aside' && (activeSection$ | async) === 'contact'"
+        >
+          {{ vm.content?.contact?.heading }}
+        </a>
+        <port-language-dropdown
+          variant="aside"
+          [currentLanguage]="vm.content?.generalInfos?.currentLanguage"
+        />
+      </div>
+    </nav>
+  }
+} -->
+
+@if (vm$ | async; as vm) {
+  @if (context === 'hero' || context === 'legal') {
+    <nav
+      class="menu menu-floating"
+      [aria-label]="vm.content?.generalInfos?.mainNavigationLabel"
+      [class.is-visible]="vm.showFloating"
+    >
+      <mat-toolbar class="custom-toolbar">
+        <div class="link-wrapper">
+          <a
+            mat-icon-button
+            (click)="scroll('hero', $event)"
+            [class.active]="context === 'hero' && (activeSection$ | async) === 'hero'"
+            [aria-label]="vm.content?.menu?.home"
+          >
+            <span class="icon-indicator">
+              <mat-icon fontSet="material-icons-outlined">home</mat-icon>
+            </span>
+          </a>
+        </div>
+
+        <div class="link-wrapper">
+          <a
+            mat-icon-button
+            (click)="scroll('about', $event)"
+            [class.active]="context === 'hero' && (activeSection$ | async) === 'about'"
+            [aria-label]="vm.content?.menu?.about"
+          >
+            <span class="icon-indicator">
+              <mat-icon fontSet="material-icons-outlined">person</mat-icon>
+            </span>
+          </a>
+        </div>
+
+        <div class="link-wrapper">
+          <a
+            mat-icon-button
+            (click)="scroll('projects', $event)"
+            [class.active]="context === 'hero' && (activeSection$ | async) === 'projects'"
+            [aria-label]="vm.content?.menu?.projects"
+          >
+            <span class="icon-indicator">
+              <mat-icon fontSet="material-icons-outlined">code</mat-icon>
+            </span>
+          </a>
+        </div>
+
+        <div class="link-wrapper">
+          <a
+            mat-icon-button
+            (click)="scroll('feedback', $event)"
+            [class.active]="context === 'hero' && (activeSection$ | async) === 'feedback'"
+            [aria-label]="vm.content?.menu?.feedback"
+          >
+            <span class="icon-indicator">
+              <mat-icon fontSet="material-icons-outlined">forum</mat-icon>
+            </span>
+          </a>
+        </div>
+
+        <div class="link-wrapper">
+          <a
+            mat-icon-button
+            (click)="scroll('cv', $event)"
+            [class.active]="context === 'hero' && (activeSection$ | async) === 'cv'"
+            [aria-label]="vm.content?.menu?.cv"
+          >
+            <span class="icon-indicator">
+              <mat-icon fontSet="material-icons-outlined">description</mat-icon>
+            </span>
+          </a>
+        </div>
+
+        <div class="link-wrapper">
+          <a
+            mat-icon-button
+            (click)="scroll('contact', $event)"
+            [class.active]="context === 'hero' && (activeSection$ | async) === 'contact'"
+            [aria-label]="vm.content?.menu?.contact"
+          >
+            <span class="icon-indicator">
+              <mat-icon fontSet="material-icons-outlined">alternate_email</mat-icon>
+            </span>
+          </a>
+        </div>
+        <div class="button-wrapper language-icon">
+          <port-language-dropdown
+            variant="icon"
+            [currentLanguage]="vm.content?.generalInfos?.currentLanguage"
+          />
+        </div>
+      </mat-toolbar>
+    </nav>
+  }
+  @if (context === 'aside' || context === 'legal') {
+    <nav
+      class="menu menu-aside"
+      [aria-label]="vm.content?.generalInfos?.mainNavigationLabel"
+      [class.is-visible]="vm.showAside"
+    >
+      <figure class="image-wrapper">
+        <img
+          [src]="vm.content?.generalInfos?.candidateImg01"
+          [alt]="vm.content?.generalInfos?.candidateImgAlt"
+        />
+      </figure>
+
+      <div class="aside-menu-wrapper">
+        <a mat-button (click)="scroll('hero', $event)" [aria-label]="vm.content?.menu?.home">{{
+          vm.content?.menu?.home
+        }}</a>
+        <a
+          mat-button
+          (click)="scroll('about', $event)"
+          [class.active]="context === 'aside' && (activeSection$ | async) === 'about'"
+          [aria-label]="vm.content?.about?.heading"
+          >{{ vm.content?.about?.heading }}</a
+        >
+
+        <a
+          mat-button
+          (click)="scroll('projects', $event)"
+          [class.active]="context === 'aside' && (activeSection$ | async) === 'projects'"
+          [aria-label]="vm.content?.projectInfos?.heading"
+        >
+          {{ vm.content?.projectInfos?.heading }}
+        </a>
+        <a
+          mat-button
+          (click)="scroll('feedback', $event)"
+          [class.active]="context === 'aside' && (activeSection$ | async) === 'feedback'"
+          [aria-label]="vm.content?.feedback?.heading"
+        >
+          {{ vm.content?.feedback?.heading }}
+        </a>
+        <a
+          mat-button
+          (click)="scroll('cv', $event)"
+          [class.active]="context === 'aside' && (activeSection$ | async) === 'cv'"
+          [aria-label]="vm.content?.cv?.heading"
+        >
+          {{ vm.content?.cv?.heading }}
+        </a>
+        <a
+          mat-button
+          (click)="scroll('contact', $event)"
+          [class.active]="context === 'aside' && (activeSection$ | async) === 'contact'"
+          [aria-label]="vm.content?.contact?.heading"
         >
           {{ vm.content?.contact?.heading }}
         </a>

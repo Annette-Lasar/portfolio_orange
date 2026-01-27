@@ -1,170 +1,3 @@
-// import { Component, Input, OnInit, inject } from '@angular/core';
-// import { CommonModule } from '@angular/common';
-// import { BreakpointObserver } from '@angular/cdk/layout';
-
-// import { MatIconModule } from '@angular/material/icon';
-// import { MatButtonModule } from '@angular/material/button';
-// import { MatToolbarModule } from '@angular/material/toolbar';
-
-// import { BehaviorSubject, Observable, combineLatest, distinctUntilChanged } from 'rxjs';
-// import { map, shareReplay } from 'rxjs/operators';
-
-// import { PageContentService } from '../../services/page-content.service';
-// import { SectionVisibilityService } from '../../services/section-visibility.service';
-// import { ActiveSectionService } from '../../services/active-section.service';
-
-// import { MenuContext } from '../../type-aliases/type-aliases';
-// import { MenuViewModel } from '../../interfaces/menu.interface';
-
-// import { LanguageDropdown } from '../language-dropdown/language-dropdown';
-
-// @Component({
-//   selector: 'port-menu',
-//   standalone: true,
-//   imports: [CommonModule, MatIconModule, MatButtonModule, MatToolbarModule, LanguageDropdown],
-//   templateUrl: './menu.html',
-//   styleUrl: './menu.scss',
-// })
-// export class Menu implements OnInit {
-//   private activeSectionService = inject(ActiveSectionService);
-
-//   /* ---------------------------------------------------
-//      Inputs
-//   --------------------------------------------------- */
-
-//   @Input({ required: true })
-//   set context(value: MenuContext) {
-//     console.log('[Menu] context input =', value);
-//     this.contextSubject.next(value);
-//   }
-
-//   /* ---------------------------------------------------
-//      State Subjects
-//   --------------------------------------------------- */
-
-//   private contextSubject = new BehaviorSubject<MenuContext>('hero');
-//   context$ = this.contextSubject.asObservable();
-
-//   /* ---------------------------------------------------
-//      Public Streams
-//   --------------------------------------------------- */
-
-//   isDesktop$!: Observable<boolean>;
-//   isMobile$!: Observable<boolean>;
-
-//   heroVisible$!: Observable<boolean>;
-
-//   showFloatingMenu$!: Observable<boolean>;
-//   showAsideMenu$!: Observable<boolean>;
-
-//   private pageContentService = inject(PageContentService);
-//   private breakpointObserver = inject(BreakpointObserver);
-//   private sectionVisibilityService = inject(SectionVisibilityService);
-
-//   activeSection$ = this.activeSectionService.activeSection$;
-
-//   vm$!: Observable<MenuViewModel>;
-
-//   /* ---------------------------------------------------
-//      Lifecycle
-//   --------------------------------------------------- */
-
-//   ngOnInit(): void {
-//     this.isDesktop$ = this.defineDesktopSize();
-//     this.isMobile$ = this.defineMobileSize();
-
-//     this.heroVisible$ = this.sectionVisibilityService.heroVisible$;
-
-//     this.showFloatingMenu$ = this.defineIfFloatingMenuShallBeRendered();
-//     this.showAsideMenu$ = this.defineIfAsideMenuShallBeRendered();
-
-//     this.vm$ = this.createViewModel();
-//   }
-
-//   /* ---------------------------------------------------
-//      Viewport
-//   --------------------------------------------------- */
-
-//   private defineDesktopSize(): Observable<boolean> {
-//     return this.breakpointObserver.observe(['(min-width: 48em)']).pipe(
-//       map((result) => result.matches),
-//       distinctUntilChanged(),
-//       shareReplay(1),
-//     );
-//   }
-
-//   private defineMobileSize(): Observable<boolean> {
-//     return this.isDesktop$.pipe(
-//       map((isDesktop) => !isDesktop),
-//       distinctUntilChanged(),
-//       shareReplay(1),
-//     );
-//   }
-
-//   /* ---------------------------------------------------
-//      Menu Visibility Logic
-//   --------------------------------------------------- */
-
-//   private defineIfFloatingMenuShallBeRendered(): Observable<boolean> {
-//     return combineLatest([this.isMobile$, this.heroVisible$, this.context$]).pipe(
-//       map(([isMobile, heroVisible, context]) => {
-//         if (context === 'hero') {
-//           return isMobile || heroVisible;
-//         }
-
-//         if (context === 'legal') {
-//           return isMobile;
-//         }
-
-//         return false;
-//       }),
-//       distinctUntilChanged(),
-//       shareReplay(1),
-//     );
-//   }
-
-//   private defineIfAsideMenuShallBeRendered(): Observable<boolean> {
-//     return combineLatest([this.isMobile$, this.heroVisible$, this.context$]).pipe(
-//       map(([isMobile, heroVisible, context]) => {
-//         if (isMobile) {
-//           return false;
-//         }
-
-//         if (context === 'legal') {
-//           return true;
-//         }
-
-//         if (context === 'hero') {
-//           return !heroVisible;
-//         }
-
-//         return false;
-//       }),
-//       distinctUntilChanged(),
-//       shareReplay(1),
-//     );
-//   }
-
-//   /* ---------------------------------------------------
-//      ViewModel
-//   --------------------------------------------------- */
-
-//   private createViewModel(): Observable<MenuViewModel> {
-//     return combineLatest([
-//       this.pageContentService.mergedContent$,
-//       this.showFloatingMenu$,
-//       this.showAsideMenu$,
-//     ]).pipe(
-//       map(([content, showFloating, showAside]) => ({
-//         content,
-//         showFloating,
-//         showAside,
-//       })),
-//       shareReplay(1),
-//     );
-//   }
-// }
-
 import { Component, Input, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BreakpointObserver } from '@angular/cdk/layout';
@@ -179,6 +12,7 @@ import { map, shareReplay } from 'rxjs/operators';
 import { PageContentService } from '../../services/page-content.service';
 import { SectionVisibilityService } from '../../services/section-visibility.service';
 import { ActiveSectionService } from '../../services/active-section.service';
+import { ScrollService } from '../../services/scroll.service';
 
 import { MenuContext } from '../../type-aliases/type-aliases';
 import { MenuViewModel } from '../../interfaces/menu.interface';
@@ -194,6 +28,10 @@ import { LanguageDropdown } from '../language-dropdown/language-dropdown';
 })
 export class Menu implements OnInit {
   private activeSectionService = inject(ActiveSectionService);
+  private scrollService = inject(ScrollService);
+  private pageContentService = inject(PageContentService);
+  private breakpointObserver = inject(BreakpointObserver);
+  private sectionVisibilityService = inject(SectionVisibilityService);
 
   isDesktop$!: Observable<boolean>;
   isMobile$!: Observable<boolean>;
@@ -204,12 +42,6 @@ export class Menu implements OnInit {
   activeSection$ = this.activeSectionService.activeSection$;
 
   @Input({ required: true }) context!: MenuContext;
-
-  constructor(
-    private pageContentService: PageContentService,
-    private breakpointObserver: BreakpointObserver,
-    private sectionVisibilityService: SectionVisibilityService,
-  ) {}
 
   ngOnInit(): void {
     this.isDesktop$ = this.defineDesktopSize();
@@ -261,5 +93,17 @@ export class Menu implements OnInit {
         showAside,
       })),
     );
+  }
+
+  scroll(sectionId: string, event: Event): void {
+    event.preventDefault();
+    event.stopPropagation();
+
+    console.log('[Menu] click ->', sectionId, 'url:', this.scrollServiceUrlDebug());
+    this.scrollService.scrollTo(sectionId);
+  }
+
+  private scrollServiceUrlDebug(): string {
+    return window.location.pathname + window.location.hash;
   }
 }

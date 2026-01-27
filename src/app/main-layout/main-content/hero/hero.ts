@@ -1,8 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, Input } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+
 import { PageContentService } from '../../../shared/services/page-content.service.js';
 import { SectionVisibilityService } from '../../../shared/services/section-visibility.service.js';
+import { ScrollService } from '../../../shared/services/scroll.service.js';
+
 import { Menu } from '../../../shared/components/menu/menu.js';
 import { MergedContent } from '../../../shared/interfaces/merged-content.interface.js';
 import { Observable, take, filter } from 'rxjs';
@@ -17,13 +20,12 @@ import { LanguageDropdown } from '../../../shared/components/language-dropdown/l
 export class Hero implements OnInit, AfterViewInit {
   mergedContent$!: Observable<MergedContent | null>;
 
+  public pageContentService = inject(PageContentService);
+  private sectionVisibilityService = inject(SectionVisibilityService);
+  private scrollService = inject(ScrollService);
+
   @ViewChild('heroSection', { static: true })
   heroElement!: ElementRef<HTMLElement>;
-
-  constructor(
-    public pageContentService: PageContentService,
-    private sectionVisibilityService: SectionVisibilityService
-  ) {}
 
   ngOnInit(): void {
     this.pageContentService.loadVariableContent('de');
@@ -43,8 +45,16 @@ export class Hero implements OnInit, AfterViewInit {
     this.mergedContent$
       .pipe(
         filter((value) => value !== null),
-        take(1)
+        take(1),
       )
       .subscribe(console.log);
+  }
+
+  scroll(sectionId: string, event: Event): void {
+    event.preventDefault();
+    event.stopPropagation();
+
+    console.log('[Menu] click ->', sectionId, 'url:');
+    this.scrollService.scrollTo(sectionId);
   }
 }

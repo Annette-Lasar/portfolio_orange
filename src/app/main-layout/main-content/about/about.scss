@@ -6,10 +6,23 @@
 
 section {
   padding: 2em 0.5em;
+  .text-wrapper {
+    margin: 0 auto;
+    max-width: 600px;
+    .subheading-1 {
+      margin: 0 0 1.5em;
+      font-size: clamp(0.9rem, 3vw, 1.3rem);
+      text-align: center;
+    }
+    .subheading-2 {
+      margin: 1em 0;
+      font-size: clamp(0.9rem, 3vw, 1.2rem);
+    }
+  }
 }
 
 .tabs-wrapper {
-  margin: 0 auto; 
+  margin: 0 auto;
   max-width: 600px;
 }
 
@@ -35,7 +48,6 @@ section {
 }
 
 ::ng-deep .about-tabs .mat-mdc-tab-body-content {
-  // height: 550px;
   padding: 3em 1.5em;
   @include flex-layout($align: baseline, $justify: center, $gap: 1rem);
   flex-wrap: wrap;
@@ -46,10 +58,10 @@ section {
     width: 75px;
     text-align: center;
     img {
-        margin: 0 0 12px;
+      margin: 0 0 12px;
     }
     figcaption {
-        margin: 0 0 1em;
+      margin: 0 0 1em;
       text-align: center;
     }
   }

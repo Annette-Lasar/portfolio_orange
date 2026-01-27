@@ -99,6 +99,11 @@ section {
       }
       .button-wrapper {
         margin: unset;
+        .about-link {
+          padding: 1em 2em;
+          @include flex-layout($justify: center);
+          border-radius: 0;
+        }
       }
     }
     .language-dropdown-wrapper {

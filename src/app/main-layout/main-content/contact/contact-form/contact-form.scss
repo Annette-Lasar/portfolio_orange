@@ -1,4 +1,4 @@
-@use '../../../../../scss_styles/index.scss' as *;
+@use '../../../../../scss_styles/index' as *;
 
 section {
   background-color: var(--color-primary-500);
@@ -6,122 +6,99 @@ section {
     max-width: 600px;
     margin: 2em auto 0;
     background-color: var(--color-primary-500);
-    .field-holder {
-      margin: 0 0 16px;
-      width: 100%;
-      .field {
+  }
+
+  .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .checkbox-wrapper {
+    margin: 1em 0 0;
+    font-size: 0.75rem;
+    color: var(--color-primary-contrast-400);
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    .custom-checkbox {
+      @include flex-layout($justify: flex-start, $gap: 1em);
+      .checkbox {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 14px;
+        height: 14px;
+        border: 2px solid white;
+        background-color: var(--color-primary-500);
+        border-radius: 0;
+        display: block;
+        flex-shrink: 0;
         position: relative;
-
-        input {
-          height: 48px;
-          border: transparent 2px solid;
-        }
-
-        textarea {
-          padding: 16px 0 0 1em;
-          resize: none;
-          border: transparent 2px solid;
-        }
-        label {
+        cursor: pointer;
+        margin-top: 2px;
+        transition:
+          background-color 0.2s ease,
+          border-color 0.2s ease;
+        &::after {
+          content: '';
           position: absolute;
-          top: 0.9rem;
-          left: 1rem;
-          color: var(--color-primary-500);
-          transition: all 0.3s ease-in-out;
+          left: 3px;
+          top: 0px;
+          width: 5px;
+          height: 9px;
+          border-right: 2px solid var(--color-primary-500);
+          border-bottom: 2px solid var(--color-primary-500);
+          transform: rotate(45deg);
+          opacity: 0;
+          transition: opacity 0.15s ease;
         }
-        input,
-        textarea {
-          width: 100%;
-          padding-inline-start: 1em;
-          background-color: var(--color-primary-500);
-          outline: none;
-          border: none;
-          color: var(--color-primary-500);
-          transition: all 0.3s ease;
 
-          &:focus {
-            border: 2px solid var(--color-primary-500);
-          }
-          &:focus + label,
-          &:valid + label,
-          &:not(:placeholder-shown) + label {
-            top: -0.6rem;
-            left: 0.75rem;
-            font-size: 0.75rem;
-            background: var(--color-primary-contrast-500);
-            padding: 0 0.25rem;
-            pointer-events: none;
-          }
-          &:-webkit-autofill {
-            -webkit-box-shadow: 0 0 0px 1000px var(--color-primary-contrast-500) inset;
-            -webkit-text-fill-color: var(--color-primary-500);
-          }
+        &:checked {
+          background-color: var(--color-primary-contrast-900);
+          border-color: var(--color-primary-contrast-900);
 
-          &:-moz-autofill {
-            box-shadow: 0 0 0px 1000px var(--color-primary-contrast-500) inset;
-            color: var(--color-primary-500);
-          }
-        }
-      }
-    }
-
-    .checkbox-wrapper {
-      margin: 1em 0 0;
-      font-size: 0.75rem;
-      color: var(--color-primary-contrast-400);
-      line-height: 1.5;
-      .custom-checkbox {
-        @include flex-layout($justify: flex-start, $gap: 1em);
-        .checkbox {
-          appearance: none;
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          width: 14px;
-          height: 14px;
-          border: 2px solid white;
-          background-color: var(--color-primary-500);
-          border-radius: 0;
-          display: block;
-          flex-shrink: 0;
-          position: relative;
-          cursor: pointer;
-          margin-top: 2px;
-          transition: background-color 0.2s ease, border-color 0.2s ease;
           &::after {
-            content: '';
-            position: absolute;
-            left: 3px;
-            top: 0px;
-            width: 5px;
-            height: 9px;
-            border-right: 2px solid var(--color-primary-500);
-            border-bottom: 2px solid var(--color-primary-500);
-            transform: rotate(45deg);
-            opacity: 0;
-            transition: opacity 0.15s ease;
+            opacity: 1;
           }
+        }
 
-          &:checked {
-            background-color: var(--color-primary-contrast-900);
-            border-color: var(--color-primary-contrast-900);
-
-            &::after {
-              opacity: 1;
-            }
-          }
-
-          &:focus-visible {
-            outline: 2px solid var(--color-accent-200);
-            outline-offset: 2px;
-          }
+        &:focus-visible {
+          outline: 2px solid var(--color-accent-200);
+          outline-offset: 2px;
         }
       }
     }
   }
+}
 
-  .char-hint {
-    font-size: 0.75rem;
-    text-align: right;
+mat-error {
+  color: var(--color-warn-200);
+}
+
+.char-hint {
+  font-size: 0.75rem;
+  text-align: right;
+}
+
+.contact-submit {
+  display: block;
+  width: fit-content;
+  padding: 1em 2em;
+  margin: 2em auto 0;
+  @include flex-layout();
+  border-radius: 0;
+  color: var(--color-accent-contrast-500);
+  background-color: var(--color-accent-500);
+
+  &:disabled,
+  &[aria-disabled='true'] {
+    color: var(--color-primary-50);
+    background-color: var(--color-primary-400);
+
+    cursor: not-allowed;
+    box-shadow: none;
   }
 }
 

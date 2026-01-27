@@ -12,6 +12,8 @@ export interface ContactForm {
   emailPlaceholder: string;
   message: string;
   messagePlaceholder: string;
+  messageCharacters: string;
+  submitAccessibility: string;
   submit: string;
   errors: ContactFormErrors;
 }

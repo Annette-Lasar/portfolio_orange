@@ -149,6 +149,10 @@ MEDIA QUERIES
       max-height: 700px;
       padding: 1em;
       @include flex-layout($direction: column);
+      a {
+        width: 100%;
+        border-radius: 0;
+      }
       .active {
         text-decoration: underline;
       }

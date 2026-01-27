@@ -1,13 +1,16 @@
 <section>
   @if (mergedContent$ | async; as content) {
-    <h2>{{ content.about.heading }}</h2>
-    <div>{{ content.about.subHeading }}</div>
+    <div class="text-wrapper">
+      <h2>{{ content.about.heading }}</h2>
+      <div class="subheading-1">{{ content.about.subHeading }}</div>
 
-    @for (intro of content.about.introduction; track intro) {
-      <p>{{ intro }}</p>
-    }
+      @for (intro of content.about.introduction; track intro) {
+        <p>{{ intro }}</p>
+      }
 
-    <h5>{{ content.about.skillsHeading }}</h5>
+      <div class="subheading-2">{{ content.about.skillsHeading }}</div>
+    </div>
+
     <div class="tabs-wrapper">
       <mat-tab-group class="about-tabs">
         <mat-tab [label]="content.about.tabHeading1">
