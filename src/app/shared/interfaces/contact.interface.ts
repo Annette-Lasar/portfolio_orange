@@ -13,6 +13,7 @@ export interface ContactForm {
   message: string;
   messagePlaceholder: string;
   messageCharacters: string;
+  privacyLinkAccessibility: string;
   submitAccessibility: string;
   submit: string;
   errors: ContactFormErrors;

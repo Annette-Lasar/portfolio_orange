@@ -14,7 +14,8 @@
       "Ich bin Fullstack-Webentwicklerin mit einer Leidenschaft dafür, Ideen in funktionierende digitale Produkte zu verwandeln.",
       "Ich lebe in der Nähe von Heilbronn und arbeite gerne im Team, um saubere, durchdachte Web-Erlebnisse zu schaffen."
     ],
-    "buttonCaption": "Mehr über mich"
+    "buttonCaption": "Mehr über mich",
+    "buttonAccessibility": "Zum Über-mich-Bereich scrollen"
   },
   "about": {
     "heading": "Über mich",
@@ -24,6 +25,7 @@
       "Ich liebe es, moderne Technologien zu entdecken und in benutzerfreundliche Lösungen zu verwandeln – mit einem klaren Fokus auf durchdachtes Design und mobile Nutzung ab dem ersten Pixel."
     ],
     "skillsHeading": "Meine Fähigkeiten",
+    "tabExplanationLabel": "Kompetenzen nach Bereich",
     "tabHeading1": "Frontend",
     "tabHeading2": "Backend"
   },
@@ -34,6 +36,8 @@
     "ariaLabelGitHub": "Auf GitHub anschauen",
     "ariaLabelOpenProject": "Detailansicht des Projekts öffnen",
     "ariaLabelCloseProject": "Detailansicht des Projekts schließen",
+    "ariaLabelPreviousProject": "Voriges Projekt ansehen",
+    "ariaLabelNextProject": "Nächstes Projekt ansehen",
     "subHeadingDetailView1": "Über das Projekt",
     "subHeadingDetailView2": "Meine Arbeitsweise",
     "appliedTechnologies": "Verwendete Technologien",
@@ -176,7 +180,8 @@
       "Verantwortung für Menschen und Projekte"
     ],
     "buttonCaption": "Lebenslauf als pdf",
-    "cvDownload": "cv-de.pdf"
+    "cvDownload": "cv-de.pdf",
+    "downloadAccessibility": "Lebenslauf als pdf herunterladen"
   },
   "contact": {
     "heading": "Kontakt",
@@ -191,6 +196,7 @@
       "message": "Nachricht",
       "messagePlaceholder": "Ihre Nachricht",
       "messageCharacters": "Zeichen",
+      "privacyLinkAccessibility": "Datenschutzerklärung lesen",
       "submitAccessibility": "Nachricht absenden",
       "submit": "Absenden",
       "errors": {
@@ -200,6 +206,12 @@
         "errorPrivacyPolicyUnchecked": "Bitte akzeptieren Sie die Datenschutzbestimmungen."
       }
     }
+  },
+  "footer": {
+    "accessibilityLinkTextGitHub": "Link zum GitHub-Profil von Annette Lasar",
+    "accessibilityLinkTextLinkedIn": "Link zum LinkedIn-Profil von Annette Lasar",
+    "accessibilityLinkImprit": "Link zum Impressum",
+    "accessibilityLinkPrivacy": "Link zur Datenschutzerklärung"
   },
   "menu": {
     "home": "Start",

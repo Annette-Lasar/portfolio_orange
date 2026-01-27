@@ -1,16 +1,39 @@
-<footer>
-  <div class="social-media">
-    <a href="https://github.com/Annette-Lasar" target="_blank">
-      <img src="icons/general/github.svg" alt="" height="32" />
-    </a>
-    <a href="#" target="_blank">
-      <img src="icons/general/linkedin.svg" alt="" height="32" />
-    </a>
-  </div>
-  <div class="legal-links">
-    <a [routerLink]="['/legal/imprint']" class="legal-link">Impressum</a>
-    |
-    <a [routerLink]="['/legal/privacy']" class="legal-link">Datenschutz</a>
-  </div>
-  <div class="copyright">&copy; Annette Lasar 2026</div>
-</footer>
+@if (mergedContent$ | async; as content) {
+  <footer>
+    <div class="social-media">
+      <a
+        [href]="content.footer.gitHubLinkPath"
+        target="_blank"
+        rel="noopener"
+        [aria-label]="content.footer.accessibilityLinkTextGitHub"
+      >
+        <img [src]="linkPathPrefix + content.footer.gitHubIconPath" alt="" height="32" />
+      </a>
+      <a
+        [href]="content.footer.linkedInLinkPath"
+        target="_blank"
+        rel="noopener"
+        [aria-label]="content.footer.accessibilityLinkTextLinkedIn"
+      >
+        <img [src]="linkPathPrefix + content.footer.linkedInIconPath" alt="" height="32" />
+      </a>
+    </div>
+    <div class="legal-links">
+      <a [routerLink]="['/legal/imprint']" class="legal-link">
+        {{ content.legal.imprint.heading }}
+      </a>
+      <span aria-hidden="true">|</span>
+      <a [routerLink]="['/legal/privacy']" class="legal-link">
+        {{ content.legal.privacy.heading }}
+      </a>
+    </div>
+    <div class="copyright">
+      <span>&copy;</span>
+      <span>
+        {{ content.generalInfos.candidateFirstName }}
+        {{ content.generalInfos.candidateLastName }}
+        {{ content.generalInfos.year }}
+      </span>
+    </div>
+  </footer>
+}

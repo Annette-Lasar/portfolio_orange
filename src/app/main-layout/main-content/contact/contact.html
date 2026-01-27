@@ -1,18 +1,16 @@
 <section>
-  @if(mergedContent$ | async; as content) {
-  <h2>
-    {{ content.contact.heading }}
-  </h2>
-  <div class="contact-form-wrapper">
-    <h5>
-      {{ content.contact.subHeading }}
-    </h5>
-    <p>
-      {{ content.contact.introduction }}
-    </p>
-    <port-contact-form 
-    [allContent]="content"
-    />
-  </div>
+  @if (mergedContent$ | async; as content) {
+    <h2>
+      {{ content.contact.heading }}
+    </h2>
+    <div class="contact-form-wrapper">
+      <p class="contact-intro-heading">
+        {{ content.contact.subHeading }}
+      </p>
+      <p>
+        {{ content.contact.introduction }}
+      </p>
+      <port-contact-form [allContent]="content" />
+    </div>
   }
 </section>

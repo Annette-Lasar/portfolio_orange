@@ -11,10 +11,17 @@ section {
 .content-wrapper {
   margin: 0 auto;
   max-width: 600px;
-}
-
-.summary {
-  text-align: center;
+  .cv-subheading {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    margin: 2em 0 1em;
+    font-size: clamp(0.9rem, 3vw, 1.4rem);
+    text-align: center;
+    color: var(--color-accent-500);
+  }
+  .summary {
+    text-align: center;
+  }
 }
 
 .list-content {

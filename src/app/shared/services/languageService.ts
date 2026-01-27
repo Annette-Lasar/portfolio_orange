@@ -21,6 +21,7 @@ export class LanguageService {
   }
 
   setLanguage(lang: LanguageOption) {
+    console.log('setLanguage', lang);
     this.languageSubject.next(lang);
     localStorage.setItem(STORAGE_LANG_KEY, lang.code);
 

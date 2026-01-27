@@ -12,6 +12,11 @@ section {
   padding: 2em 1em;
   background-color: var(--color-primary-500);
   color: var(--color-primary-contrast-500);
+  .contact-intro-heading {
+    margin: 0 0 1em;
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    text-align: center;
+  }
   p {
     text-align: center;
     color: inherit;

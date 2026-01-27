@@ -4,7 +4,7 @@
     <h2>
       {{ content.legal.imprint.heading }}
     </h2>
-    <h3>
+    <h3 class="title">
       {{ content.legal.imprint.subHeading1 }}
     </h3>
     <address>
@@ -14,15 +14,15 @@
       {{ content.generalInfos.candidateTownWithZIP }} <br />
       {{ content.generalInfos.candidateCountry }}
     </address>
-    <h3>
+    <h3 class="title">
       {{ content.legal.imprint.subHeading2 }}
     </h3>
     <p>
-      {{ content.generalInfos.emailLabel }}:
+      {{ content.generalInfos.emailLabel }}<span aria-hidden="true">: </span>
       <span class="email">{{ content.generalInfos.candidateEmail }}</span>
     </p>
     <p>
-      {{ content.generalInfos.phoneLabel }}:
+      {{ content.generalInfos.phoneLabel }}<span aria-hidden="true">: </span>
       <a
         class="phone"
         [attr.href]="

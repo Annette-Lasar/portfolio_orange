@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Project } from './project/project.js';
 import { PageContentService } from '../../../shared/services/page-content.service.js';
@@ -16,15 +16,14 @@ import { ProjectDetail } from './project-detail/project-detail.js';
 export class Projects implements OnInit, OnDestroy {
   currentIndex: number | null = null;
   mergedContent$!: Observable<MergedContent | null>;
+
   private subscriptions: Subscription = new Subscription();
+  public pageContentService = inject(PageContentService);
+  
   projects: ProjectModel[] = [];
 
-  constructor(public pageContentService: PageContentService) {}
 
   ngOnInit(): void {
-    this.pageContentService.loadVariableContent('de');
-    this.pageContentService.loadStaticContent();
-
     this.mergedContent$ = this.pageContentService.mergedContent$;
     this.showMergedContent();
     this.getProjects();

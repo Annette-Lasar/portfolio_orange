@@ -10,4 +10,5 @@ export interface CvContent {
   mainEmphasisList: string[];
   buttonCaption: string;
   cvDownload: string;
+  downloadAccessibility: string;
 }

@@ -1,6 +1,6 @@
 <section #heroSection class="hero" data-section="hero">
   @if (mergedContent$ | async; as content) {
-    <div class="picture"></div>
+    <div class="picture" aria-hidden="true"></div>
     <div class="content-wrapper">
       <div class="text-content-wrapper">
         <p class="greeting">{{ content.hero.greeting }}</p>
@@ -21,7 +21,7 @@
           class="about-link"
           color="accent"
           (click)="scroll('about', $event)"
-          aria-label="content.hero.buttonCaption"
+          [aria-label]="content.hero.buttonAccessibility"
         >
           {{ content.hero.buttonCaption }}
         </a>

@@ -18,14 +18,16 @@
         <img [src]="imgPathPrefix + project.imagePath" alt="" />
 
         <div class="link-wrapper">
-          <a [href]="project.links?.demo" target="_blank" class="test-button">{{
+          <a [href]="project.links?.demo" target="_blank" rel="noopener" class="test-button">{{
             content.projectInfos.tryButton
           }}</a>
-          <a [href]="project.links?.github" target="_blank" class="github-button">GitHub</a>
+          <a [href]="project.links?.github" target="_blank" rel="noopener" class="github-button">GitHub</a>
         </div>
       </div>
       <div class="button-wrapper">
-        <button class="arrow arrow-left cursor-pointer" (click)="showOtherProject(-1)">
+        <button class="arrow arrow-left cursor-pointer" (click)="showOtherProject(-1)"
+        [attr.aria-label]="content.projectInfos.ariaLabelPreviousProject"
+        >
           <img [src]="iconPathGeneralPrefix + content.generalInfos.arrowLeft" alt="" />
         </button>
         <div class="navigation-info">

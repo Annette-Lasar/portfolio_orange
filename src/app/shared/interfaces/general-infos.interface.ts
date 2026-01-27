@@ -4,6 +4,7 @@ export interface StaticGeneralInfos {
   candidateAddress: string;
   candidateTownWithZIP: string;
   candidateEmail: string;
+  year: string;
   candidatePhoneNumberNormal: string;
   candidatePhoneNumberNarrow: string;
   candidateImg01: string;
@@ -11,6 +12,7 @@ export interface StaticGeneralInfos {
   closeX: string;
   arrowLeft: string;
   arrowRight: string;
+  arrowHorizontal: string;
 }
 
 export interface GeneralInfos extends StaticGeneralInfos {

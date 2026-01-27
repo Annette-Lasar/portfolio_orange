@@ -2,7 +2,7 @@
   @if (mergedContent$ | async; as content) {
     <div class="content-wrapper">
       <h2>{{ content.cv.heading }}</h2>
-      <h4>{{ content.cv.subHeadingTillNow }}</h4>
+      <p class="cv-subheading">{{ content.cv.subHeadingTillNow }}</p>
       <p class="summary">{{ content.cv.introductionTillNow }}</p>
       <div class="list-content">
         <div class="list-heading">{{ content.cv.mainStackHeading }}:</div>
@@ -16,7 +16,7 @@
         </ul>
       </div>
 
-      <h4>{{ content.cv.subHeadingCarreer }}</h4>
+      <p class="cv-subheading">{{ content.cv.subHeadingCarreer }}</p>
       <p class="summary">{{ content.cv.introductionCarreer }}</p>
 
       <div class="list-content">
@@ -39,10 +39,11 @@
         download
         target="_blank"
         rel="noopener"
+        [attr.aria-label]="content.cv.downloadAccessibility"
       >
         <span class="mdc-button__label">
           <span>{{ content.cv.buttonCaption }}</span>
-          <mat-icon>download</mat-icon>
+          <mat-icon aria-hidden="true">download</mat-icon>
         </span>
       </a>
     </div>

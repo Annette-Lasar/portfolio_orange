@@ -1,61 +1,70 @@
-@if (language$ | async; as language) { @if (variant === 'overlay') {
-<button matButton [matMenuTriggerFor]="langMenu">{{ language.label }}</button>
-<mat-menu #langMenu="matMenu">
-  @for(lang of languages; track lang.code) {
-  <button mat-menu-item (click)="select(lang)">
-    {{ lang.label }}
-  </button>
+@if (language$ | async; as language) {
+  @if (variant === 'overlay') {
+    <button matButton [matMenuTriggerFor]="langMenu">{{ language.label }}</button>
+    <mat-menu #langMenu="matMenu">
+      @for (lang of languages; track lang.code) {
+        <button mat-menu-item (click)="select(lang)">
+          {{ lang.label }}
+        </button>
+      }
+    </mat-menu>
   }
-</mat-menu>
-} @if (variant === 'icon') {
-<button
-  class="lang-trigger cursor-pointer"
-  (click)="toggle()"
-  aria-haspopup="true"
-  [attr.aria-expanded]="expanded"
-  [attr.aria-label]="currentLanguage + ': ' +  language.fullName"
->
-  {{ language.label }}
-</button>
+  @if (variant === 'icon') {
+    <button
+      class="lang-trigger cursor-pointer"
+      (click)="toggle()"
+      aria-haspopup="listbox"
+      [attr.aria-expanded]="expanded"
+      [attr.aria-label]="currentLanguage + ': ' + language.fullName"
+    >
+      {{ language.label }}
+    </button>
 
-@if (expanded) {
-<div class="lang-popover">
-  @for (lang of languages; track lang.code; let i = $index) { @if (lang.code !==
-  language.code) {
-  <button class="lang-option cursor-pointer" (click)="select(lang)">
-    {{ lang.label }}
-  </button>
-  <span class="vertical-separator"></span>
-  } }
-</div>
-} } @if (variant === 'aside') {
-<div class="aside-lang" [class.expanded]="expanded">
-  <button
-    class="lang-btn cursor-pointer"
-    (click)="toggle()"
-    aria-haspopup="listbox"
-    [attr.aria-expanded]="expanded"
-  >
-    {{ language.label }}
-  </button>
+    @if (expanded) {
+      <div class="lang-popover" role="listbox">
+        @for (lang of languages; track lang.code; let i = $index) {
+          @if (lang.code !== language.code) {
+            <button class="lang-option cursor-pointer" role="option" (click)="select(lang)">
+              {{ lang.label }}
+            </button>
+            <span class="vertical-separator" aria-hidden="true"></span>
+          }
+        }
+      </div>
+    }
+  }
+  @if (variant === 'aside') {
+    <div class="aside-lang" [class.expanded]="expanded" role="listbox">
+      <button
+        class="lang-btn cursor-pointer"
+        (click)="toggle()"
+        aria-haspopup="listbox"
+        [attr.aria-expanded]="expanded"
+      >
+        {{ language.label }}
+      </button>
 
-  @if (expanded) { @for (lang of languages; track lang.code) { @if (lang.code !==
-  language.code) {
-  <span class="vertical-separator"></span>
-  <button class="lang-btn secondary" (click)="select(lang); $event.stopPropagation()">
-    {{ lang.label }}
-  </button>
-  } } }
+      @if (expanded) {
+        @for (lang of languages; track lang.code) {
+          @if (lang.code !== language.code) {
+            <span class="vertical-separator"></span>
+            <button
+              class="lang-btn secondary"
+              role="option"
+              (click)="select(lang); $event.stopPropagation()"
+            >
+              {{ lang.label }}
+            </button>
+          }
+        }
+      }
 
-  <img
-    src="/icons/general/arrow_horizontal.svg"
-    alt=""
-    class="expand-arrow"
-    [class.expanded]="expanded"
-  />
-</div>
-}}
-
-<!-- 
- {{ lang.label }} {{i < languages.length - 1 ? ' | ' : ''}}
--->
+      <img
+        [src]="imgPathPrefix + generalInfos?.arrowHorizontal"
+        alt=""
+        class="expand-arrow"
+        [class.expanded]="expanded"
+      />
+    </div>
+  }
+}

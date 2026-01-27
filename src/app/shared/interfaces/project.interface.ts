@@ -11,6 +11,8 @@ export interface ProjectInfos {
   ariaLabelGitHub: string;
   ariaLabelOpenProject: string;
   ariaLabelCloseProject: string;
+  ariaLabelPreviousProject: string;
+  ariaLabelNextProject: string;
   subHeadingDetailView1: string;
   subHeadingDetailView2: string;
   appliedTechnologies: string;

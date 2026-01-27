@@ -1,6 +1,6 @@
 @use '../../scss_styles/index' as *;
 
-section {
+.wrapper {
   min-height: 100vh;
   min-height: 100dvh;
   display: grid;
@@ -30,7 +30,7 @@ section {
 }
 
 @media (min-width: $breakpoint-md) {
-  section {
+  .wrapper {
     grid-template-rows: auto;
   }
   port-footer {

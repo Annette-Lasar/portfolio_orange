@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -15,12 +15,9 @@ import { Observable } from 'rxjs';
 export class Cv implements OnInit {
   mergedContent$!: Observable<MergedContent | null>;
 
-  constructor(public pageContentService: PageContentService) {}
+  public pageContentService = inject(PageContentService);
 
   ngOnInit(): void {
-    this.pageContentService.loadVariableContent('de');
-    this.pageContentService.loadStaticContent();
-
     this.mergedContent$ = this.pageContentService.mergedContent$;
   }
 }

@@ -12,7 +12,7 @@
     </div>
 
     <div class="tabs-wrapper">
-      <mat-tab-group class="about-tabs">
+      <mat-tab-group class="about-tabs" [aria-label]="content.about.tabExplanationLabel">
         <mat-tab [label]="content.about.tabHeading1">
           @if (frontendIcons$ | async; as frontendIcons) {
             @for (frontendIcon of frontendIcons; track frontendIcon.id) {

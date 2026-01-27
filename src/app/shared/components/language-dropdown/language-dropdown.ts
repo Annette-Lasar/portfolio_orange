@@ -7,6 +7,7 @@ import { LANGUAGES } from '../../data/language-data';
 import { LanguageOption } from '../../interfaces/language-option.interface';
 import { LanguageService } from '../../services/languageService';
 import { Observable } from 'rxjs';
+import { GeneralInfos } from '../../interfaces/general-infos.interface';
 
 @Component({
   selector: 'port-language-dropdown',
@@ -18,9 +19,11 @@ export class LanguageDropdown {
   expanded = false;
   languages = LANGUAGES;
   readonly language$: Observable<LanguageOption>;
+  imgPathPrefix: string = '/icons/general/';
 
   @Input({ required: true }) variant!: 'overlay' | 'icon' | 'aside';
   @Input() currentLanguage!: string | undefined;
+  @Input() generalInfos!: GeneralInfos | undefined;
 
   constructor(private readonly languageService: LanguageService) {
     this.language$ = this.languageService.language$;
@@ -31,7 +34,6 @@ export class LanguageDropdown {
   }
 
   select(lang: LanguageOption) {
-    // noch ohne Übersetzung → völlig okay
     this.languageService.setLanguage(lang);
     this.toggle();
   }

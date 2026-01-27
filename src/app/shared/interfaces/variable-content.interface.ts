@@ -7,6 +7,7 @@ import { CvContent } from './cv.interface.js';
 import { ContactContent } from './contact.interface.js';
 import { MenuContent } from './menu.interface.js';
 import { LegalContent } from './legal.interface.js';
+import { VariableFooterInfos } from './footer.interface.js';
 
 export interface VariableContent {
   generalInfos: GeneralInfos;
@@ -18,4 +19,5 @@ export interface VariableContent {
   contact: ContactContent;
   menu: MenuContent;
   legal: LegalContent;
+  footer: VariableFooterInfos;
 }

@@ -28,17 +28,12 @@ export class Hero implements OnInit, AfterViewInit {
   heroElement!: ElementRef<HTMLElement>;
 
   ngOnInit(): void {
-    this.pageContentService.loadVariableContent('de');
-    this.initializeMergedContent();
-    this.showMergedContent();
+    this.mergedContent$ = this.pageContentService.mergedContent$;
+    this.showMergedContent(); // delete!
   }
 
   ngAfterViewInit(): void {
     this.sectionVisibilityService.registerHeroElement(this.heroElement.nativeElement);
-  }
-
-  initializeMergedContent(): void {
-    this.mergedContent$ = this.pageContentService.mergedContent$;
   }
 
   showMergedContent() {

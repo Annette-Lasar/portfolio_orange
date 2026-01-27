@@ -29,9 +29,6 @@ export class Imprint implements OnInit {
   isMobile$ = this.breakpointObserver.observe([MOBILE_QUERY]).pipe(map((result) => result.matches));
 
   ngOnInit(): void {
-    this.pageContentService.loadVariableContent('de');
-    this.pageContentService.loadStaticContent();
-
     this.mergedContent$ = this.pageContentService.mergedContent$;
   }
 }

@@ -7,6 +7,9 @@ import { StaticContent } from '../interfaces/static-content.interface';
 import { MergedAboutContent, MergedContent } from '../interfaces/merged-content.interface';
 import { FeedbackContent } from '../interfaces/feedback.interface';
 import { GeneralInfos } from '../interfaces/general-infos.interface';
+import { VariableFooterInfos } from '../interfaces/footer.interface';
+import { StaticFooterInfos } from '../interfaces/footer.interface';
+import { LanguageService } from './languageService';
 
 @Injectable({
   providedIn: 'root',
@@ -30,15 +33,26 @@ export class PageContentService {
         feedback: this.addFeedbackToMerged(variable, statics),
         projectInfos: this.addProjectsToMerged(variable, statics),
         generalInfos: this.addGeneralInfosToMerged(variable, statics),
+        footer: this.addFooterToMerged(variable, statics),
       };
 
       this.deleteRedundantJsonParts(merged);
       return merged;
-    })
+    }),
   );
 
-  constructor(private http: HttpClient) {
+  constructor(
+    private http: HttpClient,
+    private languageService: LanguageService,
+  ) {
     this.init();
+    this.getCurrentLanguageContent();
+  }
+
+  getCurrentLanguageContent() {
+    this.languageService.language$.subscribe((lang) => {
+      this.loadVariableContent(lang.code);
+    });
   }
 
   // ----------- LOADERS ---------------------------------------
@@ -88,6 +102,16 @@ export class PageContentService {
     return {
       ...variable.generalInfos,
       ...statics.staticGeneralInfos,
+    };
+  }
+
+  private addFooterToMerged(
+    variable: VariableContent,
+    statics: StaticContent,
+  ): VariableFooterInfos & StaticFooterInfos {
+    return {
+      ...variable.footer,
+      ...statics.staticFooterInfos,
     };
   }
 

@@ -45,10 +45,15 @@
 
       <label for="acceptPrivacy" class="custom-checkbox cursor-pointer"> Ich akzeptiere die </label>
 
-      <a class="privacy-link" routerLink="/legal/privacy" rel="noopener">
+      <a
+        class="privacy-link"
+        routerLink="/legal/privacy"
+        rel="noopener"
+        [attr.aria-label]="allContent.contact.form.privacyLinkAccessibility"
+      >
         {{ allContent.legal.privacy.heading }}
       </a>
-      .
+      <span aria-hidden="true">.</span>
     </div>
     <button
       type="submit"

@@ -1,53 +1,288 @@
 {
+  "generalInfos": {
+    "candidateImgAlt": "Photo de la candidate",
+    "mainNavigationLabel": "Navigation principale",
+    "currentLanguage": "langue actuelle",
+    "backToHomepage": "Retour à la page d’accueil",
+    "candidateCountry": "Allemagne",
+    "emailLabel": "Adresse e-mail",
+    "phoneLabel": "Téléphone"
+  },
   "hero": {
-    "title": "Mon Portfolio",
-    "subtitle": "Bienvenue sur ma page"
+    "greeting": "Bonjour, je suis",
+    "introduction": [
+      "Je suis développeuse web full stack, passionnée par la transformation d’idées en produits numériques fonctionnels.",
+      "Je vis près de Heilbronn et j’aime travailler en équipe afin de créer des expériences web claires et bien pensées."
+    ],
+    "buttonCaption": "En savoir plus sur moi",
+    "buttonAccessibility": "Faire défiler jusqu’à la section À propos de moi"
+  },
+  "about": {
+    "heading": "À propos de moi",
+    "subHeading": "Je suis Annette Lasar, développeuse web full stack",
+    "introduction": [
+      "Mon parcours vers le développement logiciel n’a pas été linéaire – et c’est précisément ce qui le rend unique. J’apporte une pensée analytique, un travail structuré et la capacité de rendre compréhensibles des contenus complexes – aujourd’hui sous forme d’applications web propres et fonctionnelles.",
+      "J’aime découvrir des technologies modernes et les transformer en solutions conviviales, avec un accent clair sur un design réfléchi et une approche mobile dès le premier pixel."
+    ],
+    "skillsHeading": "Mes compétences",
+    "tabExplanationLabel": "Compétences par domaine",
+    "tabHeading1": "Frontend",
+    "tabHeading2": "Backend"
+  },
+  "projectInfos": {
+    "heading": "Projets",
+    "subHeading1": "Frontend",
+    "subHeading2": "Backend",
+    "ariaLabelGitHub": "Voir sur GitHub",
+    "ariaLabelOpenProject": "Ouvrir la vue détaillée du projet",
+    "ariaLabelCloseProject": "Fermer la vue détaillée du projet",
+    "ariaLabelPreviousProject": "Voir le projet précédent",
+    "ariaLabelNextProject": "Voir le projet suivant",
+    "subHeadingDetailView1": "À propos du projet",
+    "subHeadingDetailView2": "Ma méthode de travail",
+    "appliedTechnologies": "Technologies utilisées",
+    "tryButton": "Tester",
+    "projects": [
+      {
+        "id": "join",
+        "description": [
+          "Join est une application Kanban destinée à l’organisation des tâches et des contacts. Les tâches peuvent être créées, assignées à des listes et déplacées.",
+          "Le projet comprend une authentification des utilisateurs ainsi qu’un accès invité."
+        ],
+        "workflow": [
+          "Le développement de Join repose sur une maquette fournie dans Figma.",
+          "J’ai d’abord mis en place le backend avec Django afin de fournir des endpoints API stables pour l’authentification, la gestion des tâches et des contacts.",
+          "J’ai ensuite développé le frontend avec Angular et assuré l’intégration entre le frontend et le backend.",
+          "Au cours du processus de développement, j’ai étendu le backend de manière ciblée afin de prendre en charge toutes les exigences du frontend."
+        ]
+      },
+      {
+        "id": "videoflix",
+        "description": [
+          "Videoflix est une plateforme de streaming inspirée de Netflix. Les utilisatrices et utilisateurs peuvent s’inscrire, activer leur compte via un lien envoyé par e-mail et réinitialiser leur mot de passe si nécessaire.",
+          "Le projet propose une gestion des vidéos avec des catégories, la création automatique de miniatures ainsi que le stockage en plusieurs résolutions."
+        ],
+        "workflow": [
+          "L’accent a été mis sur le backend – le frontend était imposé. Un point central était l’authentification par adresse e-mail plutôt que par nom d’utilisateur.",
+          "J’ai d’abord implémenté les endpoints, les ai testés avec Postman et rédigé des tests unitaires.",
+          "J’ai ensuite vérifié l’intégration avec le frontend, en particulier l’authentification, l’activation du compte via lien e-mail, la réinitialisation du mot de passe et la diffusion des vidéos en différentes résolutions."
+        ]
+      },
+      {
+        "id": "coderr",
+        "description": [
+          "Coderr est une place de marché pour développeuses et développeurs, similaire à Fiverr. Les utilisateurs peuvent se connecter en tant que client ou prestataire, créer ou demander des offres et les trier selon différents critères.",
+          "Le projet a été réalisé avec Django et comprend notamment une pagination, des fonctions de tri et une API REST destinée à l’intégration avec le frontend fourni."
+        ],
+        "workflow": [
+          "Le frontend était imposé.",
+          "Sur la base d’une documentation API détaillée, j’ai construit les endpoints de manière systématique et les ai testés avec Postman.",
+          "J’ai ensuite intégré le frontend et vérifié minutieusement les interfaces.",
+          "Lors de la validation du projet, le backend a été contrôlé à l’aide de tests automatisés."
+        ]
+      },
+      {
+        "id": "mermaid",
+        "description": [
+          "Ce jeu a été développé dans le cadre de la formation avec du JavaScript vanilla. L’objectif : aider la sirène à collecter des perles et des étoiles, à se défendre contre des créatures marines hostiles et, à la fin, à trouver la clé dorée pour ouvrir le coffre au trésor.",
+          "L’ensemble du jeu repose sur une programmation orientée objet, avec des classes clairement séparées pour le personnage, les ennemis, les objets et la logique du jeu."
+        ],
+        "workflow": [
+          "Aucune maquette ni description détaillée n’ayant été fournie, j’ai conçu et développé le jeu étape par étape.",
+          "J’ai créé, testé et, si nécessaire, refactorisé les fonctions et les classes de manière itérative – un processus qui a approfondi ma compréhension de la POO et des mécaniques de jeu. La conception visuelle s’est développée en grande partie en parallèle du code, le projet laissant également une large place aux décisions créatives."
+        ]
+      },
+      {
+        "id": "pokedex",
+        "description": [
+          "Le Pokédex est une application web interactive qui offre une vue d’ensemble de différents Pokémon. Les données telles que le nom, le type et l’image sont chargées via une API publique et présentées de manière conviviale.",
+          "Le projet illustre l’utilisation d’API REST et la manipulation de base du DOM : requêtes, rendu des résultats et création dynamique d’une vue détaillée pour chaque Pokémon."
+        ],
+        "workflow": [
+          "Il n’y avait pas de maquette pour le Pokédex – j’ai élaboré le design à partir d’exemples trouvés sur Internet.",
+          "J’ai mis en place le chargement et l’affichage de 20 Pokémon et conçu leurs cartes, puis j’ai étendu l’application pour charger davantage de Pokémon.",
+          "Après la conception des vues détaillées, j’ai implémenté une fonction de recherche permettant de rechercher des Pokémon de manière ciblée."
+        ]
+      }
+    ]
   },
   "feedback": {
-    "heading": "Témoignages",
+    "heading": "Retours",
     "feedbackInfos": [
       {
+        "id": "grischa",
         "cardTitle": "Grischa Tänzer",
         "cardSubtitle": "2024",
         "cardImage": "avatar_grischa.png",
-        "feedbackText": "Merci beaucoup, Annette, pour ta vidéo détaillée – elle m’a vraiment aidé."
+        "feedbackText": "Merci beaucoup, Annette, pour ta vidéo détaillée, elle m’a beaucoup aidé."
       },
       {
+        "id": "lea",
         "cardTitle": "Lea Cotar",
         "cardSubtitle": "Juillet 2025",
         "cardImage": "avatar_lea.png",
-        "feedbackText": "Annette m'a énormément aidée avec Angular – grâce à ses explications claires de concepts complexes, j’ai enfin pu vraiment progresser. Son soutien a été un véritable atout décisif pour mon projet !"
+        "feedbackText": "Annette m’a énormément aidée avec Angular – grâce à ses explications claires de concepts complexes, j’ai enfin pu vraiment démarrer. Son soutien a été un véritable game changer pour mon projet !"
       },
       {
+        "id": "angela",
         "cardTitle": "Angela Gumprecht",
         "cardSubtitle": "2024",
         "cardImage": "avatar_angela.png",
-        "feedbackText": "Je viens de terminer le challenge. Ton explication est vraiment excellente ! Merci."
+        "feedbackText": "Je viens de terminer le challenge. Ton explication est vraiment super ! Merci."
       },
       {
+        "id": "miruna",
         "cardTitle": "Miruna Agopian",
         "cardSubtitle": "Juillet 2025",
         "cardImage": "miruna_agopian_square.jpg",
-        "feedbackText": "Annette convainc aussi bien sur le plan professionnel que personnel. Son souci du détail et sa profonde compréhension des principes de programmation façonnent sa manière structurée de travailler. Lorsqu’on lui demande de l’aide, elle explique les concepts de façon claire et compréhensible. C’est une véritable joueuse d’équipe qui partage volontiers ses connaissances. Avec aisance et charisme, elle guide les autres vers la solution la plus logique."
+        "feedbackText": "Annette convainc tant sur le plan professionnel qu’humain. Son sens du détail et sa compréhension approfondie des principes de programmation façonnent sa méthode de travail structurée. Lorsqu’on lui demande de l’aide, elle explique les concepts de manière claire et compréhensible. C’est une véritable joueuse d’équipe qui partage volontiers ses connaissances. Avec aisance et charisme, elle guide les autres vers la solution la plus logique."
       },
       {
+        "id": "nicole",
         "cardTitle": "Nicole Gerlach",
         "cardSubtitle": "Août 2025",
         "cardImage": "avatar_nicole.png",
-        "feedbackText": "Annette se distingue par une curiosité et une soif de savoir extraordinaires, qui se manifestent dans sa manière de toujours tout remettre en question lorsqu’elle code, afin de comprendre pleinement les liens et de continuer à apprendre. Elle apporte également des idées innovantes pour améliorer les processus et les projets. Sa volonté d’assumer des responsabilités et d’aider les autres en cas de problèmes ou de questions est impressionnante. C’est une collègue extrêmement serviable qui partage généreusement son savoir et rend compréhensibles des sujets complexes grâce à ses explications claires. Grâce à ses grandes compétences didactiques, elle contribue de manière significative à faire progresser l’équipe et à promouvoir une culture d’apprentissage positive. Son ouverture et son engagement font d’elle un atout précieux pour toute équipe. Je recommande Annette sans réserve et suis convaincue qu’elle brillera dans n’importe quel poste par sa compétence et son engagement."
+        "feedbackText": "Annette se distingue par une curiosité exceptionnelle et une grande soif de connaissances, ce qui se manifeste par le fait qu’elle remet constamment les choses en question lorsqu’elle code afin de comprendre pleinement les relations et d’apprendre en continu. Elle apporte également toujours des idées innovantes pour améliorer les processus et les projets. Sa volonté de prendre des responsabilités et d’aider les autres en cas de problèmes ou de questions est impressionnante. C’est une collègue extrêmement serviable qui partage généreusement son savoir et rend compréhensibles même les sujets complexes grâce à ses explications claires. Grâce à ses grandes compétences pédagogiques, elle contribue de manière significative à faire progresser l’équipe et à promouvoir une culture d’apprentissage positive. Son ouverture et son engagement font d’elle un atout précieux pour toute équipe. Je recommande Annette sans réserve et suis convaincue qu’elle saura convaincre dans n’importe quel poste par sa compétence et son engagement."
       },
       {
+        "id": "gabriela",
         "cardTitle": "Gabriela Ströbl",
         "cardSubtitle": "Septembre 2025",
         "cardImage": "gabriela_square.jpg",
-        "feedbackText": "Pendant ma formation de programmeuse en parallèle de mon emploi, Annette a été d’un grand soutien. Elle a partagé son expertise ouvertement et, avec beaucoup de patience et de clarté, elle m’a facilité mes débuts pratiques. Sa démarche structurée et son attitude calme et serviable m’ont donné confiance et m’ont inspirée aussi bien sur le plan professionnel que personnel. Je l’ai connue comme une collègue extrêmement compétente et très agréable."
+        "feedbackText": "Pendant ma formation professionnelle en programmation, Annette a été d’un grand soutien. Elle a partagé ouvertement ses connaissances et m’a facilité l’entrée dans la pratique avec beaucoup de patience et de clarté. Son approche structurée et son attitude calme et bienveillante m’ont apporté de la sécurité et m’ont inspirée tant sur le plan professionnel que personnel. Je l’ai perçue comme une collègue extrêmement compétente et très agréable."
       },
       {
+        "id": "merve",
         "cardTitle": "Merve Samur",
         "cardSubtitle": "Août 2025",
         "cardImage": "merve_samur_square.jpg",
-        "feedbackText": "Annette est développeuse front-end et back-end, passionnée par le code propre et le partage des connaissances. Elle maîtrise parfaitement le front-end comme le back-end et aime transmettre ses connaissances – que ce soit dans des vidéos pédagogiques ou par une aide directe, sans rien attendre en retour. Le code clair, des structures nettes et un travail efficace sont importants pour elle. Elle aborde les défis avec enthousiasme et apporte beaucoup de cœur et de responsabilité à ses projets. Pour elle, apprendre et se perfectionner font naturellement partie du chemin."
+        "feedbackText": "Annette est développeuse frontend et backend, animée par le plaisir du code de qualité et du partage des connaissances. Elle maîtrise parfaitement le frontend comme le backend et partage volontiers son savoir – que ce soit à travers des vidéos pédagogiques ou une aide directe, sans rien attendre en retour. Un code propre, des structures claires et un travail efficace sont essentiels pour elle. Elle relève les défis avec enthousiasme et apporte beaucoup de cœur et de sens des responsabilités à ses projets. Apprendre et évoluer font tout simplement partie de son quotidien."
       }
     ]
+  },
+  "cv": {
+    "heading": "CV",
+    "subHeadingTillNow": "2023 à 2025",
+    "subHeadingCarreer": "Parcours professionnel",
+    "introductionTillNow": "Formation continue en tant que développeuse web full stack à la Developer Akademie",
+    "introductionCarreer": "De nombreuses années d’expérience professionnelle en didactique, communication et organisation de projets",
+    "mainStackHeading": "Mon stack principal",
+    "mainStackList": [
+      "JavaScript / TypeScript",
+      "Angular (frontend)",
+      "Python",
+      "Django / DRF (backend)"
+    ],
+    "mainEmphasisHeading": "Axes principaux",
+    "mainEmphasisList": [
+      "Transmission structurée des connaissances",
+      "Travail en équipe",
+      "Responsabilité envers les personnes et les projets"
+    ],
+    "buttonCaption": "CV en PDF",
+    "cvDownload": "cv-de.pdf",
+    "downloadAccessibility": "Télécharger le CV au format PDF"
+  },
+  "contact": {
+    "heading": "Contact",
+    "subHeading": "Envie d’un nouveau projet ?",
+    "introduction": "Écrivez-moi. Je me réjouis de découvrir vos idées.",
+    "acceptPrivacyPolicy": "J’ai lu la <a>politique de confidentialité</a> et j’accepte le traitement de mes données.",
+    "form": {
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "Adresse e-mail",
+      "emailPlaceholder": "Votre adresse e-mail",
+      "message": "Message",
+      "messagePlaceholder": "Votre message",
+      "messageCharacters": "caractères",
+      "privacyLinkAccessibility": "Lire la politique de confidentialité",
+      "submitAccessibility": "Envoyer le message",
+      "submit": "Envoyer",
+      "errors": {
+        "errorMissingName": "Veuillez indiquer votre nom.",
+        "errorMissingEmail": "Veuillez indiquer une adresse e-mail valide.",
+        "errorMissingMessage": "Veuillez saisir un message.",
+        "errorPrivacyPolicyUnchecked": "Veuillez accepter la politique de confidentialité."
+      }
+    }
+  },
+  "footer": {
+    "accessibilityLinkTextGitHub": "Lien vers le profil GitHub d’Annette Lasar",
+    "accessibilityLinkTextLinkedIn": "Lien vers le profil LinkedIn d’Annette Lasar",
+    "accessibilityLinkImprit": "Lien vers les mentions légales",
+    "accessibilityLinkPrivacy": "Lien vers la politique de confidentialité"
+  },
+  "menu": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "feedback": "Reconnaissance",
+    "cv": "CV",
+    "contact": "Contact",
+    "languages": "Langues"
+  },
+  "legal": {
+    "imprint": {
+      "heading": "Mentions légales",
+      "subHeading1": "Fournisseur de services",
+      "subHeading2": "Moyens de contact",
+      "imprintOriginText": "Créé à l’aide du générateur gratuit de politique de confidentialité du Dr Thomas Schwenke.",
+      "imprintOriginLink": "https://datenschutz-generator.de/"
+    },
+    "privacy": {
+      "heading": "Politique de confidentialité",
+      "asOf": "1er juin 2024",
+      "responsible": {
+        "title": "Responsable du traitement",
+        "text": "Le responsable du traitement des données sur ce site est :"
+      },
+      "hosting": {
+        "title": "Hébergement",
+        "text": "Ce site web est hébergé par un prestataire externe. Lors de la consultation du site, des fichiers journaux du serveur sont automatiquement collectés par l’hébergeur.",
+        "dataTypes": [
+          "Adresse IP",
+          "Date et heure de l’accès",
+          "Type et version du navigateur",
+          "Système d’exploitation"
+        ],
+        "legalBasis": "Art. 6, par. 1, let. f RGPD (intérêt légitime)",
+        "purpose": "Exploitation sûre et stable du site web"
+      },
+      "contactForm": {
+        "title": "Formulaire de contact",
+        "text": "Si vous me contactez via le formulaire de contact, les informations que vous fournissez seront traitées afin de répondre à votre demande.",
+        "dataTypes": ["Nom", "Adresse e-mail", "Message"],
+        "legalBasis": "Art. 6, par. 1, let. b RGPD (demande précontractuelle)",
+        "storageDuration": "Les données sont supprimées dès qu’elles ne sont plus nécessaires au traitement de la demande."
+      },
+      "downloads": {
+        "title": "Téléchargements",
+        "text": "Lors du téléchargement de fichiers mis à disposition (par exemple des documents PDF), aucune donnée personnelle supplémentaire n’est traitée."
+      },
+      "externalLinks": {
+        "title": "Liens externes",
+        "text": "Ce site contient des liens vers des sites web externes. Les exploitants de ces sites externes sont seuls responsables de leur contenu et de la protection des données."
+      },
+      "rights": {
+        "title": "Droits des personnes concernées",
+        "items": [
+          "Droit d’accès (art. 15 RGPD)",
+          "Droit de rectification (art. 16 RGPD)",
+          "Droit à l’effacement (art. 17 RGPD)",
+          "Droit à la limitation du traitement (art. 18 RGPD)",
+          "Droit d’opposition (art. 21 RGPD)",
+          "Droit d’introduire une réclamation auprès d’une autorité de contrôle"
+        ]
+      },
+      "security": {
+        "title": "Chiffrement SSL ou TLS",
+        "text": "Ce site utilise un chiffrement SSL ou TLS pour des raisons de sécurité afin de protéger les données transmises."
+      },
+      "changes": {
+        "title": "Modifications de cette politique de confidentialité",
+        "text": "Je me réserve le droit de modifier cette politique de confidentialité afin qu’elle soit toujours conforme aux exigences légales en vigueur."
+      }
+    }
   }
 }
