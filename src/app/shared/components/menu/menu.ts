@@ -51,11 +51,6 @@ export class Menu implements OnInit {
     this.showAsideMenu$ = this.defineIfAsideMenuShallBeRendered();
 
     this.vm$ = this.createViewModel();
-    // console.log('ViewModel: ', this.vm$);
-
-    // this.heroVisible$.subscribe((v) => console.log('heroVisible$', v));
-    // this.isMobile$.subscribe((v) => console.log('isMobile$', v));
-    // this.showAsideMenu$.subscribe((v) => console.log('showAside$', v));
   }
 
   defineDesktopSize(): Observable<boolean> {
@@ -99,7 +94,6 @@ export class Menu implements OnInit {
     event.preventDefault();
     event.stopPropagation();
 
-    console.log('[Menu] click ->', sectionId, 'url:', this.scrollServiceUrlDebug());
     this.scrollService.scrollTo(sectionId);
   }
 

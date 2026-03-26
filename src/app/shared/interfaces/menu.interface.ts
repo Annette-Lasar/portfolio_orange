@@ -11,7 +11,7 @@ export interface MenuContent {
 }
 
 export interface MenuViewModel {
-  content: MergedContent | null;
+  content: MergedContent | null; // gesamtes gemergtes Objekt
   showFloating: boolean;
   showAside: boolean;
 }

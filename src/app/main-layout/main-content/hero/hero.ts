@@ -49,7 +49,6 @@ export class Hero implements OnInit, AfterViewInit {
     event.preventDefault();
     event.stopPropagation();
 
-    console.log('[Menu] click ->', sectionId, 'url:');
     this.scrollService.scrollTo(sectionId);
   }
 }

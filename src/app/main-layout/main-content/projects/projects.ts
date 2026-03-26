@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Project } from './project/project.js';
 import { PageContentService } from '../../../shared/services/page-content.service.js';
-import { ProjectModel } from '../../../shared/interfaces/project.interface.js';
+import { VariableProject } from '../../../shared/interfaces/project.interface.js';
 import { MergedContent } from '../../../shared/interfaces/merged-content.interface.js';
 import { Observable, filter, take, Subscription } from 'rxjs';
 import { ProjectDetail } from './project-detail/project-detail.js';
@@ -20,12 +20,11 @@ export class Projects implements OnInit, OnDestroy {
   private subscriptions: Subscription = new Subscription();
   public pageContentService = inject(PageContentService);
   
-  projects: ProjectModel[] = [];
+  projects: VariableProject[] = [];
 
 
   ngOnInit(): void {
     this.mergedContent$ = this.pageContentService.mergedContent$;
-    this.showMergedContent();
     this.getProjects();
   }
 
@@ -33,14 +32,7 @@ export class Projects implements OnInit, OnDestroy {
     this.subscriptions.unsubscribe();
   }
 
-  showMergedContent() {
-    this.mergedContent$
-      .pipe(
-        filter((value) => value !== null),
-        take(1),
-      )
-      .subscribe(console.log);
-  }
+
 
   getProjects() {
     const subscription = this.mergedContent$

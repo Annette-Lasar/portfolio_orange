@@ -1,8 +1,13 @@
-export interface ContactFormErrors {
-  errorMissingName: string;
-  errorMissingEmail: string;
-  errorMissingMessage: string;
-  errorPrivacyPolicyUnchecked: string;
+/* Note: There is no static information for the contact section. 
+All content needs to be translated. */
+
+/* Basic structure of content for contact section */
+export interface VariableContactContent {
+  heading: string;
+  subHeading: string;
+  introduction: string;
+  acceptPrivacyPolicy: string;
+  form: ContactForm;
 }
 
 export interface ContactForm {
@@ -19,16 +24,10 @@ export interface ContactForm {
   errors: ContactFormErrors;
 }
 
-export interface ContactContent {
-  heading: string;
-  subHeading: string;
-  introduction: string;
-  acceptPrivacyPolicy: string;
-  form: ContactForm;
+export interface ContactFormErrors {
+  errorMissingName: string;
+  errorMissingEmail: string;
+  errorMissingMessage: string;
+  errorPrivacyPolicyUnchecked: string;
 }
 
-export interface ContactData {
-  name: string;
-  email: string;
-  message: string;
-}

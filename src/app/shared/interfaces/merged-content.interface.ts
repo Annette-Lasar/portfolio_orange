@@ -1,23 +1,25 @@
-import { StaticContent } from './static-content.interface.js';
-import { VariableContent } from './variable-content.interface.js';
-import { ProjectInfos, MergedProject } from './project.interface.js';
-import { AboutContent } from './about.interface.js';
-import { StaticSkillIcon } from './about.interface.js';
-import { VariableFooterInfos, StaticFooterInfos } from './footer.interface.js';
+import { MergedGeneralInfos } from './general-infos.interface.js';
+import { HeroContent } from './hero.interface.js';
+import { MergedAbout } from './about.interface.js';
+import { MergedFeedbackContent } from './feedback.interface.js';
+import { MergedProjectContent } from './project.interface.js';
+import { VariableCvContent } from './cv.interface.js';
+import { VariableContactContent } from './contact.interface.js';
+import { MenuContent } from './menu.interface.js';
+import { LegalContent } from './legal.interface.js';
+import { MergedFooterInfos } from './footer.interface.js';
 
-export interface MergedAboutContent extends AboutContent {
-  skills: StaticSkillIcon[];
-}
 
-export interface MergedProjectContent extends ProjectInfos {
-  projects: MergedProject[];
-}
 
-export type MergedFooterInfos = VariableFooterInfos & StaticFooterInfos;
-
-export interface MergedContent extends VariableContent, StaticContent {
-  about: MergedAboutContent;
+export interface MergedContent {
+  generalInfos: MergedGeneralInfos;
+  hero: HeroContent;
+  about: MergedAbout;
   projectInfos: MergedProjectContent;
-  feedback: VariableContent['feedback'];
+  feedback: MergedFeedbackContent;
+  cv: VariableCvContent;
+  contact: VariableContactContent;
+  menu: MenuContent;
+  legal: LegalContent;
   footer: MergedFooterInfos;
 }

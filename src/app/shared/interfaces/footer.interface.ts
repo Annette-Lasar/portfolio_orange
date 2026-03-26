@@ -11,3 +11,6 @@ export interface StaticFooterInfos {
   gitHubLinkPath: string;
   linkedInLinkPath: string;
 }
+
+
+export type MergedFooterInfos = VariableFooterInfos & StaticFooterInfos;

@@ -1,4 +1,4 @@
-export interface AboutContent {
+export interface VariableAboutInfos {
   heading: string;
   subHeading: string;
   introduction: string[];
@@ -8,13 +8,15 @@ export interface AboutContent {
   tabHeading2: string;
 }
 
-export interface StaticSkillIcon {
+export interface StaticAboutInfos {
+  skills: StaticSkill[];
+}
+
+export interface StaticSkill {
   id: string;
   caption: string;
   iconPath: string;
   category: string;
 }
 
-export interface StaticAboutInfos {
-  staticSkillIcons: StaticSkillIcon[];
-}
+export type MergedAbout = VariableAboutInfos & StaticAboutInfos;

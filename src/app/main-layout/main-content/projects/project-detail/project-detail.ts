@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MergedProject } from '../../../../shared/interfaces/project.interface';
 import { MergedContent } from '../../../../shared/interfaces/merged-content.interface';
-import { ProjectModel } from '../../../../shared/interfaces/project.interface';
+import { VariableProject } from '../../../../shared/interfaces/project.interface';
 
 @Component({
   selector: 'port-project-detail',
@@ -16,7 +16,7 @@ export class ProjectDetail {
   @Input() project!: MergedProject;
   @Input() content!: MergedContent;
   @Input() currentIndex!: number; 
-  @Input() projects!: ProjectModel[];
+  @Input() projects!: VariableProject[];
   @Output() closeContainer = new  EventEmitter<void>();
   @Output() otherProject = new EventEmitter<number>();
   

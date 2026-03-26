@@ -1,4 +1,7 @@
-export interface CvContent {
+/* Note: There is no static information for the cv section. 
+All content needs to be translated. */
+
+export interface VariableCvContent {
   heading: string;
   subHeadingTillNow: string;
   introductionTillNow: string;

@@ -16,7 +16,7 @@
     "arrowHorizontal": "arrow_horizontal.svg"
   },
   "staticAboutInfos": {
-    "staticSkillIcons": [
+    "skills": [
       {
         "id": "HTML",
         "caption": "HTML",
@@ -152,10 +152,12 @@
         ],
         "imagePath": "join.png",
         "links": {
-          "github": "",
-          "demo": ""
+          "githubFrontend": "https://github.com/Annette-Lasar/Join-kanban-frontend",
+          "githubBackend": "https://github.com/Annette-Lasar/join-kanban-backend",
+          "demo": "join.annette-lasar.de"
         },
-        "category": "backend"
+        "category": "backend",
+        "readyToTry": true
       },
       {
         "id": "videoflix",
@@ -172,10 +174,12 @@
         ],
         "imagePath": "videoflix.png",
         "links": {
-          "github": "",
-          "demo": ""
+          "githubFrontend": "",
+          "githubBackend": "https://github.com/Annette-Lasar/Videoflix_backend",
+          "demo": "videoflix.annette-lasar.de"
         },
-        "category": "backend"
+        "category": "backend",
+        "readyToTry": true
       },
       {
         "id": "coderr",
@@ -192,10 +196,12 @@
         ],
         "imagePath": "coderr.png",
         "links": {
-          "github": "",
+          "githubFrontend": "",
+          "githubBackend": "https://github.com/Annette-Lasar/coderr_backend",
           "demo": ""
         },
-        "category": "backend"
+        "category": "backend",
+        "readyToTry": false
       },
       {
         "id": "mermaid",
@@ -212,10 +218,12 @@
         ],
         "imagePath": "mermaid.jpg",
         "links": {
-          "github": "https://github.com/Annette-Lasar/Mermaid",
+          "githubFrontend": "https://github.com/Annette-Lasar/Mermaid",
+          "githubBackend": "",
           "demo": "https://mermaid.annette-lasar.de/"
         },
-        "category": "frontend"
+        "category": "frontend",
+        "readyToTry": true
       },
       {
         "id": "pokedex",
@@ -233,39 +241,49 @@
         "imagePath": "pokedex.jpg",
         "links": {
           "github": "https://github.com/Annette-Lasar/Pokedex",
+          "githubBackend": "",
           "demo": "https://pokedex.annette-lasar.de/"
         },
-        "category": "frontend"
+        "category": "frontend",
+        "readyToTry": true
       }
     ]
   },
   "staticFeedbackInfos": [
     {
-      "id": "grischa",
-      "cardImage": "avatar_grischa.png"
+      "id": "julian",
+      "name": "Julian Heupgen",
+      "cardImage": "julian_heupgen_square.jpg"
+    },
+    {
+      "id": "semir",
+      "name": "Semir Muratovic",
+      "cardImage": "semir_muratovic_square.jpg"
     },
     {
       "id": "lea",
+      "name": "Lea Cotar",
       "cardImage": "avatar_lea.png"
     },
-    {
-      "id": "angela",
-      "cardImage": "avatar_angela.png"
-    },
+
     {
       "id": "miruna",
+      "name": "Miruna Agopian",
       "cardImage": "miruna_agopian_square.jpg"
     },
     {
       "id": "nicole",
-      "cardImage": "avatar_nicole.png"
+      "name": "Nicole Gerlach",
+      "cardImage": "nicole_gerlach_square.jpg"
     },
     {
       "id": "gabriela",
+      "name": "Gabriela Ströbl",
       "cardImage": "gabriela_square.jpg"
     },
     {
       "id": "merve",
+      "name": "Merve Samur",
       "cardImage": "merve_samur_square.jpg"
     }
   ],

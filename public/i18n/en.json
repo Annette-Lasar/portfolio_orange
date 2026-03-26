@@ -110,52 +110,39 @@
     "heading": "Feedback",
     "feedbackInfos": [
       {
-        "id": "grischa",
-        "cardTitle": "Grischa Tänzer",
+        "id": "julian",
         "cardSubtitle": "2024",
-        "cardImage": "avatar_grischa.png",
         "feedbackText": "Thank you very much, Annette, for your detailed video – it was really helpful."
       },
       {
-        "id": "lea",
-        "cardTitle": "Lea Cotar",
-        "cardSubtitle": "July 2025",
-        "cardImage": "avatar_lea.png",
-        "feedbackText": "Annette helped me tremendously with Angular. Thanks to her clear explanations of complex concepts, I was finally able to make real progress. Her support was a true game changer for my project."
-      },
-      {
-        "id": "angela",
-        "cardTitle": "Angela Gumprecht",
+        "id": "semir",
         "cardSubtitle": "2024",
-        "cardImage": "avatar_angela.png",
         "feedbackText": "I just completed the challenge. Your explanation is really great – thank you!"
       },
       {
-        "id": "miruna",
-        "cardTitle": "Miruna Agopian",
+        "id": "lea",
         "cardSubtitle": "July 2025",
-        "cardImage": "miruna_agopian_square.jpg",
+        "feedbackText": "Annette helped me tremendously with Angular. Thanks to her clear explanations of complex concepts, I was finally able to make real progress. Her support was a true game changer for my project."
+      },
+
+      {
+        "id": "miruna",
+        "cardSubtitle": "July 2025",
         "feedbackText": "Annette impresses both professionally and personally. Her attention to detail and deep understanding of programming principles shape her structured way of working. When asked for help, she explains concepts clearly and logically. She is a true team player who enjoys sharing her knowledge and guiding others to the most logical solution with ease and confidence."
       },
       {
         "id": "nicole",
-        "cardTitle": "Nicole Gerlach",
         "cardSubtitle": "August 2025",
-        "cardImage": "avatar_nicole.png",
         "feedbackText": "Annette stands out for her exceptional curiosity and deep thirst for knowledge, which is reflected in her habit of questioning everything while coding in order to fully understand relationships and continuously learn. She consistently contributes innovative ideas to improve processes and projects. Her willingness to take responsibility and support others is impressive. She is an extremely helpful colleague who generously shares her knowledge and makes even complex topics easy to understand. Her strong didactic skills significantly contribute to the team’s growth and a positive learning culture. I can recommend Annette without reservation."
       },
       {
         "id": "gabriela",
-        "cardTitle": "Gabriela Ströbl",
         "cardSubtitle": "September 2025",
-        "cardImage": "gabriela_square.jpg",
         "feedbackText": "During my part-time training as a programmer, Annette was a great support. She openly shared her expertise and helped me get started in practice with patience and clarity. Her structured approach and calm, supportive manner gave me confidence and inspired me both professionally and personally. I experienced her as a highly competent and very pleasant colleague."
       },
       {
         "id": "merve",
-        "cardTitle": "Merve Samur",
         "cardSubtitle": "August 2025",
-        "cardImage": "merve_samur_square.jpg",
         "feedbackText": "Annette is a frontend and backend developer who enjoys writing good code and sharing knowledge. She is highly skilled in both areas and gladly helps others – whether through instructional videos or direct support, without expecting anything in return. Clean code, clear structures and efficient workflows are important to her. She approaches challenges with enthusiasm and brings heart and responsibility to her projects. Continuous learning and growth are simply part of who she is."
       }
     ]

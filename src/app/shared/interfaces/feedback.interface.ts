@@ -1,18 +1,25 @@
-export interface FeedbackInfo {
+/* Basic structure for variable feedback content - translation required */
+export interface VariableFeedbackInfos {
+  heading: string;
+  feedbackInfos: VariableFeedbackContent[];
+}
+
+export interface VariableFeedbackContent {
   id: string;
-  cardTitle: string;
   cardSubtitle: string;
-  cardImage: string;
   feedbackText: string;
 }
 
-export interface FeedbackContent {
-  heading: string;
-  feedbackInfos: FeedbackInfo[];
+/* Basic structure for static feedback content - no translation needed */
+export interface StaticFeedbackContent {
+  id: string;
+  name: string;
+  cardImage: string;
 }
 
+export type MergedFeedbackInfo = VariableFeedbackContent & StaticFeedbackContent;
 
-export interface StaticFeedbackInfo {
-  id: string;
-  cardImage: string;
+export interface MergedFeedbackContent {
+  heading: string;
+  feedbackInfos: MergedFeedbackInfo[];
 }

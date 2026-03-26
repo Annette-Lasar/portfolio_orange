@@ -1,3 +1,13 @@
+export interface VariableGeneralInfos {
+  candidateImgAlt: string;
+  mainNavigationLabel: string;
+  currentLanguage: string;
+  backToHomepage: string;
+  candidateCountry: string;
+  emailLabel: string;
+  phoneLabel: string;
+}
+
 export interface StaticGeneralInfos {
   candidateFirstName: string;
   candidateLastName: string;
@@ -15,12 +25,4 @@ export interface StaticGeneralInfos {
   arrowHorizontal: string;
 }
 
-export interface GeneralInfos extends StaticGeneralInfos {
-  candidateImgAlt: string;
-  mainNavigationLabel: string;
-  currentLanguage: string;
-  backToHomepage: string;
-  candidateCountry: string;
-  emailLabel: string;
-  phoneLabel: string;
-}
+export type MergedGeneralInfos = VariableGeneralInfos & StaticGeneralInfos;

@@ -110,52 +110,39 @@
     "heading": "Feedback",
     "feedbackInfos": [
       {
-        "id": "grischa",
-        "cardTitle": "Grischa Tänzer",
-        "cardSubtitle": "2024",
-        "cardImage": "avatar_grischa.png",
-        "feedbackText": "Vielen Dank, Annette, für dein ausführliches Video, das hat geholfen."
+        "id": "julian",
+        "cardSubtitle": "Februar 2026",
+        "feedbackText": "Annette ist eine starke Entwicklerin, mit der ich in einem gemeinsamen Coding-Projekt (JOIN) sehr gerne zusammengearbeitet habe. Sie ist fachlich sehr kompetent und behält auch unter Druck stets das Ziel im Blick. Besonders schätze ich ihre zielstrebige, ehrgeizige Arbeitsweise sowie ihre offene und angenehme Persönlichkeit im Team."
+      },
+      {
+        "id": "semir",
+        "cardSubtitle": "Februar 2026",
+        "feedbackText": "Die Zusammenarbeit mit Annette beim Projekt Join hat mir wirklich viel Freude bereitet. Gemeinsam haben wir ein Kanban-Board mit HTML, CSS und JavaScript umgesetzt. Besonders geschätzt habe ich ihre Zielstrebigkeit und ihre motivierte Art, mit der sie das Projekt vorangebracht hat. Man konnte sich immer auf sie verlassen und die Zusammenarbeit war sowohl fachlich als auch menschlich sehr angenehm."
       },
       {
         "id": "lea",
-        "cardTitle": "Lea Cotar",
         "cardSubtitle": "Juli 2025",
-        "cardImage": "avatar_lea.png",
         "feedbackText": "Annette hat mir bei Angular unglaublich weitergeholfen - durch ihre klare Erklärung komplexer Zusammenhänge konnte ich endlich richtig durchstarten. Ihre Unterstützung war für mein Projekt ein echter Gamechanger!"
       },
-      {
-        "id": "angela",
-        "cardTitle": "Angela Gumprecht",
-        "cardSubtitle": "2024",
-        "cardImage": "avatar_angela.png",
-        "feedbackText": "Hab die Challenge gerade gemacht. Deine Erklärung ist echt super! Danke."
-      },
+
       {
         "id": "miruna",
-        "cardTitle": "Miruna Agopian",
         "cardSubtitle": "Juli 2025",
-        "cardImage": "miruna_agopian_square.jpg",
         "feedbackText": "Annette überzeugt sowohl fachlich als auch menschlich. Ihre Liebe zum Detail und ihr tiefes Verständnis für Programmierprinzipien prägen ihre strukturierte Arbeitsweise. Wenn man sie um Hilfe bittet, erklärt sie Konzepte klar und nachvollziehbar. Sie ist ein echter Teamplayer, der sein Wissen gerne teilt. Mit Leichtigkeit und Ausstrahlung führt sie andere zur logischsten Lösung."
       },
       {
         "id": "nicole",
-        "cardTitle": "Nicole Gerlach",
         "cardSubtitle": "August 2025",
-        "cardImage": "avatar_nicole.png",
         "feedbackText": "Annette zeichnet sich durch eine außergewöhnliche Neugier und einen tiefen Wissensdurst aus, was sich darin zeigt, dass sie beim Coden stets alles hinterfragt, um die Zusammenhänge vollständig zu verstehen und kontinuierlich dazuzulernen. Darüber hinaus bringt sie stets innovative Ideen ein, um Prozesse und Projekte zu verbessern. Ihre Bereitschaft, Verantwortung zu übernehmen und anderen bei Problemen oder Fragen zu helfen, ist beeindruckend. Sie ist eine äußerst hilfsbereite Kollegin, die ihr Wissen großzügig teilt und durch ihre klaren Erklärungen auch komplexe Sachverhalte verständlich macht. Mit ihrem großen didaktischen Geschick trägt sie wesentlich dazu bei, das Team weiterzubringen und eine positive Lernkultur zu fördern. Ihre offene Art und ihr Engagement machen sie zu einer wertvollen Bereicherung für jedes Team. Ich kann Annette uneingeschränkt empfehlen und bin überzeugt, dass sie in jeder Position mit ihrer Kompetenz und ihrem Einsatz überzeugen wird."
       },
       {
         "id": "gabriela",
-        "cardTitle": "Gabriela Ströbl",
         "cardSubtitle": "September 2025",
-        "cardImage": "gabriela_square.jpg",
         "feedbackText": "Während meiner nebenberuflichen Ausbildung zur Programmiererin war Annette eine große Unterstützung. Sie hat ihr Fachwissen offen geteilt und mir mit viel Geduld und Klarheit den Einstieg in die Praxis erleichtert. Ihre strukturierte Herangehensweise und ihre ruhige, hilfsbereite Art haben mir Sicherheit gegeben und mich fachlich wie persönlich inspiriert. Ich habe sie als äußerst kompetente und sehr angenehme Kollegin erlebt."
       },
       {
         "id": "merve",
-        "cardTitle": "Merve Samur",
         "cardSubtitle": "August 2025",
-        "cardImage": "merve_samur_square.jpg",
         "feedbackText": "Annette ist Entwicklerin für Front- und Backend mit Freude an gutem Code und dem Teilen von Wissen. Sie kennt sich bestens mit Front- und Backend aus und teilt ihr Wissen gerne – ob in Lehrvideos oder durch direkte Hilfe, ganz ohne etwas zurückzuverlangen. Sauberer Code, klare Strukturen und effizientes Arbeiten sind ihr wichtig. Herausforderungen packt sie mit Begeisterung an und bringt viel Herz und Verantwortung in ihre Projekte. Lernen und sich weiterentwickeln gehören für sie einfach dazu."
       }
     ]

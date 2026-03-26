@@ -18,15 +18,37 @@
         <img [src]="imgPathPrefix + project.imagePath" alt="" />
 
         <div class="link-wrapper">
-          <a [href]="project.links?.demo" target="_blank" rel="noopener" class="test-button">{{
-            content.projectInfos.tryButton
-          }}</a>
-          <a [href]="project.links?.github" target="_blank" rel="noopener" class="github-button">GitHub</a>
+          @if (project.readyToTry) {
+            <a [href]="project.links.demo" target="_blank" rel="noopener" class="test-button">{{
+              content.projectInfos.tryButton
+            }}</a>
+          }
+
+          @if (project.links.githubFrontend) {
+            <a
+              [href]="project.links.githubFrontend"
+              target="_blank"
+              rel="noopener"
+              class="github-button"
+              >GitHub Frontend</a
+            >
+          }
+          @if (project.links.githubBackend) {
+            <a
+              [href]="project.links.githubBackend"
+              target="_blank"
+              rel="noopener"
+              class="github-button"
+              >GitHub Backend</a
+            >
+          }
         </div>
       </div>
       <div class="button-wrapper">
-        <button class="arrow arrow-left cursor-pointer" (click)="showOtherProject(-1)"
-        [attr.aria-label]="content.projectInfos.ariaLabelPreviousProject"
+        <button
+          class="arrow arrow-left cursor-pointer"
+          (click)="showOtherProject(-1)"
+          [attr.aria-label]="content.projectInfos.ariaLabelPreviousProject"
         >
           <img [src]="iconPathGeneralPrefix + content.generalInfos.arrowLeft" alt="" />
         </button>

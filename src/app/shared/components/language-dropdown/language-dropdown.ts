@@ -7,7 +7,7 @@ import { LANGUAGES } from '../../data/language-data';
 import { LanguageOption } from '../../interfaces/language-option.interface';
 import { LanguageService } from '../../services/languageService';
 import { Observable } from 'rxjs';
-import { GeneralInfos } from '../../interfaces/general-infos.interface';
+import { MergedGeneralInfos } from '../../interfaces/general-infos.interface';
 
 @Component({
   selector: 'port-language-dropdown',
@@ -23,7 +23,7 @@ export class LanguageDropdown {
 
   @Input({ required: true }) variant!: 'overlay' | 'icon' | 'aside';
   @Input() currentLanguage!: string | undefined;
-  @Input() generalInfos!: GeneralInfos | undefined;
+  @Input() generalInfos!: MergedGeneralInfos | undefined;
 
   constructor(private readonly languageService: LanguageService) {
     this.language$ = this.languageService.language$;

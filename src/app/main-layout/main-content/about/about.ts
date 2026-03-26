@@ -4,7 +4,7 @@ import { PageContentService } from '../../../shared/services/page-content.servic
 import { MatTabsModule } from '@angular/material/tabs';
 import { MergedContent } from '../../../shared/interfaces/merged-content.interface';
 import { Observable, map } from 'rxjs';
-import { StaticSkillIcon } from '../../../shared/interfaces/about.interface';
+import { StaticSkill } from '../../../shared/interfaces/about.interface';
 
 @Component({
   selector: 'port-about',
@@ -15,8 +15,8 @@ import { StaticSkillIcon } from '../../../shared/interfaces/about.interface';
 })
 export class About implements OnInit {
   mergedContent$!: Observable<MergedContent | null>;
-  frontendIcons$!: Observable<StaticSkillIcon[]>;
-  backendIcons$!: Observable<StaticSkillIcon[]>;
+  frontendIcons$!: Observable<StaticSkill[]>;
+  backendIcons$!: Observable<StaticSkill[]>;
   private pageContentService = inject(PageContentService);
 
   ngOnInit(): void {
@@ -25,13 +25,13 @@ export class About implements OnInit {
     this.backendIcons$ = this.filterBackendIconsFromMergedContent();
   }
 
-  filterFrontendIconsFromMergedContent(): Observable<StaticSkillIcon[]> {
+  filterFrontendIconsFromMergedContent(): Observable<StaticSkill[]> {
     return this.pageContentService.mergedContent$.pipe(
       map((content) => content?.about.skills.filter((s) => s.category === 'frontend') ?? []),
     );
   }
 
-  filterBackendIconsFromMergedContent(): Observable<StaticSkillIcon[]> {
+  filterBackendIconsFromMergedContent(): Observable<StaticSkill[]> {
     return this.pageContentService.mergedContent$.pipe(
       map((content) => content?.about.skills.filter((s) => s.category === 'backend') ?? []),
     );
