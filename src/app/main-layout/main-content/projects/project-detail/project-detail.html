@@ -30,7 +30,12 @@
               target="_blank"
               rel="noopener"
               class="github-button"
-              >GitHub Frontend</a
+              ><img
+                class="github-icon"
+                [src]="gitHubIconPathPrefix + content.generalInfos.gitHubIconPath"
+                alt=""
+              />
+              {{ content.projectInfos.gitHubButtonFrontend }}</a
             >
           }
           @if (project.links.githubBackend) {
@@ -39,7 +44,12 @@
               target="_blank"
               rel="noopener"
               class="github-button"
-              >GitHub Backend</a
+              ><img
+                class="github-icon"
+                [src]="gitHubIconPathPrefix + content.generalInfos.gitHubIconPath"
+                alt=""
+              />
+              {{ content.projectInfos.gitHubButtonBackend }}</a
             >
           }
         </div>

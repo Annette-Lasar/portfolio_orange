@@ -64,9 +64,14 @@
     .link-wrapper {
       margin: 1em auto;
       @include flex-layout();
-      .test-button,
+      .test-button {
+        padding: 0.5em;
+      }
       .github-button {
-        padding: 0.5em 1em;
+        .github-icon {
+          height: 20px;
+        }
+        padding: 0.5em 0.25em;
       }
       .test-button {
         color: var(--color-primary-500);
@@ -86,7 +91,7 @@
     margin: 0 auto;
     grid-area: tech;
     .tech-list {
-      @include flex-layout($justify: flex-start, $gap: 1.5em);
+      @include flex-layout($justify: center, $gap: 1.5em);
       li {
         height: 40px;
         img {

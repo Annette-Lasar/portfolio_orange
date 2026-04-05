@@ -41,6 +41,8 @@
     "subHeadingDetailView1": "About the project",
     "subHeadingDetailView2": "My approach",
     "appliedTechnologies": "Technologies used",
+    "gitHubButtonFrontend": "Frontend",
+    "gitHubButtonBackend": "Backend",
     "tryButton": "Try it",
     "projects": [
       {

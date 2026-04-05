@@ -23,6 +23,7 @@ export interface StaticGeneralInfos {
   arrowLeft: string;
   arrowRight: string;
   arrowHorizontal: string;
+  gitHubIconPath: string;
 }
 
 export type MergedGeneralInfos = VariableGeneralInfos & StaticGeneralInfos;

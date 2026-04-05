@@ -8,12 +8,13 @@
     "year": "2026",
     "candidatePhoneNumberNormal": "+49 151 70145561",
     "candidatePhoneNumberNarrow": "+4915170145561",
-    "candidateImg01": "img/annette_lasar_sw_rgb_square.jpg",
-    "candidateImg02": "img/annette_lasar_sw_rgb.jpg",
+    "candidateImg01": "annette_lasar_sw_rgb_square.jpg",
+    "candidateImg02": "annette_lasar_sw_rgb.jpg",
     "closeX": "close_small.svg",
     "arrowLeft": "arrow_left.svg",
     "arrowRight": "arrow_right.svg",
-    "arrowHorizontal": "arrow_horizontal.svg"
+    "arrowHorizontal": "arrow_horizontal.svg",
+    "gitHubIconPath": "github.svg"
   },
   "staticAboutInfos": {
     "skills": [

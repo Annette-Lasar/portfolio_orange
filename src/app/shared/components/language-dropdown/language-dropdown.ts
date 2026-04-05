@@ -19,7 +19,7 @@ export class LanguageDropdown {
   expanded = false;
   languages = LANGUAGES;
   readonly language$: Observable<LanguageOption>;
-  imgPathPrefix: string = '/icons/general/';
+  imgPathPrefix: string = 'img/icons/general/';
 
   @Input({ required: true }) variant!: 'overlay' | 'icon' | 'aside';
   @Input() currentLanguage!: string | undefined;

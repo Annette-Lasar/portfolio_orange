@@ -15,7 +15,7 @@ export class Footer implements OnInit {
   mergedContent$!: Observable<MergedContent | null>;
   private pageContentService = inject(PageContentService);
 
-  linkPathPrefix: string = 'icons/general/';
+  linkPathPrefix: string = 'img/icons/general/';
 
   ngOnInit(): void {
     this.mergedContent$ = this.pageContentService.mergedContent$;

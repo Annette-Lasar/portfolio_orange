@@ -18,7 +18,7 @@
             @for (frontendIcon of frontendIcons; track frontendIcon.id) {
               <figure>
                 <img
-                  [src]="'icons/skills/' + frontendIcon.iconPath"
+                  [src]="skillIconPathPrefix + frontendIcon.iconPath"
                   [alt]="frontendIcon.caption"
                   height="60"
                 />
@@ -32,7 +32,7 @@
             @for (backendIcon of backendIcons; track backendIcon.id) {
               <figure>
                 <img
-                  [src]="'icons/skills/' + backendIcon.iconPath"
+                  [src]="skillIconPathPrefix + backendIcon.iconPath"
                   [alt]="backendIcon.caption"
                   height="60"
                 />

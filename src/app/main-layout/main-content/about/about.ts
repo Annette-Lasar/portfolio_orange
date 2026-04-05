@@ -17,6 +17,7 @@ export class About implements OnInit {
   mergedContent$!: Observable<MergedContent | null>;
   frontendIcons$!: Observable<StaticSkill[]>;
   backendIcons$!: Observable<StaticSkill[]>;
+  skillIconPathPrefix: string = 'img/icons/skills/';
   private pageContentService = inject(PageContentService);
 
   ngOnInit(): void {

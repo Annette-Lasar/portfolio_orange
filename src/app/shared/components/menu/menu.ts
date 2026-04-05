@@ -33,6 +33,7 @@ export class Menu implements OnInit {
   private breakpointObserver = inject(BreakpointObserver);
   private sectionVisibilityService = inject(SectionVisibilityService);
 
+  imgPathPrefix: string = 'img/candidate/';
   isDesktop$!: Observable<boolean>;
   isMobile$!: Observable<boolean>;
   heroVisible$!: Observable<boolean>;

@@ -12,6 +12,8 @@ export interface ProjectInfos {
   subHeadingDetailView2: string;
   appliedTechnologies: string;
   tryButton: string;
+  gitHubButtonFrontend: string;
+  gitHubButtonBackend: string;
   projects: VariableProject[];
 }
 

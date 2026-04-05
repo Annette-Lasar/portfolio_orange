@@ -10,9 +10,10 @@ import { VariableProject } from '../../../../shared/interfaces/project.interface
   styleUrl: './project-detail.scss'
 })
 export class ProjectDetail {
-  imgPathPrefix: string = '../../../../../../img/projects/';
-  iconPathSkillsPrefix: string = '../../../../../../icons/skills/';
-  iconPathGeneralPrefix: string = '../../../../../../icons/general/';
+  imgPathPrefix: string = 'img/projects/';
+  iconPathSkillsPrefix: string = 'img/icons/skills/';
+  iconPathGeneralPrefix: string = 'img/icons/general/';
+  gitHubIconPathPrefix: string = 'img/icons/general/';
   @Input() project!: MergedProject;
   @Input() content!: MergedContent;
   @Input() currentIndex!: number; 
