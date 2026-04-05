@@ -2,23 +2,23 @@
    Angular Material – Theme & Design Tokens
    ========================================================= */
 
+   // @use 'scss_styles/color-palettes' as palettes;
 @use '@angular/material' as mat;
-@use 'scss_styles/color-palettes' as palettes;
-@use 'scss_styles/index' as *;
+@use 'scss_styles/base';
 
 /* Material Theme */
-html {
-  @include mat.theme(
-    (
-      color: (
-        primary: mat.$azure-palette,
-        tertiary: mat.$blue-palette,
-      ),
-      typography: Roboto,
-      density: 0,
-    )
-  );
-}
+// html {
+//   @include mat.theme(
+//     (
+//       color: (
+//         primary: mat.$azure-palette,
+//         tertiary: mat.$blue-palette,
+//       ),
+//       typography: Roboto,
+//       density: 0,
+//     )
+//   );
+// }
 
 /* Material Component Overrides (Tokens) */
 :root {

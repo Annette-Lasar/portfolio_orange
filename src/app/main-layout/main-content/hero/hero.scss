@@ -1,4 +1,4 @@
-@use '../../../../scss_styles/index.scss' as *;
+@use '../../../../scss_styles/tools' as *;
 
 :host {
   display: block;
@@ -17,7 +17,7 @@ section {
     max-height: 100%;
     width: 100%;
     object-fit: contain;
-    background-image: url('../../../../../public/img/annette_lasar_sw_rgb_square.jpg');
+    background-image: url('../../../../../public/img/candidate/annette_lasar_sw_rgb_square.jpg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -87,7 +87,7 @@ section {
     .picture {
       width: 50%;
       height: 100%;
-      background-image: url('../../../../../public/img/annette_lasar_sw_rgb.jpg');
+      background-image: url('../../../../../public/img/candidate/annette_lasar_sw_rgb.jpg');
       background-position: right;
     }
 

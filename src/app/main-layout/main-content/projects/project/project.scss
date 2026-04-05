@@ -1,4 +1,5 @@
-@use '../../../../../scss_styles/' as *;
+// @use '../../../../../scss_styles/' as *;
+@use '../../../../../scss_styles/tools' as *; 
 
 .project-card {
   min-width: 300px;
