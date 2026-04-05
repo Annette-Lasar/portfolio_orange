@@ -61,7 +61,7 @@ export class MainContent implements AfterViewInit {
 
         if (el.offsetHeight > 0) {
           this.observer.observe(el);
-          this.resizeObserver.unobserve(el); // optional, aber sauber
+          this.resizeObserver.unobserve(el); 
         }
       });
     });

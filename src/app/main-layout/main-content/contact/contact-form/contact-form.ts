@@ -1,4 +1,4 @@
-import { Component, Input, ViewChildren, QueryList, inject, OnInit } from '@angular/core';
+import { Component, Input, ViewChildren, QueryList, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import {
@@ -27,7 +27,7 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './contact-form.html',
   styleUrl: './contact-form.scss',
 })
-export class ContactForm implements OnInit {
+export class ContactForm {
   private http = inject(HttpClient);
 
   contactForm = new FormGroup({
@@ -67,23 +67,19 @@ export class ContactForm implements OnInit {
   @Input({ required: true }) allContent!: MergedContent;
   @ViewChildren(MatFormField) fields!: QueryList<MatFormField>;
 
-  ngOnInit(): void {
-    console.log('allContent:', this.allContent);
-  }
-
   submit() {
     if (this.contactForm.invalid) {
       this.contactForm.markAllAsTouched();
       return;
     }
 
-    console.log(this.contactForm.value);
-    // this.http
-    //   .post('https://annette-lasar.de/contact.php', this.contactForm.value, {
-    //     headers: { 'Content-Type': 'application/json' },
-    //   })
-    //   .subscribe(() => {
-    //     console.log('Daten gesendet');
-    //   });
+    this.http
+      .post('https://annette-lasar.de/contact.php', this.contactForm.value, {
+        headers: { 'Content-Type': 'application/json' },
+      })
+      .subscribe({
+        next: () => console.log('Daten gesendet'),
+        error: (err) => console.error('Fehler:', err),
+      });
   }
 }

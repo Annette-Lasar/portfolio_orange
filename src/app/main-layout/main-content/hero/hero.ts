@@ -8,7 +8,7 @@ import { ScrollService } from '../../../shared/services/scroll.service.js';
 
 import { Menu } from '../../../shared/components/menu/menu.js';
 import { MergedContent } from '../../../shared/interfaces/merged-content.interface.js';
-import { Observable, take, filter } from 'rxjs';
+import { Observable } from 'rxjs';
 import { LanguageDropdown } from '../../../shared/components/language-dropdown/language-dropdown.js';
 
 @Component({
@@ -29,20 +29,10 @@ export class Hero implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.mergedContent$ = this.pageContentService.mergedContent$;
-    this.showMergedContent(); // delete!
   }
 
   ngAfterViewInit(): void {
     this.sectionVisibilityService.registerHeroElement(this.heroElement.nativeElement);
-  }
-
-  showMergedContent() {
-    this.mergedContent$
-      .pipe(
-        filter((value) => value !== null),
-        take(1),
-      )
-      .subscribe(console.log);
   }
 
   scroll(sectionId: string, event: Event): void {
