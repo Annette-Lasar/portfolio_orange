@@ -35,22 +35,27 @@
     }
 
     .about {
+      scroll-margin-top: 0;
       grid-area: about;
     }
 
     .projects {
+      scroll-margin-top: 0;
       grid-area: projects;
     }
 
     .feedback {
+      scroll-margin-top: 0;
       grid-area: feedback;
     }
 
     .cv {
+      scroll-margin-top: 0;
       grid-area: cv;
     }
 
     .contact {
+      scroll-margin-top: 0;
       grid-area: contact;
     }
   }

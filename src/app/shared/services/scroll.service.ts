@@ -25,7 +25,6 @@ export class ScrollService {
         first(),
       )
       .subscribe(() => {
-        // WICHTIG: kleiner Delay, damit Outlet final ist
         setTimeout(() => this.scrollNow(sectionId), 0);
       });
 
@@ -36,28 +35,38 @@ export class ScrollService {
   //   const el = document.getElementById(sectionId);
   //   if (!el) return;
 
-  //   const y = el.getBoundingClientRect().top;
+  //   this.zone.onStable.pipe(first()).subscribe(() => {
+  //     requestAnimationFrame(() => {
+  //       requestAnimationFrame(() => {
+  //         const y = el.getBoundingClientRect().top + window.pageYOffset;
 
-  //   this.viewportScroller.scrollToPosition([0, y + this.viewportScroller.getScrollPosition()[1]]);
+  //         window.scrollTo({
+  //           top: y,
+  //           behavior: 'smooth',
+  //         });
+  //       });
+  //     });
+  //   });
   // }
 
   private scrollNow(sectionId: string): void {
-    const el = document.getElementById(sectionId);
-    if (!el) return;
+    const tryScroll = () => {
+      const el = document.getElementById(sectionId);
+      if (!el) return false;
 
-    // 1️⃣ warten bis Angular stabil
-    this.zone.onStable.pipe(first()).subscribe(() => {
-      // 2️⃣ einen Frame warten, bis Layout-Umschaltungen durch sind
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          const y = el.getBoundingClientRect().top + window.pageYOffset;
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return true;
+    };
 
-          window.scrollTo({
-            top: y,
-            behavior: 'smooth',
-          });
-        });
-      });
-    });
+    let attempts = 0;
+
+    const interval = setInterval(() => {
+      const success = tryScroll();
+      attempts++;
+
+      if (success || attempts > 10) {
+        clearInterval(interval);
+      }
+    }, 50);
   }
 }
