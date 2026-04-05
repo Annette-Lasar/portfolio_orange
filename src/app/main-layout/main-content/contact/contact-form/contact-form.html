@@ -41,19 +41,27 @@
       </mat-form-field>
     </div>
     <div class="checkbox-wrapper cursor-pointer">
-      <input id="acceptPrivacy" type="checkbox" class="checkbox" formControlName="acceptPrivacy" />
+      <label class="accept-privacy cursor-pointer">
+        <input
+          id="acceptPrivacy"
+          type="checkbox"
+          class="checkbox"
+          formControlName="acceptPrivacy"
+        />
 
-      <label for="acceptPrivacy" class="custom-checkbox cursor-pointer"> Ich akzeptiere die </label>
-
-      <a
-        class="privacy-link"
-        routerLink="/legal/privacy"
-        rel="noopener"
-        [attr.aria-label]="allContent.contact.form.privacyLinkAccessibility"
-      >
-        {{ allContent.legal.privacy.heading }}
-      </a>
-      <span aria-hidden="true">.</span>
+        <span>
+          {{ allContent.contact.acceptPrivacyPolicy }}
+          <a
+            class="privacy-link"
+            routerLink="/legal/privacy"
+            rel="noopener"
+            (click)="$event.stopPropagation()"
+          >
+            {{ allContent.legal.privacy.heading }}
+          </a>
+            &nbsp;{{ allContent.contact.acceptDataProcessing }}
+        </span>
+      </label>
     </div>
     <button
       type="submit"

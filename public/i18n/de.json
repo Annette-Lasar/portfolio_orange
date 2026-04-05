@@ -174,7 +174,8 @@
     "heading": "Kontakt",
     "subHeading": "Lust auf ein neues Projekt?",
     "introduction": "Schreiben Sie mir. Ich freue mich auf Ihre Ideen.",
-    "acceptPrivacyPolicy": "Ich habe die <a>Datenschutzbestimmungen</a> gelesen und stimme der Vereinbarung meiner Daten zu.",
+    "acceptPrivacyPolicy": "Ich akzeptiere die ",
+    "acceptDataProcessing": "und stimme der Verarbeitung meiner Daten zu.",
     "form": {
       "name": "Name",
       "namePlaceholder": "Ihr Name",
@@ -219,7 +220,7 @@
     },
     "privacy": {
       "heading": "Datenschutzerklärung",
-      "asOf": "1. Juni 2024",
+      "asOf": "1. Februar 2026",
       "responsible": {
         "title": "Verantwortliche Stelle",
         "text": "Verantwortlich für die Datenverarbeitung auf dieser Website ist:"

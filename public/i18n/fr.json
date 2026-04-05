@@ -112,12 +112,12 @@
       {
         "id": "julian",
         "cardSubtitle": "Février 2026",
-        "feedbackText": "Merci beaucoup, Annette, pour ta vidéo détaillée, elle m’a beaucoup aidé."
+        "feedbackText": "Annette est une développeuse solide avec qui j’ai eu grand plaisir à collaborer sur un projet de codage commun (JOIN). Elle possède de solides compétences techniques et garde toujours l’objectif en vue, même sous pression. J’apprécie particulièrement sa manière de travailler, à la fois déterminée et ambitieuse, ainsi que sa personnalité ouverte et agréable au sein de l’équipe."
       },
       {
         "id": "semir",
         "cardSubtitle": "Février 2026",
-        "feedbackText": "Je viens de terminer le challenge. Ton explication est vraiment super ! Merci."
+        "feedbackText": "La collaboration avec Annette sur le projet Join a été un réel plaisir. Ensemble, nous avons développé un tableau Kanban en utilisant HTML, CSS et JavaScript. J’ai particulièrement apprécié sa détermination ainsi que son approche motivée, qui ont permis de faire avancer le projet. On pouvait toujours compter sur elle, et la collaboration a été très agréable, tant sur le plan professionnel qu’humain."
       },
       {
         "id": "lea",
@@ -174,7 +174,8 @@
     "heading": "Contact",
     "subHeading": "Envie d’un nouveau projet ?",
     "introduction": "Écrivez-moi. Je me réjouis de découvrir vos idées.",
-    "acceptPrivacyPolicy": "J’ai lu la <a>politique de confidentialité</a> et j’accepte le traitement de mes données.",
+    "acceptPrivacyPolicy": "J’ai lu la ",
+    "acceptDataProcessing": "et j’accepte le traitement de mes données.",
     "form": {
       "name": "Nom",
       "namePlaceholder": "Votre nom",
@@ -219,7 +220,7 @@
     },
     "privacy": {
       "heading": "Politique de confidentialité",
-      "asOf": "1er juin 2024",
+      "asOf": "1er février 2026",
       "responsible": {
         "title": "Responsable du traitement",
         "text": "Le responsable du traitement des données sur ce site est :"

@@ -81,7 +81,7 @@ section {
 
 @media (min-width: $breakpoint-md) {
   section {
-    padding: 0;
+    padding: 0 0 0 0.5em;
     @include flex-layout($direction: row-reverse, $justify: center);
     position: relative;
     .picture {

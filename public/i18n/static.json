@@ -240,7 +240,7 @@
         ],
         "imagePath": "pokedex.jpg",
         "links": {
-          "github": "https://github.com/Annette-Lasar/Pokedex",
+          "githubFrontend": "https://github.com/Annette-Lasar/Pokedex",
           "githubBackend": "",
           "demo": "https://pokedex.annette-lasar.de/"
         },

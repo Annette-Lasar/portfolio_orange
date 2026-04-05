@@ -111,14 +111,15 @@
     "feedbackInfos": [
       {
         "id": "julian",
-        "cardSubtitle": "2024",
-        "feedbackText": "Thank you very much, Annette, for your detailed video – it was really helpful."
+        "cardSubtitle": "February 2026",
+        "feedbackText": "Annette is a strong developer with whom I greatly enjoyed collaborating on a joint coding project (JOIN). She is highly competent in her field and consistently keeps the overall goal in focus, even under pressure. I particularly appreciate her determined and ambitious way of working, as well as her open and pleasant personality within the team."
       },
       {
         "id": "semir",
-        "cardSubtitle": "2024",
-        "feedbackText": "I just completed the challenge. Your explanation is really great – thank you!"
+        "cardSubtitle": "February 2026",
+        "feedbackText": "Working with Annette on the Join project was a truly enjoyable experience. Together, we developed a Kanban board using HTML, CSS, and JavaScript. I especially appreciated her determination and her motivated approach, which helped drive the project forward. She was always reliable, and the collaboration was both professionally effective and personally very pleasant."
       },
+
       {
         "id": "lea",
         "cardSubtitle": "July 2025",
@@ -174,7 +175,8 @@
     "heading": "Contact",
     "subHeading": "Interested in a new project?",
     "introduction": "Feel free to get in touch. I look forward to your ideas.",
-    "acceptPrivacyPolicy": "I have read the <a>privacy policy</a> and agree to the processing of my data.",
+    "acceptPrivacyPolicy": "I accept the ",
+    "acceptDataProcessing": "and agree to the processing of my data.",
     "form": {
       "name": "Name",
       "namePlaceholder": "Your name",
@@ -219,7 +221,7 @@
     },
     "privacy": {
       "heading": "Privacy policy",
-      "asOf": "June 1, 2024",
+      "asOf": "February 1, 2026",
       "responsible": {
         "title": "Data controller",
         "text": "The controller responsible for data processing on this website is:"

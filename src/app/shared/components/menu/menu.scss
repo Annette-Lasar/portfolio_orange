@@ -65,7 +65,7 @@ a {
   justify-content: center;
 }
 
-/* Punkt */
+/* dot below active menu item */
 a .icon-indicator::after {
   content: '';
   position: absolute;
@@ -81,7 +81,6 @@ a .icon-indicator::after {
   transition: opacity 150ms ease;
 }
 
-/* aktiv */
 a.active .icon-indicator::after {
   opacity: 1;
 }
@@ -152,6 +151,7 @@ MEDIA QUERIES
       a {
         width: 100%;
         border-radius: 0;
+        font-size: 1.1rem;
       }
       .active {
         text-decoration: underline;

@@ -20,6 +20,7 @@ section {
     color: var(--color-accent-500);
   }
   .summary {
+    font-size: 1.1rem;
     text-align: center;
   }
 }
@@ -31,6 +32,7 @@ section {
   background-color: var(--color-primary-500);
   .list-heading {
     margin: 0 0 1em;
+    font-size: 1.1rem;
     color: var(--color-primary-contrast-500);
   }
   ul {
@@ -41,6 +43,7 @@ section {
       position: relative;
       padding: 0 0 0 1em;
       color: var(--color-primary-contrast-500);
+      font-size: 1.1rem;
       line-height: 2;
       &::before {
         content: '•';

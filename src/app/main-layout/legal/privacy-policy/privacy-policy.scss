@@ -1,7 +1,8 @@
 @use '../../../../scss_styles/index' as *;
 
 h2 {
-  font-size: 1rem; // später anpassen!!
+  scroll-margin-top: 0;
+  font-size: 1rem; 
   font-size: clamp(1rem, 5vw, 2rem);
 }
 

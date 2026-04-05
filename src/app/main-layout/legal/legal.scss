@@ -13,17 +13,14 @@
     display: grid;
     grid-template-columns: minmax(0, 235px) 1fr;
     grid-template-areas: 'aside content';
-    border: 3px solid green;
   }
 
   aside {
     grid-area: aside;
-    border: 2px solid orchid;
   }
 
   .wrapper {
     height: 100vh;
-    // padding: 2em 1em;
     grid-area: content;
     overflow-y: auto;
   }

@@ -7,6 +7,7 @@ export interface VariableContactContent {
   subHeading: string;
   introduction: string;
   acceptPrivacyPolicy: string;
+  acceptDataProcessing: string;
   form: ContactForm;
 }
 

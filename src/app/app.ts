@@ -10,11 +10,11 @@ import { RouterOutlet, Router, Scroll } from '@angular/router';
 export class App {
   protected readonly title = signal('portfolio');
 
-  constructor(private router: Router) {
-    this.router.events.subscribe((e) => {
-      if (e instanceof Scroll) {
-        console.log('ROUTER scroll event:', e.position);
-      }
-    });
-  }
+  // constructor(private router: Router) {
+  //   this.router.events.subscribe((e) => {
+  //     if (e instanceof Scroll) {
+  //       console.log('ROUTER scroll event:', e.position);
+  //     }
+  //   });
+  // }
 }

@@ -1,4 +1,4 @@
-import { Component, Input, ViewChildren, QueryList, inject } from '@angular/core';
+import { Component, Input, ViewChildren, QueryList, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import {
@@ -27,7 +27,7 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './contact-form.html',
   styleUrl: './contact-form.scss',
 })
-export class ContactForm {
+export class ContactForm implements OnInit {
   private http = inject(HttpClient);
 
   contactForm = new FormGroup({
@@ -66,6 +66,10 @@ export class ContactForm {
 
   @Input({ required: true }) allContent!: MergedContent;
   @ViewChildren(MatFormField) fields!: QueryList<MatFormField>;
+
+  ngOnInit(): void {
+    console.log('allContent:', this.allContent);
+  }
 
   submit() {
     if (this.contactForm.invalid) {

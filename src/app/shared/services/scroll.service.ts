@@ -31,24 +31,6 @@ export class ScrollService {
     this.router.navigate(['/']);
   }
 
-  // private scrollNow(sectionId: string): void {
-  //   const el = document.getElementById(sectionId);
-  //   if (!el) return;
-
-  //   this.zone.onStable.pipe(first()).subscribe(() => {
-  //     requestAnimationFrame(() => {
-  //       requestAnimationFrame(() => {
-  //         const y = el.getBoundingClientRect().top + window.pageYOffset;
-
-  //         window.scrollTo({
-  //           top: y,
-  //           behavior: 'smooth',
-  //         });
-  //       });
-  //     });
-  //   });
-  // }
-
   private scrollNow(sectionId: string): void {
     const tryScroll = () => {
       const el = document.getElementById(sectionId);
