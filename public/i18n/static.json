@@ -145,7 +145,7 @@
             "iconPath": "django.svg"
           }
         ],
-        "imagePath": "join.png",
+        "imagePath": "join.jpg",
         "links": {
           "githubFrontend": "https://github.com/Annette-Lasar/Join-kanban-frontend",
           "githubBackend": "https://github.com/Annette-Lasar/join-kanban-backend",
@@ -167,7 +167,7 @@
             "iconPath": "docker.svg"
           }
         ],
-        "imagePath": "videoflix.png",
+        "imagePath": "videoflix.jpg",
         "links": {
           "githubFrontend": "",
           "githubBackend": "https://github.com/Annette-Lasar/Videoflix_backend",
@@ -189,7 +189,7 @@
             "iconPath": "docker.svg"
           }
         ],
-        "imagePath": "coderr.png",
+        "imagePath": "coderr.jpg",
         "links": {
           "githubFrontend": "",
           "githubBackend": "https://github.com/Annette-Lasar/coderr_backend",

@@ -1,5 +1,5 @@
 <section>
-  <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="submit()">
+  <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="submit()" #formDirective="ngForm">
     <div class="input-wrapper">
       <mat-form-field class="full-width">
         <mat-label>
@@ -73,5 +73,8 @@
     >
       {{ allContent.contact.form.submit }}
     </button>
+    @if(successMessageVisible) {
+      <p class="success-message">{{allContent.contact.form.successMessage}}</p>
+    }
   </form>
 </section>

@@ -195,7 +195,8 @@
         "errorMissingEmail": "Please enter a valid email address.",
         "errorMissingMessage": "Please enter a message.",
         "errorPrivacyPolicyUnchecked": "Please accept the privacy policy."
-      }
+      },
+      "successMessage": "Your message has been sent successfully."
     }
   },
   "footer": {

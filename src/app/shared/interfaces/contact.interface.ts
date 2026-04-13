@@ -23,6 +23,7 @@ export interface ContactForm {
   submitAccessibility: string;
   submit: string;
   errors: ContactFormErrors;
+  successMessage: string;
 }
 
 export interface ContactFormErrors {

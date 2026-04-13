@@ -1,8 +1,9 @@
-import { Component, Input, ViewChildren, QueryList, inject } from '@angular/core';
+import { Component, Input, ViewChild, ViewChildren, QueryList, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import {
   FormGroup,
+  FormGroupDirective,
   FormControl,
   AbstractControl,
   Validators,
@@ -29,6 +30,7 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class ContactForm {
   private http = inject(HttpClient);
+  successMessageVisible: boolean = true;
 
   contactForm = new FormGroup({
     name: new FormControl('', {
@@ -66,6 +68,7 @@ export class ContactForm {
 
   @Input({ required: true }) allContent!: MergedContent;
   @ViewChildren(MatFormField) fields!: QueryList<MatFormField>;
+  @ViewChild(FormGroupDirective) formDirective!: FormGroupDirective;
 
   submit() {
     if (this.contactForm.invalid) {
@@ -78,8 +81,24 @@ export class ContactForm {
         headers: { 'Content-Type': 'application/json' },
       })
       .subscribe({
-        next: () => console.log('Daten gesendet'),
+        next: () => {
+          console.log('Daten gesendet');
+          this.resetContactForm();
+          this.showSuccessMessage();
+        },
         error: (err) => console.error('Fehler:', err),
       });
+  }
+
+  resetContactForm() {
+    this.formDirective.resetForm();
+  }
+
+  showSuccessMessage() {
+    this.successMessageVisible = true;
+
+    setTimeout(() => {
+      this.successMessageVisible = false;
+    }, 2000);
   }
 }

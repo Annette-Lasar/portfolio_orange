@@ -194,7 +194,8 @@
         "errorMissingEmail": "Veuillez indiquer une adresse e-mail valide.",
         "errorMissingMessage": "Veuillez saisir un message.",
         "errorPrivacyPolicyUnchecked": "Veuillez accepter la politique de confidentialité."
-      }
+      },
+      "successMessage": "Votre message a été envoyé avec succès."
     }
   },
   "footer": {

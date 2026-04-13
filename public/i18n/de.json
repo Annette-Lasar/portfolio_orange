@@ -194,7 +194,8 @@
         "errorMissingEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
         "errorMissingMessage": "Bitte geben Sie eine Nachricht ein.",
         "errorPrivacyPolicyUnchecked": "Bitte akzeptieren Sie die Datenschutzbestimmungen."
-      }
+      },
+      "successMessage": "Ihre Nachricht wurde erfolgreich gesendet."
     }
   },
   "footer": {
