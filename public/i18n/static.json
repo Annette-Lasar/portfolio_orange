@@ -73,12 +73,6 @@
         "category": "frontend"
       },
       {
-        "id": "WordPress",
-        "caption": "WordPress",
-        "iconPath": "wordpress.svg",
-        "category": "frontend"
-      },
-      {
         "id": "Scrum",
         "caption": "Scrum",
         "iconPath": "scrum.svg",
