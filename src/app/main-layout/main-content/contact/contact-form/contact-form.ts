@@ -30,7 +30,7 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class ContactForm {
   private http = inject(HttpClient);
-  successMessageVisible: boolean = true;
+  successMessageVisible: boolean = false;
 
   contactForm = new FormGroup({
     name: new FormControl('', {
