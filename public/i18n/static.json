@@ -149,7 +149,7 @@
         "links": {
           "githubFrontend": "https://github.com/Annette-Lasar/Join-kanban-frontend",
           "githubBackend": "https://github.com/Annette-Lasar/join-kanban-backend",
-          "demo": "join.annette-lasar.de"
+          "demo": "https://join.annette-lasar.de"
         },
         "category": "backend",
         "readyToTry": true
@@ -171,7 +171,7 @@
         "links": {
           "githubFrontend": "",
           "githubBackend": "https://github.com/Annette-Lasar/Videoflix_backend",
-          "demo": "videoflix.annette-lasar.de"
+          "demo": "https://videoflix.annette-lasar.de"
         },
         "category": "backend",
         "readyToTry": true
